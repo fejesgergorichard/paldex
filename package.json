@@ -4,6 +4,7 @@
   "type": "module",
   "dependencies": {
     "@elysiajs/static": "^0.8.1",
+    "@elysiajs/cors": "latest",
     "elasticlunr": "^0.9.5",
     "elysia": "latest"
   },

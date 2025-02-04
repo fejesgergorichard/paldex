@@ -5,7 +5,15 @@ services:
     container_name: paldex
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: paldex-api
     restart: unless-stopped
     ports:
       - "3000:3000"
+  frontend:
+    container_name: frontend
+    build:
+      context: .
+      dockerfile: frontend-dockerfile
+    restart: unless-stopped
+    ports:
+      - "3001:80"
