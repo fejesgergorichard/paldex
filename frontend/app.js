@@ -59,10 +59,7 @@ const activeList = document.getElementById("activeList");
 const removedList = document.getElementById("removedList");
 
 function renderTodos() {
-    activeList.innerHTML = "";
-    removedList.innerHTML = "";
     const removedTodos = todosData.filter(todo => todo.isDone);
-    
     const searchTerm = searchInput.value.toLowerCase();
     const activeTodos = todosData.filter(
         todo => !todo.isDone && todo.name.toLowerCase().includes(searchTerm)
@@ -71,6 +68,8 @@ function renderTodos() {
         .map(checkbox => checkbox.value.toLowerCase());
 
     getPals().then(pals => {
+        activeList.innerHTML = "";
+
         const palPedia = pals.filter(pal =>
             // Name filtering
             activeTodos.some(a => a.name.toLowerCase() === pal.name.toLowerCase()) &&
@@ -143,6 +142,7 @@ function renderTodos() {
         });
     });
 
+    removedList.innerHTML = "";
     removedTodos.forEach(todo => {
         const li = document.createElement("li");
         li.className = "border border-gray-200 rounded-md p-2 text-gray-500";
@@ -168,5 +168,16 @@ searchInput.addEventListener("input", renderTodos);
 
 document.addEventListener("DOMContentLoaded", renderTodos);
 document.querySelectorAll('input[name="element"]').forEach(checkbox => {
-    checkbox.addEventListener('change', renderTodos);
+    checkbox.addEventListener('change', (event) => {
+        const img = event.target.nextElementSibling;
+        if (event.target.checked) {
+            img.classList.remove('opacity-40');
+            img.classList.add('opacity-100');
+        } else {
+            img.classList.remove('opacity-100');
+            img.classList.add('opacity-40');
+        }
+
+        renderTodos();
+    });
 });
