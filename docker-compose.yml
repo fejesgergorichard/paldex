@@ -7,8 +7,9 @@ services:
       context: .
       dockerfile: paldex-api
     restart: unless-stopped
-    ports:
-      - "3000:3000"
+    networks:
+      - pal_network 
+
   frontend:
     container_name: frontend
     build:
@@ -16,4 +17,10 @@ services:
       dockerfile: frontend-dockerfile
     restart: unless-stopped
     ports:
-      - "3001:80"
+      - "80:80"
+    networks:
+      - pal_network 
+      
+networks:
+  pal_network:
+    driver: bridge

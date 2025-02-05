@@ -1,7 +1,7 @@
 import { initialData } from "./initialData.js";
 
 const dataKey = "dddd";
-const apiUrl = "http://192.168.0.229:3000"
+const apiUrl = "/api";
 
 async function getPals() {
     try {
