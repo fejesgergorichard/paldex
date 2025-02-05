@@ -91,14 +91,11 @@ function renderTodos() {
             activeList.appendChild(li);
 
             function addImage() {
-                const a = document.createElement("a");
-                a.href = pal.wiki;
-                a.target = '_blank';
                 const img = document.createElement("img");
                 img.src = getImage(pal.image);
-                img.className = "h-24 mr-2";
-                a.appendChild(img);
-                li.appendChild(a);
+                img.className = "h-24 mr-2 cursor-pointer";
+                img.dataset.key = pal.key
+                li.appendChild(img);
             }
 
             function addContent() {
@@ -106,7 +103,12 @@ function renderTodos() {
                 div.className = "flex flex-col"
                 const textDiv = document.createElement("div");
                 textDiv.className = "flex justify-center text-gray-800";
-                textDiv.textContent = pal.name;
+                const a = document.createElement("a");
+                a.href = pal.wiki;
+                a.target = '_blank';
+                a.textContent = pal.name;
+                a.title = "Wiki";
+                textDiv.appendChild(a);
                 div.appendChild(textDiv);
 
 
@@ -167,17 +169,46 @@ addButton.addEventListener("click", () => {
 searchInput.addEventListener("input", renderTodos);
 
 document.addEventListener("DOMContentLoaded", renderTodos);
-document.querySelectorAll('input[name="element"]').forEach(checkbox => {
-    checkbox.addEventListener('change', (event) => {
-        const img = event.target.nextElementSibling;
-        if (event.target.checked) {
-            img.classList.remove('opacity-40');
-            img.classList.add('opacity-100');
-        } else {
-            img.classList.remove('opacity-100');
-            img.classList.add('opacity-40');
-        }
+document.getElementById('element-filters').addEventListener('click', (event) => {
+    const wrapper = event.target.closest('.element-wrapper'); // Find the nearest wrapper div
 
-        renderTodos();
-    });
+    if (wrapper) {
+        const checkbox = wrapper.querySelector('input[type="checkbox"]');
+
+        if (checkbox) {
+            checkbox.checked = !checkbox.checked;
+
+            const img = wrapper.querySelector('.element-icon');
+            if (img) {
+                img.classList.toggle('opacity-25', !checkbox.checked);
+                img.classList.toggle('opacity-100', checkbox.checked);
+            }
+
+            renderTodos();
+        }
+    }
+});
+
+document.getElementById("activeList").addEventListener("click", (event) => {
+    const img = event.target.closest("img");
+    if (img && img.dataset.key) {
+        const palId = img.dataset.key; 
+        const modalImage = document.getElementById("modal-image");
+        modalImage.src = `../public/images/maps/${palId}-day.png`;
+
+        // Show the modal
+        document.getElementById("pal-modal").classList.remove("hidden");
+    }
+});
+
+// Close Modal on Button Click
+document.getElementById("close-modal").addEventListener("click", () => {
+    document.getElementById("pal-modal").classList.add("hidden");
+});
+
+// Close Modal on Click Outside
+document.getElementById("pal-modal").addEventListener("click", (event) => {
+    if (event.target === document.getElementById("pal-modal")) {
+        document.getElementById("pal-modal").classList.add("hidden");
+    }
 });
