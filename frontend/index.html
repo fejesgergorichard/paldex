@@ -16,60 +16,73 @@
       <ul id="removedList" class="space-y-2"></ul>
     </div>
 
-    <div class="flex w-full flex-col md:w-2/3 bg-white ">
+    <div class="flex w-full flex-col md:w-2/3 bg-white">
       <!-- Controls -->
-      <div class="sticky top-0 h-72 w-full bg-white rounded-lg shadow-md p-6 space-y-4">
-        <h1 class="text-2xl font-bold text-gray-900">Pals to capture</h1>
-        <!-- Search Field -->
-        <input id="searchInput" type="text" placeholder="Search pals..."
-          class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-        <!-- Input and Add Button -->
-        <div class="flex space-x-2">
-          <input id="newTodoInput" type="text" placeholder="Enter a new pal"
-            class="flex-1 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
-          <button id="addButton"
-            class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
-            Add
-          </button>
-        </div>
+      <div class="border-b border-slate-200 p-6 space-y-2 sticky top-0 bg-white">
+        <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
+          <h1 class="font-bold text-gray-900">Pals to capture</h1>
+          <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+              <path fill-rule="evenodd"
+                d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+          </span>
+        </button>
+        <div id="content-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+          <div class="w-full bg-white rounded-lg shadow-md space-y-4">
+            <!-- Search Field -->
+            <input id="searchInput" type="text" placeholder="Search pals..."
+              class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+            <!-- Input and Add Button -->
+            <div class="flex space-x-2">
+              <input id="newTodoInput" type="text" placeholder="Enter a new pal"
+                class="flex-1 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+              <button id="addButton"
+                class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                Add
+              </button>
+            </div>
 
-        <!-- Element filters -->
-        <div class="flex space-x-2" id="element-filters">
-          <div class="flex flex-col space-y-2">
-            <input type="checkbox" name="element" value="neutral">
-            <img src="../public/images/elements/neutral.png" alt="Neutral" class="element-icon">
-          </div>
-          <div class="flex flex-col space-y-2">
-            <input type="checkbox" name="element" value="grass">
-            <img src="../public/images/elements/grass.png" alt="Grass" class="element-icon">
-          </div>
-          <div class="flex flex-col space-y-2">
-            <input type="checkbox" name="element" value="fire">
-            <img src="../public/images/elements/fire.png" alt="Fire" class="element-icon">
-          </div>
-          <div class="flex flex-col space-y-2">
-            <input type="checkbox" name="element" value="water">
-            <img src="../public/images/elements/water.png" alt="Water" class="element-icon">
-          </div>
-          <div class="flex flex-col space-y-2">
-            <input type="checkbox" name="element" value="electric">
-            <img src="../public/images/elements/electric.png" alt="Electric" class="element-icon">
-          </div>
-          <div class="flex flex-col space-y-2">
-            <input type="checkbox" name="element" value="ice">
-            <img src="../public/images/elements/ice.png" alt="Ice" class="element-icon">
-          </div>
-          <div class="flex flex-col space-y-2">
-            <input type="checkbox" name="element" value="ground">
-            <img src="../public/images/elements/ground.png" alt="Ground" class="element-icon">
-          </div>
-          <div class="flex flex-col space-y-2">
-            <input type="checkbox" name="element" value="dark">
-            <img src="../public/images/elements/dark.png" alt="Dark" class="element-icon">
-          </div>
-          <div class="flex flex-col space-y-2">
-            <input type="checkbox" name="element" value="dragon">
-            <img src="../public/images/elements/dragon.png" alt="Dragon" class="element-icon">
+            <!-- Element filters -->
+            <div class="flex space-x-2" id="element-filters">
+              <div class="flex flex-col space-y-2">
+                <input type="checkbox" name="element" value="neutral">
+                <img src="../public/images/elements/neutral.png" alt="Neutral" class="transition-opacity duration-300 element-icon opacity-40">
+              </div>
+              <div class="flex flex-col space-y-2">
+                <input type="checkbox" name="element" value="grass">
+                <img src="../public/images/elements/grass.png" alt="Grass" class="transition-opacity duration-300 element-icon opacity-40">
+              </div>
+              <div class="flex flex-col space-y-2">
+                <input type="checkbox" name="element" value="fire">
+                <img src="../public/images/elements/fire.png" alt="Fire" class="transition-opacity duration-300 element-icon opacity-40">
+              </div>
+              <div class="flex flex-col space-y-2">
+                <input type="checkbox" name="element" value="water">
+                <img src="../public/images/elements/water.png" alt="Water" class="transition-opacity duration-300 element-icon opacity-40">
+              </div>
+              <div class="flex flex-col space-y-2">
+                <input type="checkbox" name="element" value="electric">
+                <img src="../public/images/elements/electric.png" alt="Electric" class="transition-opacity duration-300 element-icon opacity-40">
+              </div>
+              <div class="flex flex-col space-y-2">
+                <input type="checkbox" name="element" value="ice"> 
+                <img src="../public/images/elements/ice.png" alt="Ice" class="transition-opacity duration-300 element-icon opacity-40">
+              </div>
+              <div class="flex flex-col space-y-2">
+                <input type="checkbox" name="element" value="ground">
+                <img src="../public/images/elements/ground.png" alt="Ground" class="transition-opacity duration-300 element-icon opacity-40">
+              </div>
+              <div class="flex flex-col space-y-2">
+                <input type="checkbox" name="element" value="dark">
+                <img src="../public/images/elements/dark.png" alt="Dark" class="transition-opacity duration-300 element-icon opacity-40">
+              </div>
+              <div class="flex flex-col space-y-2">
+                <input type="checkbox" name="element" value="dragon">
+                <img src="../public/images/elements/dragon.png" alt="Dragon" class="transition-opacity duration-300 element-icon opacity-40">
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -78,11 +91,37 @@
       <div class="space-y-2  border-gray-300 rounded-lg p-4">
         <ul id="activeList"></ul>
       </div>
-
     </div>
   </div>
   <script type="module" src="app.js"></script>
-  
+  <script>
+    function toggleAccordion(index) {
+      const content = document.getElementById(`content-${index}`);
+      const icon = document.getElementById(`icon-${index}`);
+
+      const downSVG = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+        </svg>
+      `;
+      const upSVG = `
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+          <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+        </svg>
+      `;
+
+      // Toggle the content's max-height for smooth opening and closing
+      if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+        content.style.maxHeight = '0';
+        icon.innerHTML = downSVG;
+      } else {
+        content.style.maxHeight = content.scrollHeight + 'px';
+        icon.innerHTML = upSVG;
+      }
+    }
+
+    toggleAccordion(1);
+  </script>
 </body>
 
 </html>
