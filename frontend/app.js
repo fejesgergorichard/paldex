@@ -3,16 +3,15 @@ import { initialData } from "./initialData.js";
 const dataKey = "dddd";
 const apiUrl = "http://192.168.0.229:3000"
 
-async function getDataForName(name) {
+async function getPals() {
     try {
         const response = await fetch(
-            `${apiUrl}/?page=1&limit=10&name=${name}`,
+            `${apiUrl}?limit=200`,
             {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
                     'Accept': 'application/json',
-                    'Access-Control-Allow-Origin': '*'
                 }
             }
         );
@@ -22,30 +21,15 @@ async function getDataForName(name) {
         }
 
         const data = await response.json();
-        return data.content[0];
+        return data.content;
     } catch (error) {
         console.error('Error:', error);
         return null;
     }
 }
 
-async function getImageForPal(name) {
-    const data = await getDataForName(name);
-    return getImage(data.image);
-}
-
 function getImage(imagePath) {
-    return `${apiUrl}${imagePath}`;
-}
-
-async function getWikiLink(name) {
-    const data = await getDataForName(name);
-    return data.wiki;
-}
-
-async function getElements(name) {
-    const data = await getDataForName(name);
-    return data.types;
+    return `../${imagePath}`;
 }
 
 function storeData(data) {
@@ -60,8 +44,7 @@ function loadData() {
         // Initialize with default values if nothing is stored
         const initialDataToStore = initialData.map(name => ({
             name,
-            isDone: false,
-            element: "fire"
+            isDone: false
         }));
         storeData(initialDataToStore);
         return initialDataToStore;
@@ -69,8 +52,6 @@ function loadData() {
 }
 
 let todosData = loadData();
-
-// DOM Elements
 const searchInput = document.getElementById("searchInput");
 const newTodoInput = document.getElementById("newTodoInput");
 const addButton = document.getElementById("addButton");
@@ -80,81 +61,86 @@ const removedList = document.getElementById("removedList");
 function renderTodos() {
     activeList.innerHTML = "";
     removedList.innerHTML = "";
+    const removedTodos = todosData.filter(todo => todo.isDone);
+    
     const searchTerm = searchInput.value.toLowerCase();
-
-    // Filter active todos (isDone false) based on search term
     const activeTodos = todosData.filter(
         todo => !todo.isDone && todo.name.toLowerCase().includes(searchTerm)
     );
-    // Filter removed todos (isDone true) -- no search filtering for removed list
-    const removedTodos = todosData.filter(todo => todo.isDone);
+    const selectedElements = Array.from(document.querySelectorAll('input[name="element"]:checked'))
+        .map(checkbox => checkbox.value.toLowerCase());
 
-    // Render active todos
-    activeTodos.forEach((todo, index) => {
-        const li = document.createElement("li");
-        li.className = "flex items-center justify-between border border-gray-200 rounded-md p-2";
+    getPals().then(pals => {
+        const palPedia = pals.filter(pal =>
+            // Name filtering
+            activeTodos.some(a => a.name.toLowerCase() === pal.name.toLowerCase()) &&
+            // Element type filtering
+            (selectedElements.length === 0 || pal.types.some(type => selectedElements.includes(type.name.toLowerCase())))
+        );
 
-        addImage();
-        addContent();
-        addDeleteButton();
+        console.log("kugi");
 
-        activeList.appendChild(li);
+        // Render active todos
+        palPedia.forEach((pal, index) => {
+            const li = document.createElement("li");
+            li.className = "flex items-center justify-between border border-gray-200 rounded-md p-2";
 
-        function addImage() {
-            const a = document.createElement("a");
-                getWikiLink(todo.name).then(res => 
-                    a.href = res
-                );
+            addImage();
+            addContent();
+            addDeleteButton();
+
+            activeList.appendChild(li);
+
+            function addImage() {
+                const a = document.createElement("a");
+                a.href = pal.wiki;
                 a.target = '_blank';
                 const img = document.createElement("img");
-                getImageForPal(todo.name).then(res =>
-                    img.src = res
-                );
+                img.src = getImage(pal.image);
                 img.className = "h-24 mr-2";
                 a.appendChild(img);
-            li.appendChild(a);
-        }
+                li.appendChild(a);
+            }
 
-        function addContent() {
-            const div = document.createElement("div");
-            div.className = "flex flex-col"
+            function addContent() {
+                const div = document.createElement("div");
+                div.className = "flex flex-col"
                 const textDiv = document.createElement("div");
                 textDiv.className = "flex justify-center text-gray-800";
-                textDiv.textContent = todo.name;
+                textDiv.textContent = pal.name;
                 div.appendChild(textDiv);
 
-                
+
                 const elementsDiv = document.createElement("div");
                 elementsDiv.className = "flex justify-around";
-                getElements(todo.name).then(elementsResult =>
-                    elementsResult.forEach(element => {
-                        const elementImg = document.createElement("img");
-                        elementImg.src = getImage(element.image);
-                        elementImg.className = "h-8";
-                        elementsDiv.appendChild(elementImg);
-                    })
-                );
+                pal.types.forEach(element => {
+                    const elementImg = document.createElement("img");
+                    elementImg.src = getImage(element.image);
+                    elementImg.className = "h-8";
+                    elementsDiv.appendChild(elementImg);
+                })
                 div.appendChild(elementsDiv);
 
-            li.appendChild(div);
-        }
+                li.appendChild(div);
+            }
 
-        function addDeleteButton() {
-            const delButton = document.createElement("button");
-            delButton.className = "text-red-500 hover:text-red-700 focus:outline-none";
-            delButton.textContent = "Delete";
+            function addDeleteButton() {
+                const delButton = document.createElement("button");
+                delButton.className = "text-red-500 hover:text-red-700 focus:outline-none";
+                delButton.textContent = "Delete";
 
-            delButton.addEventListener("click", () => {
-                const target = todosData.find(item => item.name === todo.name && !item.isDone);
-                if (target) {
-                    target.isDone = true;
-                    storeData(todosData);
-                    renderTodos();
-                }
-            });
+                delButton.addEventListener("click", () => {
+                    const target = todosData.find(item => item.name === pal.name && !item.isDone);
+                    if (target) {
+                        target.isDone = true;
+                        storeData(todosData);
+                        renderTodos();
+                    }
+                });
 
-            li.appendChild(delButton);
-        }
+                li.appendChild(delButton);
+            }
+        });
     });
 
     removedTodos.forEach(todo => {
@@ -181,3 +167,6 @@ addButton.addEventListener("click", () => {
 searchInput.addEventListener("input", renderTodos);
 
 document.addEventListener("DOMContentLoaded", renderTodos);
+document.querySelectorAll('input[name="element"]').forEach(checkbox => {
+    checkbox.addEventListener('change', renderTodos);
+});

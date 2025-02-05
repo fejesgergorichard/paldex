@@ -9,6 +9,8 @@ RUN rm -rf ./*
 # Copy your HTML and JS files to the container
 COPY frontend/index.html frontend/app.js frontend/initialData.js ./
 
+# Copy the images into nginx
+COPY public/images /usr/share/nginx/html/public/images
 # Expose port 80
 EXPOSE 80
 

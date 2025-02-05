@@ -1,49 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pal Tracker</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body class="min-h-screen bg-gray-100 p-6">
-    <div class="flex flex-col md:flex-row gap-4">
-      <!-- Completed List -->
-      <div class="w-full md:w-1/5 bg-white rounded-lg shadow-md p-6 space-y-4">
-        <h2 class="text-xl font-bold text-gray-900">Captured</h2>
-        <ul id="removedList" class="space-y-2"></ul>
-      </div>
-      
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pal Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="h-full bg-gray-100 p-6">
+  <div class="h-full flex flex-col md:flex-row gap-4">
+    <!-- Completed List -->
+    <div class="w-full md:w-1/5 bg-white rounded-lg shadow-md p-6 space-y-4">
+      <h2 class="text-xl font-bold text-gray-900">Captured</h2>
+      <ul id="removedList" class="space-y-2"></ul>
+    </div>
+
+    <div class="flex w-full flex-col md:w-2/3 bg-white ">
       <!-- Controls -->
-      <div class="w-full md:w-2/3 bg-white rounded-lg shadow-md p-6 space-y-4">
+      <div class="sticky top-0 h-72 w-full bg-white rounded-lg shadow-md p-6 space-y-4">
         <h1 class="text-2xl font-bold text-gray-900">Pals to capture</h1>
         <!-- Search Field -->
-        <input
-          id="searchInput"
-          type="text"
-          placeholder="Search pals..."
-          class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
+        <input id="searchInput" type="text" placeholder="Search pals..."
+          class="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
         <!-- Input and Add Button -->
         <div class="flex space-x-2">
-          <input
-            id="newTodoInput"
-            type="text"
-            placeholder="Enter a new pal"
-            class="flex-1 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-          <button
-            id="addButton"
-            class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          >
+          <input id="newTodoInput" type="text" placeholder="Enter a new pal"
+            class="flex-1 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-400" />
+          <button id="addButton"
+            class="bg-blue-500 text-white rounded-md px-4 py-2 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">
             Add
           </button>
         </div>
 
-        <!-- Active Todos List -->
-        <ul id="activeList" class="space-y-2"></ul>
+        <!-- Element filters -->
+        <div class="flex space-x-2" id="element-filters">
+          <div class="flex flex-col space-y-2">
+            <input type="checkbox" name="element" value="neutral">
+            <img src="../public/images/elements/neutral.png" alt="Neutral" class="element-icon">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <input type="checkbox" name="element" value="grass">
+            <img src="../public/images/elements/grass.png" alt="Grass" class="element-icon">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <input type="checkbox" name="element" value="fire">
+            <img src="../public/images/elements/fire.png" alt="Fire" class="element-icon">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <input type="checkbox" name="element" value="water">
+            <img src="../public/images/elements/water.png" alt="Water" class="element-icon">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <input type="checkbox" name="element" value="electric">
+            <img src="../public/images/elements/electric.png" alt="Electric" class="element-icon">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <input type="checkbox" name="element" value="ice">
+            <img src="../public/images/elements/ice.png" alt="Ice" class="element-icon">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <input type="checkbox" name="element" value="ground">
+            <img src="../public/images/elements/ground.png" alt="Ground" class="element-icon">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <input type="checkbox" name="element" value="dark">
+            <img src="../public/images/elements/dark.png" alt="Dark" class="element-icon">
+          </div>
+          <div class="flex flex-col space-y-2">
+            <input type="checkbox" name="element" value="dragon">
+            <img src="../public/images/elements/dragon.png" alt="Dragon" class="element-icon">
+          </div>
+        </div>
       </div>
+
+      <!-- Active Todos List -->
+      <div class="space-y-2  border-gray-300 rounded-lg p-4">
+        <ul id="activeList"></ul>
+      </div>
+
     </div>
-    <script type="module" src="app.js"></script>
-  </body>
+  </div>
+  <script type="module" src="app.js"></script>
+  
+</body>
+
 </html>
