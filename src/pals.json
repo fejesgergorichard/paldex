@@ -1,11 +1,16 @@
 [
   {
     "id": 166,
-    "key": "",
-    "image": "",
+    "key": "083B",
+    "image": "/public/images/paldeck/083B.png",
     "name": "Cryolinx Terra",
-    "wiki": "",
-    "types": [],
+    "wiki": "https://palworld.fandom.com/wiki/Cryolinx_Terra",
+    "types": [
+      {
+        "name": "ground",
+        "image": "/public/images/elements/ground.png"
+      }
+    ],
     "imageWiki": "",
     "suitability": [],
     "drops": [],
@@ -15,14 +20,23 @@
   },
   {
     "id": 175,
-    "key": "",
-    "image": "",
+    "key": "093B",
+    "image": "/public/images/paldeck/093B.png",
     "name": "Fenglope Lux",
-    "wiki": "",
-    "types": [],
+    "wiki": "https://palworld.fandom.com/wiki/Fenglope_Lux",
+    "types": [
+      {
+        "name": "electric",
+        "image": "/public/images/elements/electric.png"
+      }
+    ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "leather", 
+      "horn",
+     "electric_organ"
+    ],
     "aura": {},
     "description": "",
     "skills": []
