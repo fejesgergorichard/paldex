@@ -94,8 +94,7 @@ async function renderTodos() {
     palPedia.forEach((pal, index) => {
         const li = document.createElement("li");
         const isCaptured = !activeTodos.some(a => a.name.toLowerCase() === pal.name.toLowerCase());
-        li.className = `${isCaptured ? "" : "bg-gray-50"} flex items-center justify-between border border-gray-200 rounded-md p-2 gap-10`;
-
+        li.className = `${isCaptured ? "" : "bg-gray-50"} flex items-center justify-between border border-gray-200 rounded-md p-2 gap-12`;
         
         const indexer = document.createElement("div");
         indexer.className ="flex items-center"
@@ -126,7 +125,7 @@ async function renderTodos() {
             const div = document.createElement("div");
             div.className = "flex flex-col"
             const textDiv = document.createElement("div");
-            textDiv.className = "flex justify-center text-gray-800";
+            textDiv.className = "flex justify-center text-center text-gray-800";
             const a = document.createElement("a");
             a.href = pal.wiki;
             a.target = '_blank';
