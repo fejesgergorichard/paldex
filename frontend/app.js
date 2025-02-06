@@ -97,7 +97,7 @@ async function renderTodos() {
         li.className = `${isCaptured ? "" : "bg-gray-50"} flex items-center justify-between border border-gray-200 rounded-md p-2 gap-12`;
         
         const indexer = document.createElement("div");
-        indexer.className ="flex items-center"
+        indexer.className ="flex items-center shrink-0"
         addNumber();
         addImage();
         li.appendChild(indexer);
@@ -107,16 +107,19 @@ async function renderTodos() {
         activeList.appendChild(li);
 
         function addImage() {
+            const imgDiv = document.createElement("div");
+            imgDiv.className = "cursor-pointer right";
             const img = document.createElement("img");
+            img.className = "h-16 md:h-24";
             img.src = getImageById(pal.key);
-            img.className = "h-16 md:h-24 mr-2 cursor-pointer";
             img.dataset.key = pal.key
-            indexer.appendChild(img);
+            imgDiv.appendChild(img);
+            indexer.appendChild(imgDiv);
         }
 
         function addNumber() {
             const span = document.createElement("span");
-            span.className = "flex w-12 mr-2 left justify-around";
+            span.className = "flex w-8 mr-2 left justify-around";
             span.innerText = pal.key
             indexer.appendChild(span);
         }
