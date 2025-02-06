@@ -29,16 +29,13 @@
   <a href="#rocket-info">Info</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-how-to">How to</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#mag_right-functionalities">Functionalities</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#busts_in_silhouette-contribute">Contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
 </p>
 
 ## :rocket: Info
 
 This is a fork of the Palworld API project. Uses the API and a JavaScript frontend where you can track your captured ones (for xp boost) and check their spawn locations.
-![image](https://github.com/user-attachments/assets/1bfe951b-865e-4fc8-83a6-4daa92c1793d)
-![image](https://github.com/user-attachments/assets/2532f296-2603-47bc-9000-a22b26ef6393)
+
+![image](https://github.com/user-attachments/assets/3c034027-25eb-4dcd-b0f4-8c124ca27400)
 
 <details>
   <summary>Example API response</summary>
@@ -281,7 +278,13 @@ This project was developed following this technologies:
 
 ## :information_source: How To
 
-To clone this application you will need [Git](https://git-scm.com) + [bun](https://bun.sh/). Run in terminal:
+The whole service can run inside a docker stack:
+
+```bash
+docker-compose up
+```
+
+To work on the API you will need [Git](https://git-scm.com) + [bun](https://bun.sh/). Run in terminal:
 
 ```bash
 ##### Clone this repo #####
@@ -302,14 +305,6 @@ $ bun install
 $ bun start
 ```
 
-You also can run it easily with Docker:
-
-```bash
-docker-compose up
-```
-
-After that, just choose your favorite API client and make a request to `http://localhost:3000`.
-
 You can pass some query params to the request, like `http://localhost:3000?page=1&limit=10&name=Relaxaurus`.
 
 All query params are optional, but you can use them to filter the results.
@@ -327,11 +322,7 @@ All query params are optional, but you can use them to filter the results.
 
 \***_This api provides full text search with Elasticlunr, so you can search for any term in the Palworld Paldex._**
 
-## :test_tube: Testing
-
-Testing is a crucial part of maintaining the quality and reliability of the Palworld Paldex API. This section explains how to run the tests and provides a brief overview of the testing setup.
-
-### Running the Tests
+### Tests
 
 To ensure that the API functions as expected, follow these steps to run the tests:
 
@@ -341,22 +332,5 @@ $ bun test
 
 This will run all the automated tests and display the results.
 
-### Types of Tests (WIP)
+API project was created using `bun init` in bun v1.0.25. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
 
-The testing suite includes the following types of tests:
-
-- **Unit Tests**: These tests cover individual functions and components to ensure they behave as expected in isolation.
-
-### Test Coverage
-
-We aim to cover as much of the codebase as possible with our tests to maintain high standards of quality and reliability. Test coverage metrics are regularly updated and can be viewed in the test reports.
-
-[vc]: https://code.visualstudio.com/
-
-This project was created using `bun init` in bun v1.0.25. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
-
-## :wrench: Projects that make use of palworld-paldex-api
-
-- [Paldex - is a Kotlin Multiplatform app (KMM) built with Compose Multiplatform to retrieve Palworld game information](https://github.com/viethua99/Paldex)
-- [Discord Bot Using this API](https://github.com/nibalizer/palbot-rs/)
-- [Mobile APP - PalPad](https://github.com/Juanvic/PalPad)
