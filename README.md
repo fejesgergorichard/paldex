@@ -36,10 +36,12 @@
 
 ## :rocket: Info
 
-This is the first Palworld API, it's a simple API to get all Palworld Paldex data.
+This is a fork of the Palworld API project. Uses the API and a JavaScript frontend where you can track your captured ones (for xp boost) and check their spawn locations.
+![image](https://github.com/user-attachments/assets/1bfe951b-865e-4fc8-83a6-4daa92c1793d)
+![image](https://github.com/user-attachments/assets/2532f296-2603-47bc-9000-a22b26ef6393)
 
 <details>
-  <summary>This is what final data looks like</summary>
+  <summary>Example API response</summary>
 
 ```json
 {
@@ -167,6 +169,8 @@ This is the first Palworld API, it's a simple API to get all Palworld Paldex dat
 </details>
 
 ## :family: Breeding
+<details>
+  <summary>Breeding calculation</summary>
 
 The `breeding.rank` can be used to calculate the children for two parents:
 
@@ -262,6 +266,7 @@ Some pals can only be bred if their parents are both of the type of the offsprin
 </details>
 
 The breeding power data was taken from [@dini.rfl's Google Docs Sheet](https://docs.google.com/spreadsheets/u/1/d/1YgPc11dgdBUC8jXNp01b7gI6jNHoBRQGwrY_V6lXMgQ/htmlview?usp=sharing)
+</details>
 
 ## :computer: Technologies
 
