@@ -14,7 +14,7 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/fejesgergorichard/paldex.svg">
   <a href="https://github.com/fejesgergorichard/paldex/commits/master">
-    <img alt="GitHub last commit" src="[https://img.shields.io/github/last-commit/fejesgergorichard/paldex.svg](https://img.shields.io/github/last-commit/fejesgergorichard/paldex.svg)">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/fejesgergorichard/paldex.svg">
   </a>
 
   <a href="https://github.com/mlg404/palworld-paldex-api/issues">
