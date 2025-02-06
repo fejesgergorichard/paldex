@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Palworld Paldex
+  Palworld Paldex Tracker
 </h3>
 <h6 align="center"><i>Paldex API + Frontend + Map web scraper</i></h6>
 
@@ -267,14 +267,14 @@ The breeding power data was taken from [@dini.rfl's Google Docs Sheet](https://d
 
 ## :computer: Technologies
 
-This project was developed following this technologies:
+This project uses the following technologies:
 
 - [bun](https://bun.sh/)
 - [Prettier](https://prettier.io/)
 - [ElysiaJS](https://elysiajs.com/)
-- [VS Code][vc]
 - [Typescript](https://www.typescriptlang.org/)
 - [elasticlunr](https://github.com/weixsong/elasticlunr.js)
+- [TailWindCSS](https://tailwindcss.com/docs/)
 
 ## :information_source: How To
 
