@@ -88,7 +88,7 @@ async function renderTodos() {
         : palPedia.filter(pal => activeTodos.some(a => a.name.toLowerCase() === pal.name.toLowerCase()));
 
     // search filter
-    palPedia = palPedia.filter(pal => pal.name.toLowerCase().includes(searchTerm));
+    palPedia = palPedia.filter(pal => pal.name.toLowerCase().includes(searchTerm) || pal.key.toLowerCase().includes(searchTerm));
 
     // Render
     palPedia.forEach((pal, index) => {
