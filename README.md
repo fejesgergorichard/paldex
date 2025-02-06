@@ -274,7 +274,7 @@ This project uses the following technologies:
 - [ElysiaJS](https://elysiajs.com/)
 - [Typescript](https://www.typescriptlang.org/)
 - [elasticlunr](https://github.com/weixsong/elasticlunr.js)
-- [TailWindCSS](https://tailwindcss.com/docs/)
+- [Tailwind CSS](https://tailwindcss.com/docs/)
 
 ## :information_source: How To
 
