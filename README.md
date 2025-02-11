@@ -3,43 +3,42 @@
 </h1>
 
 <h3 align="center">
-  Palworld Paldex API
+  Palworld Paldex Tracker
 </h3>
-<h6 align="center"><i>First Palworld API</i></h6>
+<h6 align="center"><i>Paldex API + Frontend + Map web scraper</i></h6>
 
 <p align="center">
-  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/mlg404/palworld-paldex-api.svg">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/fejesgergorichard/paldex.svg">
 
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/mlg404/palworld-paldex-api.svg">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/fejesgergorichard/paldex.svg">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/mlg404/palworld-paldex-api.svg">
-  <a href="https://github.com/mlg404/palworld-paldex-api/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/mlg404/palworld-paldex-api.svg">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/fejesgergorichard/paldex.svg">
+  <a href="https://github.com/fejesgergorichard/paldex/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/fejesgergorichard/paldex.svg">
   </a>
 
   <a href="https://github.com/mlg404/palworld-paldex-api/issues">
-    <img alt="Repository issues" src="https://img.shields.io/github/issues/mlg404/palworld-paldex-api.svg">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/fejesgergorichard/paldex.svg">
   </a>
-
-  <img alt="GitHub" src="https://img.shields.io/github/license/mlg404/palworld-paldex-api.svg">
 </p>
-<p align="center"><a href="https://www.buymeacoffee.com/mlg404"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=mlg404&button_colour=BD5FFF&font_colour=ffffff&font_family=Poppins&outline_colour=000000&coffee_colour=FFDD00" /></a></p>
+<p align="center">
+    <a href="https://www.buymeacoffee.com/zserbinator" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+  </p>
 
 <p align="center">
   <a href="#rocket-info">Info</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#information_source-how-to">How to</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#mag_right-functionalities">Functionalities</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#busts_in_silhouette-contribute">Contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
 </p>
 
 ## :rocket: Info
 
-This is the first Palworld API, it's a simple API to get all Palworld Paldex data.
+This is a fork of the Palworld API project. Uses the API and a JavaScript frontend where you can track your captured ones (for xp boost) and check their spawn locations.
+
+![image](https://github.com/user-attachments/assets/3c034027-25eb-4dcd-b0f4-8c124ca27400)
 
 <details>
-  <summary>This is what final data looks like</summary>
+  <summary>Example API response</summary>
 
 ```json
 {
@@ -167,6 +166,8 @@ This is the first Palworld API, it's a simple API to get all Palworld Paldex dat
 </details>
 
 ## :family: Breeding
+<details>
+  <summary>Breeding calculation</summary>
 
 The `breeding.rank` can be used to calculate the children for two parents:
 
@@ -262,21 +263,28 @@ Some pals can only be bred if their parents are both of the type of the offsprin
 </details>
 
 The breeding power data was taken from [@dini.rfl's Google Docs Sheet](https://docs.google.com/spreadsheets/u/1/d/1YgPc11dgdBUC8jXNp01b7gI6jNHoBRQGwrY_V6lXMgQ/htmlview?usp=sharing)
+</details>
 
 ## :computer: Technologies
 
-This project was developed following this technologies:
+This project uses the following technologies:
 
 - [bun](https://bun.sh/)
 - [Prettier](https://prettier.io/)
 - [ElysiaJS](https://elysiajs.com/)
-- [VS Code][vc]
 - [Typescript](https://www.typescriptlang.org/)
 - [elasticlunr](https://github.com/weixsong/elasticlunr.js)
+- [Tailwind CSS](https://tailwindcss.com/docs/)
 
 ## :information_source: How To
 
-To clone this application you will need [Git](https://git-scm.com) + [bun](https://bun.sh/). Run in terminal:
+The whole service can run inside a docker stack:
+
+```bash
+docker-compose up
+```
+
+To work on the API you will need [Git](https://git-scm.com) + [bun](https://bun.sh/). Run in terminal:
 
 ```bash
 ##### Clone this repo #####
@@ -297,14 +305,6 @@ $ bun install
 $ bun start
 ```
 
-You also can run it easily with Docker:
-
-```bash
-docker-compose up
-```
-
-After that, just choose your favorite API client and make a request to `http://localhost:3000`.
-
 You can pass some query params to the request, like `http://localhost:3000?page=1&limit=10&name=Relaxaurus`.
 
 All query params are optional, but you can use them to filter the results.
@@ -322,28 +322,7 @@ All query params are optional, but you can use them to filter the results.
 
 \***_This api provides full text search with Elasticlunr, so you can search for any term in the Palworld Paldex._**
 
-## :mag_right: Functionalities
-
-See the current features!
-
-- ElysiaJS for fast and easy API development;
-- Elasticlunr for fast and easy full text search;
-- useCase's structure for better code organization;
-- typescript for better code quality;
-- typesafety for better code quality;
-- Docker
-
-## :stars: Upcoming features
-
-- Error handling
-- Eslint and Prettier
-- Tests
-
-## :test_tube: Testing
-
-Testing is a crucial part of maintaining the quality and reliability of the Palworld Paldex API. This section explains how to run the tests and provides a brief overview of the testing setup.
-
-### Running the Tests
+### Tests
 
 To ensure that the API functions as expected, follow these steps to run the tests:
 
@@ -353,48 +332,5 @@ $ bun test
 
 This will run all the automated tests and display the results.
 
-### Types of Tests (WIP)
+API project was created using `bun init` in bun v1.0.25. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
 
-The testing suite includes the following types of tests:
-
-- **Unit Tests**: These tests cover individual functions and components to ensure they behave as expected in isolation.
-
-### Test Coverage
-
-We aim to cover as much of the codebase as possible with our tests to maintain high standards of quality and reliability. Test coverage metrics are regularly updated and can be viewed in the test reports.
-
-### Continuous Integration
-
-WIP
-
-### Contributing to Tests
-
-Contributions to improve or add tests are always welcome. If you're interested in contributing, please follow the guidelines in the [Contribute](#busts_in_silhouette-contribute) section.
-
-## :busts_in_silhouette: Contribute
-
-- Fork this repository;
-- Create one branch with your feature: `git checkout -b my-feature`;
-- Commit your alterations: `git commit -m 'feat: My new feature'`;
-- Push to your branch: `git push origin my-feature`.
-
-Open a pull request with your branch. After pull request merge, you should delete your branch.
-<br />
-
-## :memo: License
-
-This project is under MIT license. See [LICENSE](https://github.com/mlg404/palworld-paldex-api/blob/master/LICENSE) for more information.
-
----
-
-Made with 💙 by Victor Eyer :wave: [Get in touch!](https://www.linkedin.com/in/victoreyer/)
-
-[vc]: https://code.visualstudio.com/
-
-This project was created using `bun init` in bun v1.0.25. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
-
-## :wrench: Projects that make use of palworld-paldex-api
-
-- [Paldex - is a Kotlin Multiplatform app (KMM) built with Compose Multiplatform to retrieve Palworld game information](https://github.com/viethua99/Paldex)
-- [Discord Bot Using this API](https://github.com/nibalizer/palbot-rs/)
-- [Mobile APP - PalPad](https://github.com/Juanvic/PalPad)
