@@ -112,7 +112,8 @@ async function renderTodos() {
             const img = document.createElement("img");
             img.className = "h-16 md:h-24";
             img.src = getImageById(pal.key);
-            img.dataset.key = pal.key
+            img.dataset.key = pal.key;
+            img.dataset.palName = pal.name;
             imgDiv.appendChild(img);
             indexer.appendChild(imgDiv);
         }
@@ -237,6 +238,8 @@ document.getElementById("activeList").addEventListener("click", (event) => {
         const modalImage = document.getElementById("modal-image");
         modalImage.src = `../public/images/maps/${palId}.png`;
         document.getElementById("pal-modal").classList.remove("hidden");
+        const header = document.getElementById("pal-modal-text");
+        header.innerText = img.dataset.palName;
     }
 });
 
