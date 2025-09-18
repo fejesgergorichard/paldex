@@ -15641,5 +15641,321 @@
     },
     "description": "",
     "skills": []
+  },
+  {
+    "id": 202,
+    "key": "141",
+    "image": "/public/images/paldeck/141.png",
+    "name": "Herbil",
+    "wiki": "https://palworld.fandom.com/wiki/Herbil",
+    "types": [
+      { "name": "grass", "image": "/public/images/elements/grass.png" },
+      { "name": "neutral", "image": "/public/images/elements/neutral.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 203,
+    "key": "142",
+    "image": "/public/images/paldeck/142.png",
+    "name": "Icelyn",
+    "wiki": "https://palworld.fandom.com/wiki/Icelyn",
+    "types": [
+      { "name": "ice", "image": "/public/images/elements/ice.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 204,
+    "key": "143",
+    "image": "/public/images/paldeck/143.png",
+    "name": "Frostplume",
+    "wiki": "https://palworld.fandom.com/wiki/Frostplume",
+    "types": [
+      { "name": "ice", "image": "/public/images/elements/ice.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 205,
+    "key": "144",
+    "image": "/public/images/paldeck/144.png",
+    "name": "Palumba",
+    "wiki": "https://palworld.fandom.com/wiki/Palumba",
+    "types": [
+      { "name": "grass", "image": "/public/images/elements/grass.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 206,
+    "key": "145",
+    "image": "/public/images/paldeck/145.png",
+    "name": "Braloha",
+    "wiki": "https://palworld.fandom.com/wiki/Braloha",
+    "types": [
+      { "name": "grass", "image": "/public/images/elements/grass.png" },
+      { "name": "ground", "image": "/public/images/elements/ground.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 207,
+    "key": "146",
+    "image": "/public/images/paldeck/146.png",
+    "name": "Munchill",
+    "wiki": "https://palworld.fandom.com/wiki/Munchill",
+    "types": [
+      { "name": "ice", "image": "/public/images/elements/ice.png" },
+      { "name": "water", "image": "/public/images/elements/water.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 208,
+    "key": "147",
+    "image": "/public/images/paldeck/147.png",
+    "name": "Polapup",
+    "wiki": "https://palworld.fandom.com/wiki/Polapup",
+    "types": [
+      { "name": "ice", "image": "/public/images/elements/ice.png" },
+      { "name": "water", "image": "/public/images/elements/water.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 209,
+    "key": "148",
+    "image": "/public/images/paldeck/148.png",
+    "name": "Turtacle",
+    "wiki": "https://palworld.fandom.com/wiki/Turtacle",
+    "types": [
+      { "name": "water", "image": "/public/images/elements/water.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 210,
+    "key": "148B",
+    "image": "/public/images/paldeck/148B.png",
+    "name": "Turtacle Terra",
+    "wiki": "https://palworld.fandom.com/wiki/Turtacle_Terra",
+    "types": [
+      { "name": "water", "image": "/public/images/elements/water.png" },
+      { "name": "ground", "image": "/public/images/elements/ground.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 211,
+    "key": "149",
+    "image": "/public/images/paldeck/149.png",
+    "name": "Jellroy",
+    "wiki": "https://palworld.fandom.com/wiki/Jellroy",
+    "types": [
+      { "name": "water", "image": "/public/images/elements/water.png" },
+      { "name": "dark", "image": "/public/images/elements/dark.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 212,
+    "key": "150",
+    "image": "/public/images/paldeck/150.png",
+    "name": "Jelliette",
+    "wiki": "https://palworld.fandom.com/wiki/Jelliette",
+    "types": [
+      { "name": "water", "image": "/public/images/elements/water.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 213,
+    "key": "151",
+    "image": "/public/images/paldeck/151.png",
+    "name": "Gloopie",
+    "wiki": "https://palworld.fandom.com/wiki/Gloopie",
+    "types": [
+      { "name": "water", "image": "/public/images/elements/water.png" },
+      { "name": "dark", "image": "/public/images/elements/dark.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 214,
+    "key": "152",
+    "image": "/public/images/paldeck/152.png",
+    "name": "Finsider",
+    "wiki": "https://palworld.fandom.com/wiki/Finsider",
+    "types": [
+      { "name": "water", "image": "/public/images/elements/water.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 215,
+    "key": "152B",
+    "image": "/public/images/paldeck/152B.png",
+    "name": "Finsider Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Finsider_Ignis",
+    "types": [
+      { "name": "water", "image": "/public/images/elements/water.png" },
+      { "name": "fire", "image": "/public/images/elements/fire.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 216,
+    "key": "153",
+    "image": "/public/images/paldeck/153.png",
+    "name": "Ghangler",
+    "wiki": "https://palworld.fandom.com/wiki/Ghangler",
+    "types": [
+      { "name": "water", "image": "/public/images/elements/water.png" },
+      { "name": "dark", "image": "/public/images/elements/dark.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 217,
+    "key": "153B",
+    "image": "/public/images/paldeck/153B.png",
+    "name": "Ghangler Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Ghangler_Ignis",
+    "types": [
+      { "name": "water", "image": "/public/images/elements/water.png" },
+      { "name": "fire", "image": "/public/images/elements/fire.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 218,
+    "key": "154",
+    "image": "/public/images/paldeck/154.png",
+    "name": "Whalaska",
+    "wiki": "https://palworld.fandom.com/wiki/Whalaska",
+    "types": [
+      { "name": "water", "image": "/public/images/elements/water.png" },
+      { "name": "ice", "image": "/public/images/elements/ice.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 219,
+    "key": "154B",
+    "image": "/public/images/paldeck/154B.png",
+    "name": "Whalaska Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Whalaska_Ignis",
+    "types": [
+      { "name": "fire", "image": "/public/images/elements/fire.png" },
+      { "name": "ice", "image": "/public/images/elements/ice.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
+  },
+  {
+    "id": 220,
+    "key": "155",
+    "image": "/public/images/paldeck/155.png",
+    "name": "Neptilius",
+    "wiki": "https://palworld.fandom.com/wiki/Neptilius",
+    "types": [
+      { "name": "water", "image": "/public/images/elements/water.png" }
+    ],
+    "imageWiki": "",
+    "suitability": [],
+    "drops": [],
+    "aura": {},
+    "description": "",
+    "skills": []
   }
 ]

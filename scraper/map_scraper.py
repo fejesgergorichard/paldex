@@ -59,7 +59,7 @@ def saveImageForPalName(driver, pal_name, key):
     pal_element.click()
     time.sleep(1)
 
-    screenshot_path = f"maps/{key}.png"
+    screenshot_path = f"../public/images/maps/{key}.png"
     driver.save_screenshot(screenshot_path)
     print(f"Screenshot saved for {pal_name} at {screenshot_path}")
     return screenshot_path
@@ -68,7 +68,9 @@ def saveImageForPalName(driver, pal_name, key):
 acceptCookieConsent(driver)
 disableLocations(driver)
 
-for pal in pals:
+filtered_pals = [pal for pal in pals if pal['id'] >= 220]
+
+for pal in filtered_pals:
     pal_name = pal['name']
     pal_key = pal['key']
     try:
