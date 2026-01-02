@@ -166,27 +166,46 @@ async function renderTodos() {
 
         function addWorkSuitabilities() {
             const workDiv = document.createElement("div");
-            workDiv.className = "flex flex-col gap-1 w-16 ml-2";
+            workDiv.className = "flex flex-col gap-1 w-32 ml-2"; // Increased width for 2 items
 
-            pal.suitability.forEach(suitability => {
-                const row = document.createElement("div");
-                row.className = "flex items-center gap-2";
+            // Group suitabilities in pairs
+            for (let i = 0; i < pal.suitability.length; i += 2) {
+                const rowContainer = document.createElement("div");
+                rowContainer.className = "flex items-center gap-2";
 
-                const suitabilityImg = document.createElement("img");
-                suitabilityImg.src = getImage(`../public/images/works/${suitability.type}.png`);
-                suitabilityImg.className = "h-6 w-6 object-contain";
-                suitabilityImg.title = suitability.type;
+                // Add first item in the pair
+                const item1 = createSuitabilityItem(pal.suitability[i]);
+                rowContainer.appendChild(item1);
 
-                const label = document.createElement("span");
-                label.className = "text-xs text-gray-200 whitespace-nowrap";
-                label.textContent = suitability.level;
+                // Add second item if it exists
+                if (i + 1 < pal.suitability.length) {
+                    const item2 = createSuitabilityItem(pal.suitability[i + 1]);
+                    rowContainer.appendChild(item2);
+                }
 
-                row.appendChild(suitabilityImg);
-                row.appendChild(label);
-                workDiv.appendChild(row);
-            });
+                workDiv.appendChild(rowContainer);
+            }
 
             indexer.appendChild(workDiv);
+        }
+
+        function createSuitabilityItem(suitability) {
+            const item = document.createElement("div");
+            item.className = "flex items-center gap-1";
+
+            const suitabilityImg = document.createElement("img");
+            suitabilityImg.src = getImage(`../public/images/works/${suitability.type}.png`);
+            suitabilityImg.className = "h-6 w-6 object-contain";
+            suitabilityImg.title = suitability.type;
+
+            const label = document.createElement("span");
+            label.className = "text-xs text-gray-200 whitespace-nowrap";
+            label.textContent = suitability.level;
+
+            item.appendChild(suitabilityImg);
+            item.appendChild(label);
+
+            return item;
         }
 
 
