@@ -2358,6 +2358,107 @@
     ]
   },
   {
+    "id": 230,
+    "key": "023B",
+    "image": "/public/images/paldeck/023B.png",
+    "name": "Killamari Primo",
+    "wiki": "https://palworld.fandom.com/wiki/Killamari_Primo",
+    "types": [
+      {
+        "name": "neutral",
+        "image": "/public/images/elements/neutral.png"
+      },
+      {
+        "name": "water",
+        "image": "/public/images/elements/water.png"
+      }
+    ],
+    "imageWiki": "https://static.wikia.nocookie.net/palworld/images/8/80/Killamari_menu.png/revision/latest?cb=20240122120010",
+    "suitability": [
+      {
+        "type": "gathering",
+        "image": "/public/images/works/gathering.png",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "image": "/public/images/works/transporting.png",
+        "level": 2
+      },
+      {
+        "type": "watering",
+        "image": "/public/images/works/watering.png",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "venom_gland"
+    ],
+    "aura": {
+      "name": "fried_squid",
+      "description": "While in team, can be summoned and used instead of a glider.\nCan float for long periods of time while gliding."
+    },
+    "description": "It wraps itself around an enemy's head, sucking out their insides. Pal mummies are occasionally found, but these are in fact Killamari victims.",
+    "skills": [
+      {
+        "level": 1,
+        "name": "hydro_jet",
+        "type": "water",
+        "cooldown": 2,
+        "power": 30,
+        "description": "Hurls a high speed ball of water at an enemy."
+      },
+      {
+        "level": 7,
+        "name": "poison_blast",
+        "type": "dark",
+        "cooldown": 2,
+        "power": 30,
+        "description": "Hurls poison sludge at an enemy."
+      },
+      {
+        "level": 15,
+        "name": "dark_ball",
+        "type": "dark",
+        "cooldown": 4,
+        "power": 40,
+        "description": "Unleashes a sphere of darkness that slowly tracks down the enemy."
+      },
+      {
+        "level": 22,
+        "name": "shadow_burst",
+        "type": "dark",
+        "cooldown": 10,
+        "power": 55,
+        "description": "Quickly discharges dark energy, damaging those around it."
+      },
+      {
+        "level": 30,
+        "name": "acid_rain",
+        "type": "water",
+        "cooldown": 18,
+        "power": 80,
+        "description": "Creates acidic clouds that pour down acid rain on enemies."
+      },
+      {
+        "level": 40,
+        "name": "nightmare_ball",
+        "type": "dark",
+        "cooldown": 30,
+        "power": 100,
+        "description": "Creates a giant ball of darkness and hurls it at an enemy."
+      },
+      {
+        "level": 50,
+        "name": "dark_laser",
+        "type": "dark",
+        "cooldown": 55,
+        "power": 150,
+        "description": "Charges dark energy before blasting enemies with a powerful beam."
+      }
+    ]
+  },
+  {
     "id": 24,
     "key": "024",
     "image": "/public/images/paldeck/024.png",
@@ -6006,7 +6107,7 @@
     ],
     "drops": [
       "honey",
-      "elizabee's_staff"
+      "elizabee_s_staff"
     ],
     "aura": {
       "name": "queen_bee_command",
@@ -15654,7 +15755,10 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "leather",
+      "red_berries"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15670,7 +15774,10 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "ice_organ",
+      "precious_plume"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15686,7 +15793,9 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "ice_organ"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15702,7 +15811,9 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "bone"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15719,7 +15830,12 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "leather",
+      "red_berries",
+      "lettuce_seeds",
+      "tomato_seeds"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15736,7 +15852,9 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "pal_fluids"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15753,7 +15871,9 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "ice_organ"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15769,7 +15889,10 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "pal_fluids",
+      "bone"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15786,7 +15909,10 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "pal_fluids",
+      "bone"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15803,7 +15929,10 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "pal_fluids",
+      "jellroy_bell_flesh"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15819,7 +15948,10 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "pal_fluids",
+      "jelliette_bell_flesh"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15836,7 +15968,10 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "pal_fluids",
+      "gloopie_tentacle"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15852,7 +15987,11 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "leather",
+      "small_pal_soul",
+      "pal_fluids"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15869,7 +16008,11 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "leather",
+      "small_pal_soul",
+      "flame_organ"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15886,7 +16029,10 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "bone",
+      "venom_gland"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15903,7 +16049,10 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "bone",
+      "flame_organ"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15920,7 +16069,12 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "pal_fluids",
+      "coralum_ore",
+      "ice_organ",
+      "large_pal_soul"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15937,7 +16091,12 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "pal_fluids",
+      "coralum_ore",
+      "flame_organ",
+      "large_pal_soul"
+    ],
     "aura": {},
     "description": "",
     "skills": []
@@ -15953,7 +16112,14 @@
     ],
     "imageWiki": "",
     "suitability": [],
-    "drops": [],
+    "drops": [
+      "coralum_ore",
+      "pure_quartz",
+      "polymer",
+      "carbon_fiber",
+      "diamond",
+      "large_pal_soul"
+    ],
     "aura": {},
     "description": "",
     "skills": []

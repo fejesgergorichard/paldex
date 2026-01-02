@@ -43,6 +43,7 @@ function storeData(data) {
 function loadData() {
     const stored = localStorage.getItem(dataKey);
     if (stored) {
+        console.log(stored);
         return JSON.parse(stored);
     } else {
         // Initialize with default values if nothing is stored
@@ -80,7 +81,7 @@ async function renderTodos() {
         (selectedElements.length === 0 || pal.types.some(type => selectedElements.includes(type.name.toLowerCase())))
     );
 
-    // sor by key
+    // sort by key
     palPedia.sort((a, b) => a.key.localeCompare(b.key));
 
     // show captured filter
@@ -94,17 +95,25 @@ async function renderTodos() {
     palPedia.forEach((pal, index) => {
         const li = document.createElement("li");
         const isCaptured = !activeTodos.some(a => a.name.toLowerCase() === pal.name.toLowerCase());
-        li.className = `${isCaptured ? "" : "bg-gray-50"} flex items-center justify-between border border-gray-200 rounded-md p-2 gap-12`;
+        li.className = `${isCaptured ? "bg-gray-900" : "bg-gray-700"} text-white flex items-center justify-between border border-gray-200 rounded-md p-2 gap-12`;
         
         const indexer = document.createElement("div");
         indexer.className ="flex items-center shrink-0"
         addNumber();
         addImage();
+        addDropItems();
         li.appendChild(indexer);
         addContent();
         addDeleteButton();
 
         activeList.appendChild(li);
+
+        function addNumber() {
+            const span = document.createElement("span");
+            span.className = "flex w-8 mr-2 left justify-around";
+            span.innerText = pal.key
+            indexer.appendChild(span);
+        }
 
         function addImage() {
             const imgDiv = document.createElement("div");
@@ -118,18 +127,24 @@ async function renderTodos() {
             indexer.appendChild(imgDiv);
         }
 
-        function addNumber() {
-            const span = document.createElement("span");
-            span.className = "flex w-8 mr-2 left justify-around";
-            span.innerText = pal.key
-            indexer.appendChild(span);
+        function addDropItems() {
+            const dropsDiv = document.createElement("div");
+            dropsDiv.className = "flex flex-col items-center w-16";
+            pal.drops.forEach(element => {
+                const elementImg = document.createElement("img");
+                elementImg.src = getImage(`../public/images/items/${element}.png`);
+                elementImg.className = "h-8 w-auto";
+                elementImg.title = element;
+                dropsDiv.appendChild(elementImg);
+            })
+            indexer.appendChild(dropsDiv);
         }
 
         function addContent() {
             const div = document.createElement("div");
             div.className = "flex flex-col"
             const textDiv = document.createElement("div");
-            textDiv.className = "flex justify-center text-center text-gray-800";
+            textDiv.className = "flex justify-center text-center text-white-800";
             const a = document.createElement("a");
             a.href = pal.wiki;
             a.target = '_blank';
@@ -159,7 +174,7 @@ async function renderTodos() {
                 <label class="flex-col justify-around cursor-pointer">
                     <input type="checkbox" value="" class="sr-only peer" ${isCaptured ? 'checked' : ''}>
                     <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
-                    <span class="text-sm text-gray-900 dark:text-gray-300 w-16 inline-block">${isCaptured ? "Captured" : ""}</span>
+                    <span class="text-sm text-white-900 dark:text-white-300 w-16 inline-block">${isCaptured ? "Captured" : ""}</span>
                 </label>
             `;
             container.innerHTML = toggleHTML;
@@ -189,7 +204,7 @@ async function renderTodos() {
     removedList.innerHTML = "";
     activeTodos.forEach(todo => {
         const li = document.createElement("li");
-        li.className = "border border-gray-200 rounded-md p-2 text-gray-500";
+        li.className = "border border-gray-200 rounded-md p-2 text-white-500";
         li.textContent = todo.name;
         removedList.appendChild(li);
     });
