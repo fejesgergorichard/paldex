@@ -36,6 +36,13 @@ function getImageById(palId) {
     return `../public/images/paldeck/${palId}.png`;
 }
 
+function toHumanReadable(str) {
+    return str
+        .split("_")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+}
+
 function storeData(data) {
     localStorage.setItem(dataKey, JSON.stringify(data));
 }
@@ -89,7 +96,11 @@ async function renderTodos() {
         : palPedia.filter(pal => activeTodos.some(a => a.name.toLowerCase() === pal.name.toLowerCase()));
 
     // search filter
-    palPedia = palPedia.filter(pal => pal.name.toLowerCase().includes(searchTerm) || pal.key.toLowerCase().includes(searchTerm));
+    palPedia = palPedia.filter(pal =>
+        pal.name.toLowerCase().includes(searchTerm) ||
+        pal.key.toLowerCase().includes(searchTerm) ||
+        pal.drops.some(drop => toHumanReadable(drop).toLowerCase().includes(searchTerm))
+    );
 
     // Render
     palPedia.forEach((pal, index) => {
@@ -129,16 +140,29 @@ async function renderTodos() {
 
         function addDropItems() {
             const dropsDiv = document.createElement("div");
-            dropsDiv.className = "flex flex-col items-center w-16";
+            dropsDiv.className = "flex flex-col gap-1 w-32 ml-2";
+
             pal.drops.forEach(element => {
+                const row = document.createElement("div");
+                row.className = "flex items-center gap-2";
+
                 const elementImg = document.createElement("img");
                 elementImg.src = getImage(`../public/images/items/${element}.png`);
-                elementImg.className = "h-8 w-auto";
+                elementImg.className = "h-8 w-8 object-contain";
                 elementImg.title = element;
-                dropsDiv.appendChild(elementImg);
-            })
+
+                const label = document.createElement("span");
+                label.className = "text-xs text-gray-200 whitespace-nowrap";
+                label.textContent = toHumanReadable(element);
+
+                row.appendChild(elementImg);
+                row.appendChild(label);
+                dropsDiv.appendChild(row);
+            });
+
             indexer.appendChild(dropsDiv);
         }
+
 
         function addContent() {
             const div = document.createElement("div");
@@ -173,7 +197,7 @@ async function renderTodos() {
             const toggleHTML = `
                 <label class="flex-col justify-around cursor-pointer">
                     <input type="checkbox" value="" class="sr-only peer" ${isCaptured ? 'checked' : ''}>
-                    <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
+                    <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-900 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600 dark:peer-checked:bg-blue-600"></div>
                     <span class="text-sm text-white-900 dark:text-white-300 w-16 inline-block">${isCaptured ? "Captured" : ""}</span>
                 </label>
             `;
@@ -201,13 +225,13 @@ async function renderTodos() {
         }
     });
 
-    removedList.innerHTML = "";
-    activeTodos.forEach(todo => {
-        const li = document.createElement("li");
-        li.className = "border border-gray-200 rounded-md p-2 text-white-500";
-        li.textContent = todo.name;
-        removedList.appendChild(li);
-    });
+    // removedList.innerHTML = "";
+    // activeTodos.forEach(todo => {
+    //     const li = document.createElement("li");
+    //     li.className = "border border-gray-200 rounded-md p-2 text-white-500";
+    //     li.textContent = todo.name;
+    //     removedList.appendChild(li);
+    // });
 }
 
 addButton.addEventListener("click", () => {
