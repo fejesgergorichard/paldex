@@ -32,7 +32,11 @@ async function getPals(limit=300) {
 function getImage(imagePath) {
     return `../${imagePath}`;
 }
-function getImageById(palId) {
+
+function getElementImage(elementType) {
+    return `../public/images/elements/${elementType}.png`;
+}
+function getPaldeckImageById(palId) {
     return `../public/images/paldeck/${palId}.png`;
 }
 
@@ -132,7 +136,7 @@ async function renderTodos() {
             imgDiv.className = "cursor-pointer right";
             const img = document.createElement("img");
             img.className = "h-10 md:h-24";
-            img.src = getImageById(pal.key);
+            img.src = getPaldeckImageById(pal.key);
             img.dataset.key = pal.key;
             img.dataset.palName = pal.name;
             imgDiv.appendChild(img);
@@ -227,7 +231,8 @@ async function renderTodos() {
             elementsDiv.className = "flex justify-around";
             pal.types.forEach(element => {
                 const elementImg = document.createElement("img");
-                elementImg.src = getImage(element.image);
+                elementImg.src = getElementImage(element.name);
+                elementImg.title = element.name;
                 elementImg.className = "h-4 md:h-8";
                 elementsDiv.appendChild(elementImg);
             })
