@@ -113,6 +113,7 @@ async function renderTodos() {
         addNumber();
         addImage();
         addDropItems();
+        addWorkSuitabilities();
         li.appendChild(indexer);
         addContent();
         addDeleteButton();
@@ -140,7 +141,7 @@ async function renderTodos() {
 
         function addDropItems() {
             const dropsDiv = document.createElement("div");
-            dropsDiv.className = "flex flex-col gap-1 w-32 ml-2";
+            dropsDiv.className = "flex flex-col gap-1 w-48 ml-2";
 
             pal.drops.forEach(element => {
                 const row = document.createElement("div");
@@ -161,6 +162,31 @@ async function renderTodos() {
             });
 
             indexer.appendChild(dropsDiv);
+        }
+
+        function addWorkSuitabilities() {
+            const workDiv = document.createElement("div");
+            workDiv.className = "flex flex-col gap-1 w-16 ml-2";
+
+            pal.suitability.forEach(suitability => {
+                const row = document.createElement("div");
+                row.className = "flex items-center gap-2";
+
+                const suitabilityImg = document.createElement("img");
+                suitabilityImg.src = getImage(`../public/images/works/${suitability.type}.png`);
+                suitabilityImg.className = "h-6 w-6 object-contain";
+                suitabilityImg.title = suitability.type;
+
+                const label = document.createElement("span");
+                label.className = "text-xs text-gray-200 whitespace-nowrap";
+                label.textContent = suitability.level;
+
+                row.appendChild(suitabilityImg);
+                row.appendChild(label);
+                workDiv.appendChild(row);
+            });
+
+            indexer.appendChild(workDiv);
         }
 
 
