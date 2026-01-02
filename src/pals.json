@@ -1171,6 +1171,118 @@
     ]
   },
   {
+    "id": 311,
+    "key": "011B",
+    "image": "/public/images/paldeck/011B.png",
+    "name": "Penking Lux",
+    "wiki": "https://palworld.fandom.com/wiki/Penking_Lux",
+    "types": [
+      {
+        "name": "water",
+        "image": "/public/images/elements/water.png"
+      },
+      {
+        "name": "electric",
+        "image": "/public/images/elements/electric.png"
+      }
+    ],
+    "imageWiki": "https://static.wikia.nocookie.net/palworld/images/b/b5/Penking_menu.png/revision/latest?cb=20240122115104",
+    "suitability": [
+      {
+        "type": "watering",
+        "image": "/public/images/works/watering.png",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "image": "/public/images/works/handiwork.png",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "image": "/public/images/works/mining.png",
+        "level": 2
+      },
+      {
+        "type": "generating_electricity",
+        "image": "/public/images/works/cooling.png",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "image": "/public/images/works/transporting.png",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "electric_organ",
+      "penking_plume"
+    ],
+    "aura": {
+      "name": "brave_sailor",
+      "description": "When fighting together, Fire Pals drop more items when defeated."
+    },
+    "description": "Surprisingly, it is unrelated to Pengullet. Ever wanting to be the center of attention, this Pal will strut its stuff for any onlookers.",
+    "skills": [
+      {
+        "level": 1,
+        "name": "aqua_gun",
+        "type": "water",
+        "cooldown": 4,
+        "power": 40,
+        "description": "Hurls a ball of water straight at an enemy."
+      },
+      {
+        "level": 7,
+        "name": "iceberg",
+        "type": "ice",
+        "cooldown": 15,
+        "power": 70,
+        "description": "Summons a sharp ice lance under an enemy."
+      },
+      {
+        "level": 15,
+        "name": "emperor_slide",
+        "type": "ice",
+        "cooldown": 10,
+        "power": 70,
+        "description": "Penking's exclusive skill. Lies on its belly while generating frozen air all around it before sliding at enemies at high speed."
+      },
+      {
+        "level": 22,
+        "name": "cryst_breath",
+        "type": "ice",
+        "cooldown": 22,
+        "power": 90,
+        "description": "Enshrouds an enemy in a frigid blast of air, dealing continuous damage."
+      },
+      {
+        "level": 30,
+        "name": "aqua_burst",
+        "type": "water",
+        "cooldown": 30,
+        "power": 100,
+        "description": "Creates a giant ball of water and hurls it at an enemy."
+      },
+      {
+        "level": 40,
+        "name": "blizzard_spike",
+        "type": "ice",
+        "cooldown": 45,
+        "power": 130,
+        "description": "Creates a giant lump of ice and hurls it at an enemy. It deals damage to those in the surrounding area upon impact."
+      },
+      {
+        "level": 50,
+        "name": "hydro_laser",
+        "type": "water",
+        "cooldown": 55,
+        "power": 150,
+        "description": "Shoots pressurized water at extreme velocities, sweeping over a wide area in front of it."
+      }
+    ]
+  },
+  {
     "id": 12,
     "key": "012",
     "image": "/public/images/paldeck/012.png",
@@ -14396,6 +14508,57 @@
         "description": "Selyne's exclusive skill. Stores energy in the moon on its back, then fires a crescent-shaped beam forward."
       }
     ]
+  },
+  {
+    "id": 314,
+    "key": "114B",
+    "image": "/public/images/paldeck/114B.png",
+    "name": "Croajiro Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Croajiro_Noct",
+    "types": [
+      {
+        "name": "water",
+        "image": "/public/images/elements/water.png"
+      },
+      {
+        "name": "dark",
+        "image": "/public/images/elements/dark.png"
+      }
+    ],
+    "imageWiki": "https://static.wikia.nocookie.net/palworld/images/4/42/Croajiro_menu.png/revision/latest?cb=20240627035133",
+    "suitability": [
+      {
+        "type": "watering",
+        "image": "/public/images/works/watering.png",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "image": "/public/images/works/handiwork.png",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "image": "/public/images/works/gathering.png",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "image": "/public/images/works/transporting.png",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "pal_fluids",
+      "cloth",
+      "venom_gland"
+    ],
+    "aura": {
+      "name": "leap_stance",
+      "description": "When activated, Croajiro swells its abdomen and channels its loyalty to build up energy.\nClimbing on top will propel the player high into the air."
+    },
+    "description": "Those who disgrace the honor of the herd are forced to take their own life. By piercing their inflated vocal sac with a tree branch, they are blown away into the atmosphere and return to the afterlife.",
+    "skills": []
   },
   {
     "id": 114,

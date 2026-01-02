@@ -122,7 +122,7 @@ async function renderTodos() {
 
         function addNumber() {
             const span = document.createElement("span");
-            span.className = "flex w-8 mr-2 left justify-around";
+            span.className = "flex w-8 mr-1 md:mr-2 text-xs md:text-base left justify-around";
             span.innerText = pal.key
             indexer.appendChild(span);
         }
@@ -131,7 +131,7 @@ async function renderTodos() {
             const imgDiv = document.createElement("div");
             imgDiv.className = "cursor-pointer right";
             const img = document.createElement("img");
-            img.className = "h-16 md:h-24";
+            img.className = "h-10 md:h-24";
             img.src = getImageById(pal.key);
             img.dataset.key = pal.key;
             img.dataset.palName = pal.name;
@@ -141,7 +141,7 @@ async function renderTodos() {
 
         function addDropItems() {
             const dropsDiv = document.createElement("div");
-            dropsDiv.className = "flex flex-col gap-1 w-48 ml-2";
+            dropsDiv.className = "flex flex-col gap-1 w-4 md:w-48 ml-2";
 
             pal.drops.forEach(element => {
                 const row = document.createElement("div");
@@ -149,11 +149,11 @@ async function renderTodos() {
 
                 const elementImg = document.createElement("img");
                 elementImg.src = getImage(`../public/images/items/${element}.png`);
-                elementImg.className = "h-8 w-8 object-contain";
+                elementImg.className = "h-4 w-4 md:h-8 md:w-8 object-contain";
                 elementImg.title = element;
 
                 const label = document.createElement("span");
-                label.className = "text-xs text-gray-200 whitespace-nowrap";
+                label.className = "hidden md:inline text-xs text-gray-200 whitespace-nowrap";
                 label.textContent = toHumanReadable(element);
 
                 row.appendChild(elementImg);
@@ -166,12 +166,12 @@ async function renderTodos() {
 
         function addWorkSuitabilities() {
             const workDiv = document.createElement("div");
-            workDiv.className = "flex flex-col gap-1 w-32 ml-2"; // Increased width for 2 items
+            workDiv.className = "hidden md:inline flex flex-col gap-1 w-8 md:w-32 ml-2"; // Increased width for 2 items
 
             // Group suitabilities in pairs
             for (let i = 0; i < pal.suitability.length; i += 2) {
                 const rowContainer = document.createElement("div");
-                rowContainer.className = "flex items-center gap-2";
+                rowContainer.className = "flex items-center gap-1";
 
                 // Add first item in the pair
                 const item1 = createSuitabilityItem(pal.suitability[i]);
@@ -195,7 +195,7 @@ async function renderTodos() {
 
             const suitabilityImg = document.createElement("img");
             suitabilityImg.src = getImage(`../public/images/works/${suitability.type}.png`);
-            suitabilityImg.className = "h-6 w-6 object-contain";
+            suitabilityImg.className = "h-3 w-3 md:h-6 md:w-6 object-contain";
             suitabilityImg.title = suitability.type;
 
             const label = document.createElement("span");
@@ -213,7 +213,7 @@ async function renderTodos() {
             const div = document.createElement("div");
             div.className = "flex flex-col"
             const textDiv = document.createElement("div");
-            textDiv.className = "flex justify-center text-center text-white-800";
+            textDiv.className = "flex justify-center text-xs md:text-base text-center text-white-800";
             const a = document.createElement("a");
             a.href = pal.wiki;
             a.target = '_blank';
@@ -228,7 +228,7 @@ async function renderTodos() {
             pal.types.forEach(element => {
                 const elementImg = document.createElement("img");
                 elementImg.src = getImage(element.image);
-                elementImg.className = "h-8";
+                elementImg.className = "h-4 md:h-8";
                 elementsDiv.appendChild(elementImg);
             })
             div.appendChild(elementsDiv);
