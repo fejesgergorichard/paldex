@@ -130,12 +130,13 @@ async function renderTodos() {
 
         function addImage() {
             const imgDiv = document.createElement("div");
-            imgDiv.className = "cursor-pointer right";
+            imgDiv.className = "cursor-pointer right hover:saturate-50";
             const img = document.createElement("img");
             img.className = "h-10 md:h-24";
             img.src = getPaldeckImageById(pal.key);
             img.dataset.key = pal.key;
             img.dataset.palName = pal.name;
+            img.title = "Show habitat map"
             imgDiv.appendChild(img);
             indexer.appendChild(imgDiv);
         }
@@ -214,7 +215,7 @@ async function renderTodos() {
             const div = document.createElement("div");
             div.className = "flex flex-col"
             const textDiv = document.createElement("div");
-            textDiv.className = "flex justify-center text-xs md:text-base text-center text-white-800";
+            textDiv.className = "flex justify-center text-xs md:text-base text-center text-white-800 hover:text-blue-400";
             const a = document.createElement("a");
             a.href = pal.wiki;
             a.target = '_blank';
