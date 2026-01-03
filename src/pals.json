@@ -4859,7 +4859,16 @@
     "types": [
       "ice"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "cooling",
+        "level": 2
+      }
+    ],
     "drops": [
       "ice_organ"
     ]
@@ -4872,7 +4881,20 @@
     "types": [
       "grass"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 3
+      }
+    ],
     "drops": [
       "bone"
     ]
@@ -4886,7 +4908,20 @@
       "grass",
       "ground"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 4
+      },
+      {
+        "type": "gathering",
+        "level": 4
+      },
+      {
+        "type": "mining",
+        "level": 2
+      }
+    ],
     "drops": [
       "leather",
       "red_berries",
@@ -4903,7 +4938,20 @@
       "ice",
       "water"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 1
+      },
+      {
+        "type": "cooling",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
     "drops": [
       "pal_fluids"
     ]
@@ -4917,7 +4965,16 @@
       "ice",
       "water"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "cooling",
+        "level": 3
+      }
+    ],
     "drops": [
       "ice_organ"
     ]
@@ -4930,7 +4987,20 @@
     "types": [
       "water"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
     "drops": [
       "pal_fluids",
       "bone"
@@ -4945,7 +5015,20 @@
       "water",
       "ground"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
     "drops": [
       "pal_fluids",
       "bone"
@@ -4960,7 +5043,24 @@
       "water",
       "dark"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
     "drops": [
       "pal_fluids",
       "jellroy_bell_flesh"
@@ -4974,7 +5074,20 @@
     "types": [
       "water"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
     "drops": [
       "pal_fluids",
       "jelliette_bell_flesh"
@@ -4989,7 +5102,20 @@
       "water",
       "dark"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
     "drops": [
       "pal_fluids",
       "gloopie_tentacle"
@@ -5003,7 +5129,16 @@
     "types": [
       "water"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
     "drops": [
       "leather",
       "small_pal_soul",
@@ -5019,7 +5154,20 @@
       "water",
       "fire"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      },
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
     "drops": [
       "leather",
       "small_pal_soul",
@@ -5035,7 +5183,16 @@
       "water",
       "dark"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 4
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
     "drops": [
       "bone",
       "venom_gland"
@@ -5050,7 +5207,20 @@
       "water",
       "fire"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 3
+      },
+      {
+        "type": "watering",
+        "level": 4
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
     "drops": [
       "bone",
       "flame_organ"
@@ -5065,7 +5235,16 @@
       "water",
       "ice"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 3
+      },
+      {
+        "type": "cooling",
+        "level": 4
+      }
+    ],
     "drops": [
       "pal_fluids",
       "coralum_ore",
@@ -5082,7 +5261,16 @@
       "fire",
       "ice"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 3
+      },
+      {
+        "type": "cooling",
+        "level": 4
+      }
+    ],
     "drops": [
       "pal_fluids",
       "coralum_ore",

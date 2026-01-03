@@ -51,8 +51,130 @@
                     </div>
 
                     <div>
-                        <label class="block text-white text-sm font-bold mb-2">Suitability</label>
-                        <div id="suitabilityEditor" class="border border-gray-800 rounded-md p-3 bg-gray-700"></div>
+                        <label class="block text-white text-sm font-bold mb-2">Work Suitability</label>
+                        <div id="suitabilityEditor" class="border border-gray-800 rounded-md p-4 bg-gray-700">
+                            <div class="grid grid-cols-2 gap-1">
+                                <!-- Kindling -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="kindling">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/kindling.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Kindling">
+                                        <span class="text-white text-sm">Kindling</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                                
+                                <!-- Watering -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="watering">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/watering.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Watering">
+                                        <span class="text-white text-sm">Watering</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                                
+                                <!-- Planting -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="planting">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/planting.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Planting">
+                                        <span class="text-white text-sm">Planting</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                                
+                                <!-- Generating Electricity -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="generating_electricity">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/generating_electricity.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Generating Electricity">
+                                        <span class="text-white text-sm">Generating Electricity</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                                
+                                <!-- Handiwork -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="handiwork">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/handiwork.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Handiwork">
+                                        <span class="text-white text-sm">Handiwork</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                                
+                                <!-- Gathering -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="gathering">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/gathering.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Gathering">
+                                        <span class="text-white text-sm">Gathering</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                                
+                                <!-- Lumbering -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="lumbering">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/lumbering.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Lumbering">
+                                        <span class="text-white text-sm">Lumbering</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                                
+                                <!-- Mining -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="mining">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/mining.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Mining">
+                                        <span class="text-white text-sm">Mining</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                                
+                                <!-- Medicine Production -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="medicine_production">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/medicine_production.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Medicine Production">
+                                        <span class="text-white text-sm">Medicine Production</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                                
+                                <!-- Cooling -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="cooling">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/cooling.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Cooling">
+                                        <span class="text-white text-sm">Cooling</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                                
+                                <!-- Transporting -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="transporting">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/transporting.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Transporting">
+                                        <span class="text-white text-sm">Transporting</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                                
+                                <!-- Farming -->
+                                <div class="suitability-item bg-gray-800 p-3 rounded-lg flex items-center justify-between" data-type="farming">
+                                    <div class="flex items-center gap-1">
+                                        <img src="../public/images/works/farming.png" class="h-8 w-8 opacity-30 suitability-icon" alt="Farming">
+                                        <span class="text-white text-sm">Farming</span>
+                                    </div>
+                                    <input type="number" min="0" max="4" value="0" 
+                                           class="w-16 border border-gray-600 rounded p-1 bg-gray-900 text-white text-center suitability-level focus:outline-none focus:ring-2 focus:ring-blue-400">
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div class="flex gap-3 justify-end pt-4 border-t border-gray-700">
@@ -359,7 +481,7 @@
                     extractAutocompleteData();
                     renderPals();
                     updateStats();
-                    console.log(`Loaded ${palsData.length} pals successfully!`);
+                    alert(`Loaded ${palsData.length} pals successfully!`);
                 } catch (error) {
                     alert('Error parsing JSON: ' + error.message);
                 }
@@ -483,70 +605,45 @@
         }
 
         function renderSuitabilityEditor(suitabilities) {
-            const editor = document.getElementById('suitabilityEditor');
-            const suitabilityList = Array.from(allSuitabilities).sort();
-            const datalistHtml = suitabilityList.length > 0 
-                ? `<datalist id="suitability-datalist">${suitabilityList.map(item => `<option value="${item}">`).join('')}</datalist>`
-                : '';
+            // Reset all inputs to 0
+            const allInputs = document.querySelectorAll('.suitability-item input');
+            allInputs.forEach(input => {
+                input.value = '0';
+                const icon = input.closest('.suitability-item').querySelector('.suitability-icon');
+                icon.classList.add('opacity-30');
+                icon.classList.remove('opacity-100');
+            });
             
-            editor.innerHTML = suitabilities.map((suit, index) => `
-                <div class="flex gap-2 mb-2 suitability-item-row">
-                    <input type="text" placeholder="Type" value="${suit.type || ''}" data-index="${index}" data-field="type" 
-                           list="suitability-datalist" class="flex-1 border border-gray-800 rounded p-2 bg-gray-600 text-white">
-                    <input type="number" placeholder="Level" value="${suit.level || ''}" data-index="${index}" data-field="level"
-                           class="w-24 border border-gray-800 rounded p-2 bg-gray-600 text-white">
-                    <button type="button" onclick="event.stopPropagation(); removeSuitability(${index})" 
-                            class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">✕</button>
-                </div>
-            `).join('') + datalistHtml + `
-                <button type="button" onclick="event.stopPropagation(); addSuitability()" 
-                        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 mt-2 add-suitability-button">+ Add Suitability</button>
-            `;
-        }
-
-        function addSuitability() {
-            const editor = document.getElementById('suitabilityEditor');
-            const addButton = editor.querySelector('.add-suitability-button');
-            const items = editor.querySelectorAll('.suitability-item-row');
-            const newIndex = items.length;
-            
-            const newItem = document.createElement('div');
-            newItem.className = 'flex gap-2 mb-2 suitability-item-row';
-            newItem.innerHTML = `
-                <input type="text" placeholder="Type" data-index="${newIndex}" data-field="type" 
-                       list="suitability-datalist" class="flex-1 border border-gray-800 rounded p-2 bg-gray-600 text-white">
-                <input type="number" placeholder="Level" data-index="${newIndex}" data-field="level"
-                       class="w-24 border border-gray-800 rounded p-2 bg-gray-600 text-white">
-                <button type="button" onclick="event.stopPropagation(); removeSuitability(${newIndex})" 
-                        class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">✕</button>
-            `;
-            
-            if (addButton) {
-                editor.insertBefore(newItem, addButton);
-            } else {
-                editor.appendChild(newItem);
-            }
-        }
-
-        function removeSuitability(index) {
-            const editor = document.getElementById('suitabilityEditor');
-            const items = editor.querySelectorAll('.suitability-item-row');
-            if (items[index]) {
-                items[index].remove();
-            }
+            // Set values from data
+            suitabilities.forEach(suit => {
+                const item = document.querySelector(`.suitability-item[data-type="${suit.type}"]`);
+                if (item) {
+                    const input = item.querySelector('input');
+                    const icon = item.querySelector('.suitability-icon');
+                    input.value = suit.level || 0;
+                    
+                    if (suit.level >= 1) {
+                        icon.classList.remove('opacity-30');
+                        icon.classList.add('opacity-100');
+                    }
+                }
+            });
         }
 
         function getSuitabilityValues() {
-            const editor = document.getElementById('suitabilityEditor');
-            const items = editor.querySelectorAll('.suitability-item-row');
-            return Array.from(items).map(item => {
-                const typeInput = item.querySelector('[data-field="type"]');
-                const levelInput = item.querySelector('[data-field="level"]');
-                return {
-                    type: typeInput.value,
-                    level: parseInt(levelInput.value) || 1
-                };
-            }).filter(s => s.type);
+            const items = document.querySelectorAll('.suitability-item');
+            const suitabilities = [];
+            
+            items.forEach(item => {
+                const type = item.dataset.type;
+                const level = parseInt(item.querySelector('input').value) || 0;
+                
+                if (level >= 1) {
+                    suitabilities.push({ type, level });
+                }
+            });
+            
+            return suitabilities;
         }
 
         function closeModal() {
@@ -628,6 +725,22 @@
         document.getElementById('editModal').addEventListener('click', (e) => {
             if (e.target.id === 'editModal') {
                 closeModal();
+            }
+        });
+
+        // Handle suitability level changes
+        document.getElementById('suitabilityEditor').addEventListener('input', (e) => {
+            if (e.target.classList.contains('suitability-level')) {
+                const level = parseInt(e.target.value) || 0;
+                const icon = e.target.closest('.suitability-item').querySelector('.suitability-icon');
+                
+                if (level >= 1) {
+                    icon.classList.remove('opacity-30');
+                    icon.classList.add('opacity-100');
+                } else {
+                    icon.classList.add('opacity-30');
+                    icon.classList.remove('opacity-100');
+                }
             }
         });
     </script>
