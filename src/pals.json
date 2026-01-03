@@ -5068,7 +5068,12 @@
     "types": [
       "water"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 4
+      }
+    ],
     "drops": [
       "coralum_ore",
       "pure_quartz",

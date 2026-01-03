@@ -432,46 +432,53 @@
                 : '';
             
             editor.innerHTML = items.map((item, index) => `
-                <div class="flex gap-2 mb-2">
+                <div class="flex gap-2 mb-2 array-item-row">
                     <input type="text" value="${item}" data-index="${index}" list="${datalistId}"
                            class="flex-1 border border-gray-800 rounded p-2 bg-gray-600 text-white">
-                    <button type="button" onclick="removeArrayItem('${editorId}', ${index})" 
+                    <button type="button" onclick="event.stopPropagation(); removeArrayItem('${editorId}', ${index})" 
                             class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">✕</button>
                 </div>
             `).join('') + datalistHtml + `
-                <button type="button" onclick="addArrayItem('${editorId}', '${placeholder}')" 
-                        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 mt-2">+ Add ${placeholder}</button>
+                <button type="button" onclick="event.stopPropagation(); addArrayItem('${editorId}', '${placeholder}')" 
+                        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 mt-2 add-item-button">+ Add ${placeholder}</button>
             `;
         }
 
         function addArrayItem(editorId, placeholder) {
             const editor = document.getElementById(editorId);
-            const inputs = editor.querySelectorAll('.flex.gap-2');
+            const addButton = editor.querySelector('.add-item-button');
+            const inputs = editor.querySelectorAll('.array-item-row');
             const newIndex = inputs.length;
             
             const datalistId = `${editorId}-datalist`;
             
             const newItem = document.createElement('div');
-            newItem.className = 'flex gap-2 mb-2';
+            newItem.className = 'flex gap-2 mb-2 array-item-row';
             newItem.innerHTML = `
                 <input type="text" placeholder="Enter ${placeholder}" data-index="${newIndex}" list="${datalistId}"
                        class="flex-1 border border-gray-800 rounded p-2 bg-gray-600 text-white">
-                <button type="button" onclick="removeArrayItem('${editorId}', ${newIndex})" 
+                <button type="button" onclick="event.stopPropagation(); removeArrayItem('${editorId}', ${newIndex})" 
                         class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">✕</button>
             `;
             
-            editor.insertBefore(newItem, editor.querySelector('button[type="button"]'));
+            if (addButton) {
+                editor.insertBefore(newItem, addButton);
+            } else {
+                editor.appendChild(newItem);
+            }
         }
 
         function removeArrayItem(editorId, index) {
             const editor = document.getElementById(editorId);
-            const items = editor.querySelectorAll('.flex.gap-2');
-            items[index].remove();
+            const items = editor.querySelectorAll('.array-item-row');
+            if (items[index]) {
+                items[index].remove();
+            }
         }
 
         function getArrayEditorValues(editorId) {
             const editor = document.getElementById(editorId);
-            const inputs = editor.querySelectorAll('.flex.gap-2 input');
+            const inputs = editor.querySelectorAll('.array-item-row input');
             return Array.from(inputs).map(input => input.value).filter(v => v.trim());
         }
 
@@ -483,48 +490,55 @@
                 : '';
             
             editor.innerHTML = suitabilities.map((suit, index) => `
-                <div class="flex gap-2 mb-2">
+                <div class="flex gap-2 mb-2 suitability-item-row">
                     <input type="text" placeholder="Type" value="${suit.type || ''}" data-index="${index}" data-field="type" 
                            list="suitability-datalist" class="flex-1 border border-gray-800 rounded p-2 bg-gray-600 text-white">
                     <input type="number" placeholder="Level" value="${suit.level || ''}" data-index="${index}" data-field="level"
                            class="w-24 border border-gray-800 rounded p-2 bg-gray-600 text-white">
-                    <button type="button" onclick="removeSuitability(${index})" 
+                    <button type="button" onclick="event.stopPropagation(); removeSuitability(${index})" 
                             class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">✕</button>
                 </div>
             `).join('') + datalistHtml + `
-                <button type="button" onclick="addSuitability()" 
-                        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 mt-2">+ Add Suitability</button>
+                <button type="button" onclick="event.stopPropagation(); addSuitability()" 
+                        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 mt-2 add-suitability-button">+ Add Suitability</button>
             `;
         }
 
         function addSuitability() {
             const editor = document.getElementById('suitabilityEditor');
-            const items = editor.querySelectorAll('.flex.gap-2');
+            const addButton = editor.querySelector('.add-suitability-button');
+            const items = editor.querySelectorAll('.suitability-item-row');
             const newIndex = items.length;
             
             const newItem = document.createElement('div');
-            newItem.className = 'flex gap-2 mb-2';
+            newItem.className = 'flex gap-2 mb-2 suitability-item-row';
             newItem.innerHTML = `
                 <input type="text" placeholder="Type" data-index="${newIndex}" data-field="type" 
                        list="suitability-datalist" class="flex-1 border border-gray-800 rounded p-2 bg-gray-600 text-white">
                 <input type="number" placeholder="Level" data-index="${newIndex}" data-field="level"
                        class="w-24 border border-gray-800 rounded p-2 bg-gray-600 text-white">
-                <button type="button" onclick="removeSuitability(${newIndex})" 
+                <button type="button" onclick="event.stopPropagation(); removeSuitability(${newIndex})" 
                         class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">✕</button>
             `;
             
-            editor.insertBefore(newItem, editor.querySelector('button[type="button"]'));
+            if (addButton) {
+                editor.insertBefore(newItem, addButton);
+            } else {
+                editor.appendChild(newItem);
+            }
         }
 
         function removeSuitability(index) {
             const editor = document.getElementById('suitabilityEditor');
-            const items = editor.querySelectorAll('.flex.gap-2');
-            items[index].remove();
+            const items = editor.querySelectorAll('.suitability-item-row');
+            if (items[index]) {
+                items[index].remove();
+            }
         }
 
         function getSuitabilityValues() {
             const editor = document.getElementById('suitabilityEditor');
-            const items = editor.querySelectorAll('.flex.gap-2');
+            const items = editor.querySelectorAll('.suitability-item-row');
             return Array.from(items).map(item => {
                 const typeInput = item.querySelector('[data-field="type"]');
                 const levelInput = item.querySelector('[data-field="level"]');
@@ -557,20 +571,11 @@
             const palData = {
                 id: parseInt(document.getElementById('palId').value),
                 key: document.getElementById('palKey').value,
-                image: `/public/images/paldeck/${document.getElementById('palKey').value}.png`,
                 name: document.getElementById('palName').value,
                 wiki: document.getElementById('palWiki').value,
-                types: getArrayEditorValues('typesEditor').map(t => ({ name: t, image: `/public/images/elements/${t}.png` })),
-                imageWiki: "",
-                suitability: getSuitabilityValues().map(s => ({ 
-                    type: s.type, 
-                    image: `/public/images/works/${s.type}.png`,
-                    level: s.level 
-                })),
-                drops: getArrayEditorValues('dropsEditor'),
-                aura: {},
-                description: "",
-                skills: []
+                types: getArrayEditorValues('typesEditor'),
+                suitability: getSuitabilityValues(),
+                drops: getArrayEditorValues('dropsEditor')
             };
             
             if (currentEditingIndex === -1) {
