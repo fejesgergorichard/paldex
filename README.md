@@ -35,7 +35,8 @@
 
 This is a fork of the Palworld API project. Uses the API and a JavaScript frontend where you can track your captured ones (for xp boost) and check their spawn locations.
 
-![image](https://github.com/user-attachments/assets/3c034027-25eb-4dcd-b0f4-8c124ca27400)
+<img width="1346" height="1015" alt="image" src="https://github.com/user-attachments/assets/cfaf4256-e0f1-46d1-af15-7b051563e650" />
+
 
 <details>
   <summary>Example API response</summary>
