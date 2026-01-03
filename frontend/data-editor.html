@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palworld Data Editor</title>
+    <link rel="icon" type="image/x-icon" href="../public/images/paldeck/085.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="h-full bg-gray-900 md:p-6">
+    
+    <!-- Edit Modal -->
+    <div id="editModal" class="z-50 fixed inset-0 bg-black bg-opacity-50 hidden">
+        <div class="flex justify-center items-start p-4 min-h-screen overflow-y-auto">
+            <div class="bg-gray-600 p-6 rounded-lg shadow-lg max-w-4xl w-full my-8">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 id="modalTitle" class="text-2xl font-bold text-white">Edit Pal</h2>
+                    <button onclick="closeModal()" class="text-white hover:text-red-500 text-3xl">&times;</button>
+                </div>
+
+                <form id="palForm" class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-white text-sm font-bold mb-2">ID</label>
+                            <input type="number" id="palId" required class="w-full border border-gray-800 rounded-md p-2 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        </div>
+                        <div>
+                            <label class="block text-white text-sm font-bold mb-2">Key</label>
+                            <input type="text" id="palKey" required class="w-full border border-gray-800 rounded-md p-2 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-white text-sm font-bold mb-2">Name</label>
+                        <input type="text" id="palName" required class="w-full border border-gray-800 rounded-md p-2 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    </div>
+
+                    <div>
+                        <label class="block text-white text-sm font-bold mb-2">Wiki URL</label>
+                        <input type="url" id="palWiki" class="w-full border border-gray-800 rounded-md p-2 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    </div>
+
+                    <div>
+                        <label class="block text-white text-sm font-bold mb-2">Types</label>
+                        <div id="typesEditor" class="border border-gray-800 rounded-md p-3 bg-gray-700"></div>
+                    </div>
+
+                    <div>
+                        <label class="block text-white text-sm font-bold mb-2">Drops</label>
+                        <div id="dropsEditor" class="border border-gray-800 rounded-md p-3 bg-gray-700"></div>
+                    </div>
+
+                    <div>
+                        <label class="block text-white text-sm font-bold mb-2">Suitability</label>
+                        <div id="suitabilityEditor" class="border border-gray-800 rounded-md p-3 bg-gray-700"></div>
+                    </div>
+
+                    <div class="flex gap-3 justify-end pt-4 border-t border-gray-700">
+                        <button type="button" onclick="deletePal()" class="px-6 py-2 bg-red-600 text-white rounded hover:bg-red-700">Delete Pal</button>
+                        <button type="button" onclick="closeModal()" class="px-6 py-2 bg-gray-500 text-white rounded hover:bg-gray-600">Cancel</button>
+                        <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="h-full flex flex-col md:flex-row gap-4 justify-center">
+        <div class="flex w-full flex-col md:w-2/3 bg-gray-600">
+            <!-- Controls -->
+            <div class="border-b border-slate-900 p-6 space-y-2 sticky top-0 z-10 bg-gray-600">
+                <button onclick="toggleAccordion()" class="w-full flex justify-between items-center px-5 text-slate-800">
+                    <h1 class="font-bold text-white">Controls</h1>
+                    <span id="accordion-icon" class="text-white transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="accordion-content" class="max-h-0 overflow-hidden transition-all p-1 duration-300 ease-in-out">
+                    <div class="w-full bg-gray-600 rounded-lg shadow-md p-4 space-y-4">
+                        <!-- File Controls -->
+                        <div class="flex gap-3 flex-wrap">
+                            <button onclick="addNewPal()" class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700">+ New Pal</button>
+                            <label for="fileInput" class="px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700 cursor-pointer">📁 Load JSON</label>
+                            <input type="file" id="fileInput" accept=".json" onchange="loadJSON(event)" class="hidden">
+                            <button onclick="downloadJSON()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">💾 Download JSON</button>
+                        </div>
+
+                        <!-- Search Field -->
+                        <input id="searchInput" type="text" placeholder="Search pals..." oninput="filterPals()"
+                            class="w-full border border-gray-800 rounded-md p-2 bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400" />
+
+                        <!-- Element filters -->
+                        <div id="element-filters" class="flex flex-wrap gap-2">
+                            <div class="element-wrapper cursor-pointer">
+                                <input type="checkbox" class="hidden" name="element" value="neutral">
+                                <img src="../public/images/elements/neutral.png" alt="Neutral"
+                                    class="transition-opacity duration-300 element-icon opacity-25 h-10 w-10">
+                            </div>
+                            <div class="element-wrapper cursor-pointer">
+                                <input type="checkbox" class="hidden" name="element" value="grass">
+                                <img src="../public/images/elements/grass.png" alt="Grass"
+                                    class="transition-opacity duration-300 element-icon opacity-25 h-10 w-10">
+                            </div>
+                            <div class="element-wrapper cursor-pointer">
+                                <input type="checkbox" class="hidden" name="element" value="fire">
+                                <img src="../public/images/elements/fire.png" alt="Fire"
+                                    class="transition-opacity duration-300 element-icon opacity-25 h-10 w-10">
+                            </div>
+                            <div class="element-wrapper cursor-pointer">
+                                <input type="checkbox" class="hidden" name="element" value="water">
+                                <img src="../public/images/elements/water.png" alt="Water"
+                                    class="transition-opacity duration-300 element-icon opacity-25 h-10 w-10">
+                            </div>
+                            <div class="element-wrapper cursor-pointer">
+                                <input type="checkbox" class="hidden" name="element" value="electric">
+                                <img src="../public/images/elements/electric.png" alt="Electric"
+                                    class="transition-opacity duration-300 element-icon opacity-25 h-10 w-10">
+                            </div>
+                            <div class="element-wrapper cursor-pointer">
+                                <input type="checkbox" class="hidden" name="element" value="ice">
+                                <img src="../public/images/elements/ice.png" alt="Ice"
+                                    class="transition-opacity duration-300 element-icon opacity-25 h-10 w-10">
+                            </div>
+                            <div class="element-wrapper cursor-pointer">
+                                <input type="checkbox" class="hidden" name="element" value="ground">
+                                <img src="../public/images/elements/ground.png" alt="Ground"
+                                    class="transition-opacity duration-300 element-icon opacity-25 h-10 w-10">
+                            </div>
+                            <div class="element-wrapper cursor-pointer">
+                                <input type="checkbox" class="hidden" name="element" value="dark">
+                                <img src="../public/images/elements/dark.png" alt="Dark"
+                                    class="transition-opacity duration-300 element-icon opacity-25 h-10 w-10">
+                            </div>
+                            <div class="element-wrapper cursor-pointer">
+                                <input type="checkbox" class="hidden" name="element" value="dragon">
+                                <img src="../public/images/elements/dragon.png" alt="Dragon"
+                                    class="transition-opacity duration-300 element-icon opacity-25 h-10 w-10">
+                            </div>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="grid grid-cols-3 gap-4 text-center">
+                            <div class="bg-gray-700 p-3 rounded">
+                                <div id="totalPals" class="text-2xl font-bold text-blue-400">0</div>
+                                <div class="text-xs text-gray-300">Total Pals</div>
+                            </div>
+                            <div class="bg-gray-700 p-3 rounded">
+                                <div id="totalTypes" class="text-2xl font-bold text-green-400">0</div>
+                                <div class="text-xs text-gray-300">Types</div>
+                            </div>
+                            <div class="bg-gray-700 p-3 rounded">
+                                <div id="totalDrops" class="text-2xl font-bold text-yellow-400">0</div>
+                                <div class="text-xs text-gray-300">Drops</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pals List -->
+            <div class="space-y-2 rounded-lg p-4">
+                <ul id="palList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let palsData = [];
+        let currentEditingIndex = -1;
+        let searchTerm = '';
+        
+        // Autocomplete data
+        let allTypes = new Set();
+        let allDrops = new Set();
+        let allSuitabilities = new Set();
+
+        // Initialize
+        updateStats();
+        toggleAccordion(); // Open by default
+        
+        function extractAutocompleteData() {
+            allTypes.clear();
+            allDrops.clear();
+            allSuitabilities.clear();
+            
+            palsData.forEach(pal => {
+                if (Array.isArray(pal.types)) {
+                    pal.types.forEach(t => {
+                        const typeName = typeof t === 'string' ? t : t.name;
+                        if (typeName) allTypes.add(typeName);
+                    });
+                }
+                
+                if (Array.isArray(pal.drops)) {
+                    pal.drops.forEach(d => allDrops.add(d));
+                }
+                
+                if (Array.isArray(pal.suitability)) {
+                    pal.suitability.forEach(s => {
+                        if (s.type) allSuitabilities.add(s.type);
+                    });
+                }
+            });
+        }
+
+        function getImage(imagePath) {
+            return `../${imagePath}`;
+        }
+
+        function getElementImage(elementType) {
+            return `../public/images/elements/${elementType}.png`;
+        }
+
+        function getPaldeckImageById(palId) {
+            return `../public/images/paldeck/${palId}.png`;
+        }
+
+        function toHumanReadable(str) {
+            return str
+                .split("_")
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" ");
+        }
+
+        function renderPals() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const selectedElements = Array.from(document.querySelectorAll('input[name="element"]:checked'))
+                .map(checkbox => checkbox.value.toLowerCase());
+            
+            const palList = document.getElementById('palList');
+            
+            let filtered = palsData.filter(pal => {
+                // Element filter
+                if (selectedElements.length > 0) {
+                    const palTypes = Array.isArray(pal.types) 
+                        ? pal.types.map(t => typeof t === 'string' ? t : t.name).map(n => n.toLowerCase())
+                        : [];
+                    if (!palTypes.some(type => selectedElements.includes(type))) return false;
+                }
+                
+                // Search filter
+                if (searchTerm) {
+                    const nameMatch = pal.name.toLowerCase().includes(searchTerm);
+                    const keyMatch = pal.key.toLowerCase().includes(searchTerm);
+                    const dropMatch = Array.isArray(pal.drops) && pal.drops.some(drop => 
+                        toHumanReadable(drop).toLowerCase().includes(searchTerm)
+                    );
+                    if (!nameMatch && !keyMatch && !dropMatch) return false;
+                }
+                
+                return true;
+            });
+
+            // Sort by key
+            filtered.sort((a, b) => a.key.localeCompare(b.key));
+
+            palList.innerHTML = filtered.map((pal, index) => {
+                const actualIndex = palsData.indexOf(pal);
+                const types = Array.isArray(pal.types) 
+                    ? pal.types.map(t => typeof t === 'string' ? t : t.name)
+                    : [];
+                const drops = Array.isArray(pal.drops) ? pal.drops : [];
+                const suitability = Array.isArray(pal.suitability) ? pal.suitability : [];
+                
+                return `
+                    <li class="bg-gray-700 text-white flex items-center justify-between border border-gray-200 rounded-md p-2 gap-4 cursor-pointer hover:bg-gray-600 transition-colors" onclick="editPal(${actualIndex})">
+                        <div class="flex items-center gap-2 shrink-0">
+                            <span class="w-12 text-xs md:text-base">${pal.key}</span>
+                            <img src="${getPaldeckImageById(pal.key)}" class="h-10 md:h-24" alt="${pal.name}">
+                            
+                            <!-- Drops -->
+                            <div class="flex flex-col gap-1 w-4 md:w-48 ml-2">
+                                ${drops.map(drop => `
+                                    <div class="flex items-center gap-2">
+                                        <img src="${getImage(`public/images/items/${drop}.png`)}" 
+                                             class="h-4 w-4 md:h-8 md:w-8 object-contain" 
+                                             title="${drop}">
+                                        <span class="hidden md:inline text-xs text-gray-200">${toHumanReadable(drop)}</span>
+                                    </div>
+                                `).join('')}
+                            </div>
+                            
+                            <!-- Suitability -->
+                            <div class="hidden md:flex flex-col gap-1 w-32 ml-2">
+                                ${suitability.map((suit, i) => 
+                                    i % 2 === 0 ? `
+                                        <div class="flex items-center gap-1">
+                                            <div class="flex items-center gap-1">
+                                                <img src="${getImage(`public/images/works/${suit.type}.png`)}" 
+                                                     class="h-6 w-6" title="${suit.type}">
+                                                <span class="text-xs">${suit.level}</span>
+                                            </div>
+                                            ${suitability[i + 1] ? `
+                                                <div class="flex items-center gap-1">
+                                                    <img src="${getImage(`public/images/works/${suitability[i + 1].type}.png`)}" 
+                                                         class="h-6 w-6" title="${suitability[i + 1].type}">
+                                                    <span class="text-xs">${suitability[i + 1].level}</span>
+                                                </div>
+                                            ` : ''}
+                                        </div>
+                                    ` : ''
+                                ).join('')}
+                            </div>
+                        </div>
+                        
+                        <div class="flex flex-col items-center">
+                            <a href="${pal.wiki}" target="_blank" onclick="event.stopPropagation()" 
+                               class="text-xs md:text-base text-center hover:text-blue-400">${pal.name}</a>
+                            <div class="flex gap-1">
+                                ${types.map(type => `
+                                    <img src="${getElementImage(type)}" class="h-4 md:h-8" title="${type}">
+                                `).join('')}
+                            </div>
+                        </div>
+                        
+                        <div class="text-xs text-gray-400 shrink-0">ID: ${pal.id}</div>
+                    </li>
+                `;
+            }).join('');
+        }
+
+        function updateStats() {
+            document.getElementById('totalPals').textContent = palsData.length;
+            
+            const types = new Set();
+            const drops = new Set();
+            
+            palsData.forEach(pal => {
+                if (Array.isArray(pal.types)) {
+                    pal.types.forEach(t => {
+                        const typeName = typeof t === 'string' ? t : t.name;
+                        if (typeName) types.add(typeName);
+                    });
+                }
+                if (Array.isArray(pal.drops)) {
+                    pal.drops.forEach(d => drops.add(d));
+                }
+            });
+            
+            document.getElementById('totalTypes').textContent = types.size;
+            document.getElementById('totalDrops').textContent = drops.size;
+        }
+
+        function filterPals() {
+            renderPals();
+        }
+
+        function loadJSON(event) {
+            const file = event.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    palsData = Array.isArray(data) ? data : [data];
+                    extractAutocompleteData();
+                    renderPals();
+                    updateStats();
+                    alert(`Loaded ${palsData.length} pals successfully!`);
+                } catch (error) {
+                    alert('Error parsing JSON: ' + error.message);
+                }
+            };
+            reader.readAsText(file);
+        }
+
+        function downloadJSON() {
+            const dataStr = JSON.stringify(palsData, null, 2);
+            const blob = new Blob([dataStr], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'palworld-data.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function addNewPal() {
+            currentEditingIndex = -1;
+            document.getElementById('modalTitle').textContent = 'Add New Pal';
+            
+            document.getElementById('palId').value = palsData.length > 0 ? Math.max(...palsData.map(p => p.id)) + 1 : 1;
+            document.getElementById('palKey').value = '';
+            document.getElementById('palName').value = '';
+            document.getElementById('palWiki').value = '';
+            
+            renderArrayEditor('typesEditor', [], 'type');
+            renderArrayEditor('dropsEditor', [], 'drop');
+            renderSuitabilityEditor([]);
+            
+            document.getElementById('editModal').classList.remove('hidden');
+        }
+
+        function editPal(index) {
+            currentEditingIndex = index;
+            const pal = palsData[index];
+            
+            document.getElementById('modalTitle').textContent = 'Edit Pal';
+            document.getElementById('palId').value = pal.id || '';
+            document.getElementById('palKey').value = pal.key || '';
+            document.getElementById('palName').value = pal.name || '';
+            document.getElementById('palWiki').value = pal.wiki || '';
+            
+            let types = [];
+            if (Array.isArray(pal.types)) {
+                types = pal.types.map(t => typeof t === 'string' ? t : t.name);
+            }
+            renderArrayEditor('typesEditor', types, 'type');
+            
+            renderArrayEditor('dropsEditor', pal.drops || [], 'drop');
+            renderSuitabilityEditor(pal.suitability || []);
+            
+            document.getElementById('editModal').classList.remove('hidden');
+        }
+
+        function renderArrayEditor(editorId, items, placeholder) {
+            const editor = document.getElementById(editorId);
+            
+            let autocompleteList = [];
+            if (editorId === 'typesEditor') {
+                autocompleteList = Array.from(allTypes).sort();
+            } else if (editorId === 'dropsEditor') {
+                autocompleteList = Array.from(allDrops).sort();
+            }
+            
+            const datalistId = `${editorId}-datalist`;
+            const datalistHtml = autocompleteList.length > 0 
+                ? `<datalist id="${datalistId}">${autocompleteList.map(item => `<option value="${item}">`).join('')}</datalist>`
+                : '';
+            
+            editor.innerHTML = items.map((item, index) => `
+                <div class="flex gap-2 mb-2">
+                    <input type="text" value="${item}" data-index="${index}" list="${datalistId}"
+                           class="flex-1 border border-gray-800 rounded p-2 bg-gray-600 text-white">
+                    <button type="button" onclick="removeArrayItem('${editorId}', ${index})" 
+                            class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">✕</button>
+                </div>
+            `).join('') + datalistHtml + `
+                <button type="button" onclick="addArrayItem('${editorId}', '${placeholder}')" 
+                        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 mt-2">+ Add ${placeholder}</button>
+            `;
+        }
+
+        function addArrayItem(editorId, placeholder) {
+            const editor = document.getElementById(editorId);
+            const inputs = editor.querySelectorAll('.flex.gap-2');
+            const newIndex = inputs.length;
+            
+            const datalistId = `${editorId}-datalist`;
+            
+            const newItem = document.createElement('div');
+            newItem.className = 'flex gap-2 mb-2';
+            newItem.innerHTML = `
+                <input type="text" placeholder="Enter ${placeholder}" data-index="${newIndex}" list="${datalistId}"
+                       class="flex-1 border border-gray-800 rounded p-2 bg-gray-600 text-white">
+                <button type="button" onclick="removeArrayItem('${editorId}', ${newIndex})" 
+                        class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">✕</button>
+            `;
+            
+            editor.insertBefore(newItem, editor.querySelector('button[type="button"]'));
+        }
+
+        function removeArrayItem(editorId, index) {
+            const editor = document.getElementById(editorId);
+            const items = editor.querySelectorAll('.flex.gap-2');
+            items[index].remove();
+        }
+
+        function getArrayEditorValues(editorId) {
+            const editor = document.getElementById(editorId);
+            const inputs = editor.querySelectorAll('.flex.gap-2 input');
+            return Array.from(inputs).map(input => input.value).filter(v => v.trim());
+        }
+
+        function renderSuitabilityEditor(suitabilities) {
+            const editor = document.getElementById('suitabilityEditor');
+            const suitabilityList = Array.from(allSuitabilities).sort();
+            const datalistHtml = suitabilityList.length > 0 
+                ? `<datalist id="suitability-datalist">${suitabilityList.map(item => `<option value="${item}">`).join('')}</datalist>`
+                : '';
+            
+            editor.innerHTML = suitabilities.map((suit, index) => `
+                <div class="flex gap-2 mb-2">
+                    <input type="text" placeholder="Type" value="${suit.type || ''}" data-index="${index}" data-field="type" 
+                           list="suitability-datalist" class="flex-1 border border-gray-800 rounded p-2 bg-gray-600 text-white">
+                    <input type="number" placeholder="Level" value="${suit.level || ''}" data-index="${index}" data-field="level"
+                           class="w-24 border border-gray-800 rounded p-2 bg-gray-600 text-white">
+                    <button type="button" onclick="removeSuitability(${index})" 
+                            class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">✕</button>
+                </div>
+            `).join('') + datalistHtml + `
+                <button type="button" onclick="addSuitability()" 
+                        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 mt-2">+ Add Suitability</button>
+            `;
+        }
+
+        function addSuitability() {
+            const editor = document.getElementById('suitabilityEditor');
+            const items = editor.querySelectorAll('.flex.gap-2');
+            const newIndex = items.length;
+            
+            const newItem = document.createElement('div');
+            newItem.className = 'flex gap-2 mb-2';
+            newItem.innerHTML = `
+                <input type="text" placeholder="Type" data-index="${newIndex}" data-field="type" 
+                       list="suitability-datalist" class="flex-1 border border-gray-800 rounded p-2 bg-gray-600 text-white">
+                <input type="number" placeholder="Level" data-index="${newIndex}" data-field="level"
+                       class="w-24 border border-gray-800 rounded p-2 bg-gray-600 text-white">
+                <button type="button" onclick="removeSuitability(${newIndex})" 
+                        class="px-3 py-1 bg-red-600 text-white rounded hover:bg-red-700">✕</button>
+            `;
+            
+            editor.insertBefore(newItem, editor.querySelector('button[type="button"]'));
+        }
+
+        function removeSuitability(index) {
+            const editor = document.getElementById('suitabilityEditor');
+            const items = editor.querySelectorAll('.flex.gap-2');
+            items[index].remove();
+        }
+
+        function getSuitabilityValues() {
+            const editor = document.getElementById('suitabilityEditor');
+            const items = editor.querySelectorAll('.flex.gap-2');
+            return Array.from(items).map(item => {
+                const typeInput = item.querySelector('[data-field="type"]');
+                const levelInput = item.querySelector('[data-field="level"]');
+                return {
+                    type: typeInput.value,
+                    level: parseInt(levelInput.value) || 1
+                };
+            }).filter(s => s.type);
+        }
+
+        function closeModal() {
+            document.getElementById('editModal').classList.add('hidden');
+        }
+
+        function deletePal() {
+            if (currentEditingIndex === -1) return;
+            
+            if (confirm('Are you sure you want to delete this Pal?')) {
+                palsData.splice(currentEditingIndex, 1);
+                extractAutocompleteData();
+                renderPals();
+                updateStats();
+                closeModal();
+            }
+        }
+
+        document.getElementById('palForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const palData = {
+                id: parseInt(document.getElementById('palId').value),
+                key: document.getElementById('palKey').value,
+                image: `/public/images/paldeck/${document.getElementById('palKey').value}.png`,
+                name: document.getElementById('palName').value,
+                wiki: document.getElementById('palWiki').value,
+                types: getArrayEditorValues('typesEditor').map(t => ({ name: t, image: `/public/images/elements/${t}.png` })),
+                imageWiki: "",
+                suitability: getSuitabilityValues().map(s => ({ 
+                    type: s.type, 
+                    image: `/public/images/works/${s.type}.png`,
+                    level: s.level 
+                })),
+                drops: getArrayEditorValues('dropsEditor'),
+                aura: {},
+                description: "",
+                skills: []
+            };
+            
+            if (currentEditingIndex === -1) {
+                palsData.push(palData);
+            } else {
+                palsData[currentEditingIndex] = palData;
+            }
+            
+            extractAutocompleteData();
+            renderPals();
+            updateStats();
+            closeModal();
+        });
+
+        // Element filter handling
+        document.getElementById('element-filters').addEventListener('click', (event) => {
+            const wrapper = event.target.closest('.element-wrapper');
+            if (wrapper) {
+                const checkbox = wrapper.querySelector('input[type="checkbox"]');
+                if (checkbox) {
+                    checkbox.checked = !checkbox.checked;
+                    const img = wrapper.querySelector('.element-icon');
+                    if (img) {
+                        img.classList.toggle('opacity-25', !checkbox.checked);
+                        img.classList.toggle('opacity-100', checkbox.checked);
+                    }
+                    renderPals();
+                }
+            }
+        });
+
+        // Accordion toggle
+        function toggleAccordion() {
+            const content = document.getElementById('accordion-content');
+            const icon = document.getElementById('accordion-icon');
+
+            const downSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M4.22 6.22a.75.75 0 0 1 1.06 0L8 8.94l2.72-2.72a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L4.22 7.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>`;
+            const upSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4"><path fill-rule="evenodd" d="M11.78 9.78a.75.75 0 0 1-1.06 0L8 7.06 5.28 9.78a.75.75 0 0 1-1.06-1.06l3.25-3.25a.75.75 0 0 1 1.06 0l3.25 3.25a.75.75 0 0 1 0 1.06Z" clip-rule="evenodd" /></svg>`;
+
+            if (content.style.maxHeight && content.style.maxHeight !== '0px') {
+                content.style.maxHeight = '0';
+                icon.innerHTML = downSVG;
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.innerHTML = upSVG;
+            }
+        }
+
+        // Close modal on background click
+        document.getElementById('editModal').addEventListener('click', (e) => {
+            if (e.target.id === 'editModal') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
