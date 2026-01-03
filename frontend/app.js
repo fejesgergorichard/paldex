@@ -86,7 +86,7 @@ async function renderTodos() {
 
     // element filter
     var palPedia = pals.filter (pal =>  
-        (selectedElements.length === 0 || pal.types.some(type => selectedElements.includes(type.name.toLowerCase())))
+        (selectedElements.length === 0 || pal.types.some(type => selectedElements.includes(type.toLowerCase())))
     );
 
     // sort by key
