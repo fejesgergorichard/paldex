@@ -265,7 +265,7 @@
                 const suitability = Array.isArray(pal.suitability) ? pal.suitability : [];
                 
                 return `
-                    <li class="bg-gray-700 text-white flex items-center justify-between border border-gray-200 rounded-md p-2 gap-4 cursor-pointer hover:bg-gray-600 transition-colors" onclick="editPal(${actualIndex})">
+                    <li class="bg-gray-700 text-white flex items-center justify-between border border-gray-800 rounded-md p-2 gap-4 cursor-pointer hover:bg-gray-600 transition-colors" onclick="editPal(${actualIndex})">
                         <div class="flex items-center gap-2 shrink-0">
                             <span class="w-12 text-xs md:text-base">${pal.key}</span>
                             <img src="${getPaldeckImageById(pal.key)}" class="h-10 md:h-24" alt="${pal.name}">
@@ -359,7 +359,7 @@
                     extractAutocompleteData();
                     renderPals();
                     updateStats();
-                    alert(`Loaded ${palsData.length} pals successfully!`);
+                    console.log(`Loaded ${palsData.length} pals successfully!`);
                 } catch (error) {
                     alert('Error parsing JSON: ' + error.message);
                 }

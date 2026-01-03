@@ -4801,7 +4801,20 @@
       "grass",
       "neutral"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
     "drops": [
       "leather",
       "red_berries"
@@ -4815,7 +4828,24 @@
     "types": [
       "ice"
     ],
-    "suitability": [],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 2
+      },
+      {
+        "type": "cooling",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
     "drops": [
       "ice_organ",
       "precious_plume"
