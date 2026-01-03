@@ -107,7 +107,7 @@ async function renderTodos() {
     palPedia.forEach((pal, index) => {
         const li = document.createElement("li");
         const isCaptured = capturedList.some(capturedListItem => capturedListItem.toLowerCase() === pal.name.toLowerCase());
-        li.className = `${isCaptured ? "bg-gray-900" : "bg-gray-700"} text-white flex items-center justify-between border border-gray-200 rounded-md p-2 gap-12`;
+        li.className = `${isCaptured ? "bg-gray-900" : "bg-gray-700"} text-white flex items-center justify-between border border-gray-900 rounded-md p-2 gap-12`;
         
         const indexer = document.createElement("div");
         indexer.className ="flex items-center shrink-0"
