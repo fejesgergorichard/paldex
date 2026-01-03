@@ -5300,5 +5300,30 @@
       "diamond",
       "large_pal_soul"
     ]
+  },
+  {
+    "id": 383,
+    "key": "156",
+    "name": "Hartalis",
+    "wiki": "https://palworld.fandom.com/wiki/Hartalis",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "horn",
+      "leather",
+      "large_pal_soul",
+      "precious_pelt"
+    ]
   }
 ]
