@@ -1,6 +1,7 @@
 import { initialData } from "./initialData.js";
 
 const dataKey = "CapturedPalz";
+const capturedDataKey = "Captured_pals";
 const apiUrl = "/api";
 // const apiUrl = "http://localhost:3000";
 
@@ -47,12 +48,12 @@ function toHumanReadable(str) {
         .join(" ");
 }
 
-function storeData(data) {
-    localStorage.setItem(dataKey, JSON.stringify(data));
+function storeCapturedData(data) {
+    localStorage.setItem(capturedDataKey, JSON.stringify(data));
 }
 
-function loadData() {
-    const stored = localStorage.getItem(dataKey);
+function loadCapturedData() {
+    const stored = localStorage.getItem(capturedDataKey);
     if (stored) {
         console.log(stored);
         return JSON.parse(stored);
@@ -64,20 +65,16 @@ function loadData() {
     }
 }
 
-let todosData = loadData();
+let capturedData = loadCapturedData();
 const searchInput = document.getElementById("searchInput");
-const newTodoInput = document.getElementById("newTodoInput");
-const addButton = document.getElementById("addButton");
 const activeList = document.getElementById("activeList");
-const removedList = document.getElementById("removedList");
 const showCapturedCheckbox = document.getElementById("captured");
 
 document.addEventListener("DOMContentLoaded", renderTodos);
 
 async function renderTodos() {
-    console.log("render todos enter");
     const showCapturedFilter = showCapturedCheckbox.checked;
-    const activeTodos = todosData;
+    const capturedList = capturedData;
     const searchTerm = searchInput.value.toLowerCase();
 
     const selectedElements = Array.from(document.querySelectorAll('input[name="element"]:checked'))
@@ -97,7 +94,7 @@ async function renderTodos() {
 
     // show captured filter
     palPedia = showCapturedFilter ? palPedia
-        : palPedia.filter(pal => activeTodos.some(a => a.name.toLowerCase() === pal.name.toLowerCase()));
+        : palPedia.filter(pal => !capturedList.some(capturedListItem => capturedListItem.toLowerCase() === pal.name.toLowerCase()));
 
     // search filter
     palPedia = palPedia.filter(pal =>
@@ -109,7 +106,7 @@ async function renderTodos() {
     // Render
     palPedia.forEach((pal, index) => {
         const li = document.createElement("li");
-        const isCaptured = !activeTodos.some(a => a.name.toLowerCase() === pal.name.toLowerCase());
+        const isCaptured = capturedList.some(capturedListItem => capturedListItem.toLowerCase() === pal.name.toLowerCase());
         li.className = `${isCaptured ? "bg-gray-900" : "bg-gray-700"} text-white flex items-center justify-between border border-gray-200 rounded-md p-2 gap-12`;
         
         const indexer = document.createElement("div");
@@ -229,12 +226,12 @@ async function renderTodos() {
             // Elements
             const elementsDiv = document.createElement("div");
             elementsDiv.className = "flex justify-around";
-            pal.types.forEach(element => {
-                const elementImg = document.createElement("img");
-                elementImg.src = getElementImage(element.name);
-                elementImg.title = element.name;
-                elementImg.className = "h-4 md:h-8";
-                elementsDiv.appendChild(elementImg);
+            pal.types.forEach(type => {
+                const typeImg = document.createElement("img");
+                typeImg.src = getElementImage(type);
+                typeImg.title = type;
+                typeImg.className = "h-4 md:h-8";
+                elementsDiv.appendChild(typeImg);
             })
             div.appendChild(elementsDiv);
 
@@ -255,17 +252,17 @@ async function renderTodos() {
             const checkbox = container.querySelector("input[type='checkbox']");
 
             checkbox.addEventListener("change", () => {
-                if (!checkbox.checked) {
-                    todosData.push({ name: pal.name });
+                if (checkbox.checked) {
+                    capturedData.push(pal.name);
                 } else {
-                    const index = todosData.findIndex(item => item.name === pal.name);
+                    const index = capturedData.findIndex(item => item === pal.name);
                     if (index > -1) {
-                        todosData.splice(index, 1);
+                        capturedData.splice(index, 1);
                     }
                 }
                 
                 setTimeout(() => {
-                    storeData(todosData);
+                    storeCapturedData(capturedData);
                     renderTodos();
                 }, 150);
             });
@@ -274,29 +271,7 @@ async function renderTodos() {
 
         }
     });
-
-    // removedList.innerHTML = "";
-    // activeTodos.forEach(todo => {
-    //     const li = document.createElement("li");
-    //     li.className = "border border-gray-200 rounded-md p-2 text-white-500";
-    //     li.textContent = todo.name;
-    //     removedList.appendChild(li);
-    // });
 }
-
-addButton.addEventListener("click", () => {
-    const value = newTodoInput.value.trim();
-    if (value !== "") {
-        todosData.push({
-            name: value,
-            isDone: false
-        });
-        newTodoInput.value = "";
-        storeData(todosData);
-        renderTodos();
-    }
-});
-
 
 searchInput.addEventListener("input", renderTodos);
 

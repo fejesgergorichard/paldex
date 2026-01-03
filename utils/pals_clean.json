@@ -1,0 +1,5060 @@
+[
+  {
+    "id": 166,
+    "key": "083B",
+    "name": "Cryolinx Terra",
+    "wiki": "https://palworld.fandom.com/wiki/Cryolinx_Terra",
+    "types": [
+      "ground"
+    ],
+    "suitability": [],
+    "drops": []
+  },
+  {
+    "id": 175,
+    "key": "093B",
+    "name": "Fenglope Lux",
+    "wiki": "https://palworld.fandom.com/wiki/Fenglope_Lux",
+    "types": [
+      "electric"
+    ],
+    "suitability": [],
+    "drops": [
+      "leather",
+      "horn",
+      "electric_organ"
+    ]
+  },
+  {
+    "id": 1,
+    "key": "001",
+    "name": "Lamball",
+    "wiki": "https://palworld.fandom.com/wiki/Lamball",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "wool",
+      "lamball_mutton"
+    ]
+  },
+  {
+    "id": 2,
+    "key": "002",
+    "name": "Cattiva",
+    "wiki": "https://palworld.fandom.com/wiki/Cattiva",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "mining",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "red_berries"
+    ]
+  },
+  {
+    "id": 3,
+    "key": "003",
+    "name": "Chikipi",
+    "wiki": "https://palworld.fandom.com/wiki/Chikipi",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "egg",
+      "chikipi_poultry"
+    ]
+  },
+  {
+    "id": 4,
+    "key": "004",
+    "name": "Lifmunk",
+    "wiki": "https://palworld.fandom.com/wiki/Lifmunk",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "lumbering",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "berry_seeds",
+      "low_grade_medical_supplies"
+    ]
+  },
+  {
+    "id": 5,
+    "key": "005",
+    "name": "Foxparks",
+    "wiki": "https://palworld.fandom.com/wiki/Foxparks",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 140,
+    "key": "005B",
+    "name": "Foxparks Cryst",
+    "wiki": "https://palworld.fandom.com/wiki/Foxparks_Cryst",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "cooling",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 306,
+    "key": "006B",
+    "name": "Fuack Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Fuack_Ignis",
+    "types": [
+      "water",
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "pal_fluids",
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 6,
+    "key": "006",
+    "name": "Fuack",
+    "wiki": "https://palworld.fandom.com/wiki/Fuack",
+    "types": [
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 7,
+    "key": "007",
+    "name": "Sparkit",
+    "wiki": "https://palworld.fandom.com/wiki/Sparkit",
+    "types": [
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "electric_organ"
+    ]
+  },
+  {
+    "id": 8,
+    "key": "008",
+    "name": "Tanzee",
+    "wiki": "https://palworld.fandom.com/wiki/Tanzee",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "lumbering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "mushroom"
+    ]
+  },
+  {
+    "id": 9,
+    "key": "009",
+    "name": "Rooby",
+    "wiki": "https://palworld.fandom.com/wiki/Rooby",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "flame_organ",
+      "leather"
+    ]
+  },
+  {
+    "id": 10,
+    "key": "010",
+    "name": "Pengullet",
+    "wiki": "https://palworld.fandom.com/wiki/Pengullet",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "cooling",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "ice_organ",
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 11,
+    "key": "011",
+    "name": "Penking",
+    "wiki": "https://palworld.fandom.com/wiki/Penking",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 2
+      },
+      {
+        "type": "cooling",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "ice_organ",
+      "penking_plume"
+    ]
+  },
+  {
+    "id": 311,
+    "key": "011B",
+    "name": "Penking Lux",
+    "wiki": "https://palworld.fandom.com/wiki/Penking_Lux",
+    "types": [
+      "water",
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 2
+      },
+      {
+        "type": "generating_electricity",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "electric_organ",
+      "penking_plume"
+    ]
+  },
+  {
+    "id": 12,
+    "key": "012",
+    "name": "Jolthog",
+    "wiki": "https://palworld.fandom.com/wiki/Jolthog",
+    "types": [
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "electric_organ"
+    ]
+  },
+  {
+    "id": 141,
+    "key": "012B",
+    "name": "Jolthog Cryst",
+    "wiki": "https://palworld.fandom.com/wiki/Jolthog_Cryst",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "cooling",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 13,
+    "key": "013",
+    "name": "Gumoss",
+    "wiki": "https://palworld.fandom.com/wiki/Gumoss",
+    "types": [
+      "grass",
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "berry_seeds",
+      "gumoss_leaf"
+    ]
+  },
+  {
+    "id": 14,
+    "key": "014",
+    "name": "Vixy",
+    "wiki": "https://palworld.fandom.com/wiki/Vixy",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "bone"
+    ]
+  },
+  {
+    "id": 15,
+    "key": "015",
+    "name": "Hoocrates",
+    "wiki": "https://palworld.fandom.com/wiki/Hoocrates",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "fiber",
+      "high_grade_technical_manual"
+    ]
+  },
+  {
+    "id": 16,
+    "key": "016",
+    "name": "Teafant",
+    "wiki": "https://palworld.fandom.com/wiki/Teafant",
+    "types": [
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 17,
+    "key": "017",
+    "name": "Depresso",
+    "wiki": "https://palworld.fandom.com/wiki/Depresso",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "mining",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "venom_gland"
+    ]
+  },
+  {
+    "id": 18,
+    "key": "018",
+    "name": "Cremis",
+    "wiki": "https://palworld.fandom.com/wiki/Cremis",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "wool"
+    ]
+  },
+  {
+    "id": 19,
+    "key": "019",
+    "name": "Daedream",
+    "wiki": "https://palworld.fandom.com/wiki/Daedream",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "venom_gland",
+      "small_pal_soul"
+    ]
+  },
+  {
+    "id": 20,
+    "key": "020",
+    "name": "Rushoar",
+    "wiki": "https://palworld.fandom.com/wiki/Rushoar",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "mining",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "rushoar_pork",
+      "leather",
+      "bone"
+    ]
+  },
+  {
+    "id": 21,
+    "key": "021",
+    "name": "Nox",
+    "wiki": "https://palworld.fandom.com/wiki/Nox",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "small_pal_soul"
+    ]
+  },
+  {
+    "id": 22,
+    "key": "022",
+    "name": "Fuddler",
+    "wiki": "https://palworld.fandom.com/wiki/Fuddler",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "mining",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather"
+    ]
+  },
+  {
+    "id": 23,
+    "key": "023",
+    "name": "Killamari",
+    "wiki": "https://palworld.fandom.com/wiki/Killamari",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "venom_gland"
+    ]
+  },
+  {
+    "id": 230,
+    "key": "023B",
+    "name": "Killamari Primo",
+    "wiki": "https://palworld.fandom.com/wiki/Killamari_Primo",
+    "types": [
+      "neutral",
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      },
+      {
+        "type": "watering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "venom_gland"
+    ]
+  },
+  {
+    "id": 24,
+    "key": "024",
+    "name": "Mau",
+    "wiki": "https://palworld.fandom.com/wiki/Mau",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "gold_coin"
+    ]
+  },
+  {
+    "id": 142,
+    "key": "024B",
+    "name": "Mau Cryst",
+    "wiki": "https://palworld.fandom.com/wiki/Mau_Cryst",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "cooling",
+        "level": 1
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "ice_organ",
+      "sapphire"
+    ]
+  },
+  {
+    "id": 25,
+    "key": "025",
+    "name": "Celaray",
+    "wiki": "https://palworld.fandom.com/wiki/Celaray",
+    "types": [
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 26,
+    "key": "026",
+    "name": "Direhowl",
+    "wiki": "https://palworld.fandom.com/wiki/Direhowl",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "ruby",
+      "gold_coin"
+    ]
+  },
+  {
+    "id": 27,
+    "key": "027",
+    "name": "Tocotoco",
+    "wiki": "https://palworld.fandom.com/wiki/Tocotoco",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "gunpowder",
+      "tocotoco_feather"
+    ]
+  },
+  {
+    "id": 28,
+    "key": "028",
+    "name": "Flopie",
+    "wiki": "https://palworld.fandom.com/wiki/Flopie",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "low_grade_medical_supplies",
+      "wheat_seeds"
+    ]
+  },
+  {
+    "id": 29,
+    "key": "029",
+    "name": "Mozzarina",
+    "wiki": "https://palworld.fandom.com/wiki/Mozzarina",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "mozzarina_meat",
+      "milk"
+    ]
+  },
+  {
+    "id": 30,
+    "key": "030",
+    "name": "Bristla",
+    "wiki": "https://palworld.fandom.com/wiki/Bristla",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "wheat_seeds",
+      "lettuce_seeds"
+    ]
+  },
+  {
+    "id": 31,
+    "key": "031",
+    "name": "Gobfin",
+    "wiki": "https://palworld.fandom.com/wiki/Gobfin",
+    "types": [
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 143,
+    "key": "031B",
+    "name": "Gobfin Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Gobfin_Ignis",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 32,
+    "key": "032",
+    "name": "Hangyu",
+    "wiki": "https://palworld.fandom.com/wiki/Hangyu",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "fiber"
+    ]
+  },
+  {
+    "id": 144,
+    "key": "032B",
+    "name": "Hangyu Cryst",
+    "wiki": "https://palworld.fandom.com/wiki/Hangyu_Cryst",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "cooling",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "fiber",
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 33,
+    "key": "033",
+    "name": "Mossanda",
+    "wiki": "https://palworld.fandom.com/wiki/Mossanda",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "mushroom",
+      "leather",
+      "tomato_seeds"
+    ]
+  },
+  {
+    "id": 145,
+    "key": "033B",
+    "name": "Mossanda Lux",
+    "wiki": "https://palworld.fandom.com/wiki/Mossanda_Lux",
+    "types": [
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "mushroom",
+      "electric_organ",
+      "leather"
+    ]
+  },
+  {
+    "id": 34,
+    "key": "034",
+    "name": "Woolipop",
+    "wiki": "https://palworld.fandom.com/wiki/Woolipop",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "cotton_candy",
+      "high_quality_pal_oil"
+    ]
+  },
+  {
+    "id": 35,
+    "key": "035",
+    "name": "Caprity",
+    "wiki": "https://palworld.fandom.com/wiki/Caprity",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "caprity_meat",
+      "red_berries",
+      "horn"
+    ]
+  },
+  {
+    "id": 146,
+    "key": "035B",
+    "name": "Caprity Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Caprity_Noct",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "caprity_meat",
+      "red_berries",
+      "horn",
+      "venom_gland"
+    ]
+  },
+  {
+    "id": 36,
+    "key": "036",
+    "name": "Melpaca",
+    "wiki": "https://palworld.fandom.com/wiki/Melpaca",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "wool",
+      "leather"
+    ]
+  },
+  {
+    "id": 37,
+    "key": "037",
+    "name": "Eikthyrdeer",
+    "wiki": "https://palworld.fandom.com/wiki/Eikthyrdeer",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "eikthyrdeer_venison",
+      "leather",
+      "horn"
+    ]
+  },
+  {
+    "id": 147,
+    "key": "037B",
+    "name": "Eikthyrdeer Terra",
+    "wiki": "https://palworld.fandom.com/wiki/Eikthyrdeer_Terra",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "eikthyrdeer_venison",
+      "leather",
+      "horn"
+    ]
+  },
+  {
+    "id": 38,
+    "key": "038",
+    "name": "Nitewing",
+    "wiki": "https://palworld.fandom.com/wiki/Nitewing",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "leather"
+    ]
+  },
+  {
+    "id": 39,
+    "key": "039",
+    "name": "Ribbuny",
+    "wiki": "https://palworld.fandom.com/wiki/Ribbuny",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "beautiful_flower"
+    ]
+  },
+  {
+    "id": 148,
+    "key": "039B",
+    "name": "Ribbuny Botan",
+    "wiki": "https://palworld.fandom.com/wiki/Ribbuny_Botan",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "beautiful_flower",
+      "ribbuny_ribbon",
+      "potato_seeds"
+    ]
+  },
+  {
+    "id": 40,
+    "key": "040",
+    "name": "Incineram",
+    "wiki": "https://palworld.fandom.com/wiki/Incineram",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "horn",
+      "leather"
+    ]
+  },
+  {
+    "id": 149,
+    "key": "040B",
+    "name": "Incineram Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Incineram_Noct",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "horn",
+      "leather"
+    ]
+  },
+  {
+    "id": 41,
+    "key": "041",
+    "name": "Cinnamoth",
+    "wiki": "https://palworld.fandom.com/wiki/Cinnamoth",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "honey",
+      "lettuce_seeds",
+      "wheat_seeds"
+    ]
+  },
+  {
+    "id": 42,
+    "key": "042",
+    "name": "Arsox",
+    "wiki": "https://palworld.fandom.com/wiki/Arsox",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "horn",
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 43,
+    "key": "043",
+    "name": "Dumud",
+    "wiki": "https://palworld.fandom.com/wiki/Dumud",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 1
+      },
+      {
+        "type": "mining",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "raw_dumud",
+      "high_quality_pal_oil"
+    ]
+  },
+  {
+    "id": 44,
+    "key": "044",
+    "name": "Cawgnito",
+    "wiki": "https://palworld.fandom.com/wiki/Cawgnito",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "bone",
+      "venom_gland",
+      "small_pal_soul"
+    ]
+  },
+  {
+    "id": 45,
+    "key": "045",
+    "name": "Leezpunk",
+    "wiki": "https://palworld.fandom.com/wiki/Leezpunk",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "copper_key",
+      "silver_key"
+    ]
+  },
+  {
+    "id": 150,
+    "key": "045B",
+    "name": "Leezpunk Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Leezpunk_Ignis",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "flame_organ",
+      "silver_key"
+    ]
+  },
+  {
+    "id": 46,
+    "key": "046",
+    "name": "Loupmoon",
+    "wiki": "https://palworld.fandom.com/wiki/Loupmoon",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "bone"
+    ]
+  },
+  {
+    "id": 151,
+    "key": "046B",
+    "name": "Loupmoon Cryst",
+    "wiki": "https://palworld.fandom.com/wiki/Loupmoon_Cryst",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "cooling",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "bone"
+    ]
+  },
+  {
+    "id": 47,
+    "key": "047",
+    "name": "Galeclaw",
+    "wiki": "https://palworld.fandom.com/wiki/Galeclaw",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "galeclaw_poultry",
+      "leather"
+    ]
+  },
+  {
+    "id": 48,
+    "key": "048",
+    "name": "Robinquill",
+    "wiki": "https://palworld.fandom.com/wiki/Robinquill",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "wheat_seeds",
+      "arrow"
+    ]
+  },
+  {
+    "id": 152,
+    "key": "048B",
+    "name": "Robinquill Terra",
+    "wiki": "https://palworld.fandom.com/wiki/Robinquill_Terra",
+    "types": [
+      "grass",
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "wheat_seeds",
+      "arrow"
+    ]
+  },
+  {
+    "id": 49,
+    "key": "049",
+    "name": "Gorirat",
+    "wiki": "https://palworld.fandom.com/wiki/Gorirat",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "leather",
+      "bone"
+    ]
+  },
+  {
+    "id": 153,
+    "key": "049B",
+    "name": "Gorirat Terra",
+    "wiki": "https://palworld.fandom.com/wiki/Gorirat_Terra",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "mining",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "ore",
+      "bone"
+    ]
+  },
+  {
+    "id": 50,
+    "key": "050",
+    "name": "Beegarde",
+    "wiki": "https://palworld.fandom.com/wiki/Beegarde",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "lumbering",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "honey"
+    ]
+  },
+  {
+    "id": 51,
+    "key": "051",
+    "name": "Elizabee",
+    "wiki": "https://palworld.fandom.com/wiki/Elizabee",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "honey",
+      "elizabee_s_staff"
+    ]
+  },
+  {
+    "id": 52,
+    "key": "052",
+    "name": "Grintale",
+    "wiki": "https://palworld.fandom.com/wiki/Grintale",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "high_quality_pal_oil"
+    ]
+  },
+  {
+    "id": 53,
+    "key": "053",
+    "name": "Swee",
+    "wiki": "https://palworld.fandom.com/wiki/Swee",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "cooling",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "wool"
+    ]
+  },
+  {
+    "id": 54,
+    "key": "054",
+    "name": "Sweepa",
+    "wiki": "https://palworld.fandom.com/wiki/Sweepa",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "cooling",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "wool"
+    ]
+  },
+  {
+    "id": 55,
+    "key": "055",
+    "name": "Chillet",
+    "wiki": "https://palworld.fandom.com/wiki/Chillet",
+    "types": [
+      "ice",
+      "dragon"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "cooling",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather"
+    ]
+  },
+  {
+    "id": 154,
+    "key": "055B",
+    "name": "Chillet Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Chillet_Ignis",
+    "types": [
+      "fire",
+      "dragon"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 56,
+    "key": "056",
+    "name": "Univolt",
+    "wiki": "https://palworld.fandom.com/wiki/Univolt",
+    "types": [
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "electric_organ",
+      "horn"
+    ]
+  },
+  {
+    "id": 57,
+    "key": "057",
+    "name": "Foxcicle",
+    "wiki": "https://palworld.fandom.com/wiki/Foxcicle",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "cooling",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "leather",
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 58,
+    "key": "058",
+    "name": "Pyrin",
+    "wiki": "https://palworld.fandom.com/wiki/Pyrin",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "flame_organ",
+      "leather"
+    ]
+  },
+  {
+    "id": 155,
+    "key": "058B",
+    "name": "Pyrin Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Pyrin_Noct",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "flame_organ",
+      "leather"
+    ]
+  },
+  {
+    "id": 59,
+    "key": "059",
+    "name": "Reindrix",
+    "wiki": "https://palworld.fandom.com/wiki/Reindrix",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "cooling",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "reindrix_venison",
+      "leather",
+      "horn",
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 60,
+    "key": "060",
+    "name": "Rayhound",
+    "wiki": "https://palworld.fandom.com/wiki/Rayhound",
+    "types": [
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "electric_organ"
+    ]
+  },
+  {
+    "id": 61,
+    "key": "061",
+    "name": "Kitsun",
+    "wiki": "https://palworld.fandom.com/wiki/Kitsun",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "flame_organ",
+      "leather"
+    ]
+  },
+  {
+    "id": 156,
+    "key": "061B",
+    "name": "Kitsun Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Kitsun_Noct",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "flame_organ",
+      "leather",
+      "dark_fragment"
+    ]
+  },
+  {
+    "id": 62,
+    "key": "062",
+    "name": "Dazzi",
+    "wiki": "https://palworld.fandom.com/wiki/Dazzi",
+    "types": [
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "electric_organ",
+      "dazzi_cloud"
+    ]
+  },
+  {
+    "id": 157,
+    "key": "062B",
+    "name": "Dazzi Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Dazzi_Noct",
+    "types": [
+      "dark",
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "electric_organ",
+      "dazzi_cloud",
+      "dark_fragment"
+    ]
+  },
+  {
+    "id": 63,
+    "key": "063",
+    "name": "Lunaris",
+    "wiki": "https://palworld.fandom.com/wiki/Lunaris",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 3
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "paldium_fragment"
+    ]
+  },
+  {
+    "id": 64,
+    "key": "064",
+    "name": "Dinossom",
+    "wiki": "https://palworld.fandom.com/wiki/Dinossom",
+    "types": [
+      "grass",
+      "dragon"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "wheat_seeds"
+    ]
+  },
+  {
+    "id": 158,
+    "key": "064B",
+    "name": "Dinossom Lux",
+    "wiki": "https://palworld.fandom.com/wiki/Dinossom_Lux",
+    "types": [
+      "electric",
+      "dragon"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "tomato_seeds"
+    ]
+  },
+  {
+    "id": 65,
+    "key": "065",
+    "name": "Surfent",
+    "wiki": "https://palworld.fandom.com/wiki/Surfent",
+    "types": [
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 159,
+    "key": "065B",
+    "name": "Surfent Terra",
+    "wiki": "https://palworld.fandom.com/wiki/Surfent_Terra",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 66,
+    "key": "066",
+    "name": "Maraith",
+    "wiki": "https://palworld.fandom.com/wiki/Maraith",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "bone",
+      "small_pal_soul"
+    ]
+  },
+  {
+    "id": 67,
+    "key": "067",
+    "name": "Digtoise",
+    "wiki": "https://palworld.fandom.com/wiki/Digtoise",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "mining",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "ore",
+      "high_quality_pal_oil"
+    ]
+  },
+  {
+    "id": 68,
+    "key": "068",
+    "name": "Tombat",
+    "wiki": "https://palworld.fandom.com/wiki/Tombat",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "leather",
+      "small_pal_soul"
+    ]
+  },
+  {
+    "id": 69,
+    "key": "069",
+    "name": "Lovander",
+    "wiki": "https://palworld.fandom.com/wiki/Lovander",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "mushroom",
+      "cake",
+      "suspicious_juice",
+      "strange_juice",
+      "memory_wiping_medicine"
+    ]
+  },
+  {
+    "id": 70,
+    "key": "070",
+    "name": "Flambelle",
+    "wiki": "https://palworld.fandom.com/wiki/Flambelle",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "flame_organ",
+      "high_quality_pal_oil"
+    ]
+  },
+  {
+    "id": 71,
+    "key": "071",
+    "name": "Vanwyrm",
+    "wiki": "https://palworld.fandom.com/wiki/Vanwyrm",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "bone",
+      "ruby",
+      "gold_coin"
+    ]
+  },
+  {
+    "id": 160,
+    "key": "071B",
+    "name": "Vanwyrm Cryst",
+    "wiki": "https://palworld.fandom.com/wiki/Vanwyrm_Cryst",
+    "types": [
+      "ice",
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "cooling",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "bone",
+      "ice_organ",
+      "sapphire"
+    ]
+  },
+  {
+    "id": 72,
+    "key": "072",
+    "name": "Bushi",
+    "wiki": "https://palworld.fandom.com/wiki/Bushi",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "lumbering",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "bone",
+      "ingot"
+    ]
+  },
+  {
+    "id": 161,
+    "key": "072B",
+    "name": "Bushi Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Bushi_Noct",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "lumbering",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "flame_organ",
+      "ingot",
+      "medium_pal_soul"
+    ]
+  },
+  {
+    "id": 73,
+    "key": "073",
+    "name": "Beakon",
+    "wiki": "https://palworld.fandom.com/wiki/Beakon",
+    "types": [
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 2
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "electric_organ"
+    ]
+  },
+  {
+    "id": 74,
+    "key": "074",
+    "name": "Ragnahawk",
+    "wiki": "https://palworld.fandom.com/wiki/Ragnahawk",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 75,
+    "key": "075",
+    "name": "Katress",
+    "wiki": "https://palworld.fandom.com/wiki/Katress",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "leather",
+      "katress_hair",
+      "high_grade_technical_manual"
+    ]
+  },
+  {
+    "id": 162,
+    "key": "075B",
+    "name": "Katress Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Katress_Ignis",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "flame_organ",
+      "katress_hair",
+      "high_grade_technical_manual"
+    ]
+  },
+  {
+    "id": 76,
+    "key": "076",
+    "name": "Wixen",
+    "wiki": "https://palworld.fandom.com/wiki/Wixen",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "flame_organ",
+      "high_grade_technical_manual"
+    ]
+  },
+  {
+    "id": 163,
+    "key": "076B",
+    "name": "Wixen Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Wixen_Noct",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "medium_pal_soul",
+      "high_grade_technical_manual"
+    ]
+  },
+  {
+    "id": 77,
+    "key": "077",
+    "name": "Verdash",
+    "wiki": "https://palworld.fandom.com/wiki/Verdash",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 3
+      },
+      {
+        "type": "gathering",
+        "level": 3
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "leather",
+      "bone"
+    ]
+  },
+  {
+    "id": 78,
+    "key": "078",
+    "name": "Vaelet",
+    "wiki": "https://palworld.fandom.com/wiki/Vaelet",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "low_grade_medical_supplies",
+      "tomato_seeds"
+    ]
+  },
+  {
+    "id": 79,
+    "key": "079",
+    "name": "Sibelyx",
+    "wiki": "https://palworld.fandom.com/wiki/Sibelyx",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "medicine_production",
+        "level": 2
+      },
+      {
+        "type": "cooling",
+        "level": 2
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "high_quality_cloth",
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 80,
+    "key": "080",
+    "name": "Elphidran",
+    "wiki": "https://palworld.fandom.com/wiki/Elphidran",
+    "types": [
+      "dragon"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "high_quality_pal_oil"
+    ]
+  },
+  {
+    "id": 164,
+    "key": "080B",
+    "name": "Elphidran Aqua",
+    "wiki": "https://palworld.fandom.com/wiki/Elphidran_Aqua",
+    "types": [
+      "dragon",
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 3
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "high_quality_pal_oil"
+    ]
+  },
+  {
+    "id": 81,
+    "key": "081",
+    "name": "Kelpsea",
+    "wiki": "https://palworld.fandom.com/wiki/Kelpsea",
+    "types": [
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 1
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "raw_kelpsea",
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 165,
+    "key": "081B",
+    "name": "Kelpsea Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Kelpsea_Ignis",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 1
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "raw_kelpsea",
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 82,
+    "key": "082",
+    "name": "Azurobe",
+    "wiki": "https://palworld.fandom.com/wiki/Azurobe",
+    "types": [
+      "water",
+      "dragon"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "cloth",
+      "precious_dragon_stone"
+    ]
+  },
+  {
+    "id": 83,
+    "key": "083",
+    "name": "Cryolinx",
+    "wiki": "https://palworld.fandom.com/wiki/Cryolinx",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "cooling",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 84,
+    "key": "084",
+    "name": "Blazehowl",
+    "wiki": "https://palworld.fandom.com/wiki/Blazehowl",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 3
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 167,
+    "key": "084B",
+    "name": "Blazehowl Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Blazehowl_Noct",
+    "types": [
+      "fire",
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 3
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 85,
+    "key": "085",
+    "name": "Relaxaurus",
+    "wiki": "https://palworld.fandom.com/wiki/Relaxaurus",
+    "types": [
+      "dragon",
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "high_quality_pal_oil",
+      "ruby"
+    ]
+  },
+  {
+    "id": 168,
+    "key": "085B",
+    "name": "Relaxaurus Lux",
+    "wiki": "https://palworld.fandom.com/wiki/Relaxaurus_Lux",
+    "types": [
+      "dragon",
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "high_quality_pal_oil",
+      "electric_organ",
+      "sapphire"
+    ]
+  },
+  {
+    "id": 86,
+    "key": "086",
+    "name": "Broncherry",
+    "wiki": "https://palworld.fandom.com/wiki/Broncherry",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "broncherry_meat",
+      "tomato_seeds"
+    ]
+  },
+  {
+    "id": 169,
+    "key": "086B",
+    "name": "Broncherry Aqua",
+    "wiki": "https://palworld.fandom.com/wiki/Broncherry_Aqua",
+    "types": [
+      "grass",
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "broncherry_meat",
+      "lettuce_seeds"
+    ]
+  },
+  {
+    "id": 87,
+    "key": "087",
+    "name": "Petallia",
+    "wiki": "https://palworld.fandom.com/wiki/Petallia",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 3
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "beautiful_flower"
+    ]
+  },
+  {
+    "id": 88,
+    "key": "088",
+    "name": "Reptyro",
+    "wiki": "https://palworld.fandom.com/wiki/Reptyro",
+    "types": [
+      "fire",
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 3
+      },
+      {
+        "type": "mining",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 170,
+    "key": "088B",
+    "name": "Reptyro Cryst",
+    "wiki": "https://palworld.fandom.com/wiki/Reptyro_Cryst",
+    "types": [
+      "ice",
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "mining",
+        "level": 3
+      },
+      {
+        "type": "cooling",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 89,
+    "key": "089",
+    "name": "Kingpaca",
+    "wiki": "https://palworld.fandom.com/wiki/Kingpaca",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "wool"
+    ]
+  },
+  {
+    "id": 171,
+    "key": "089B",
+    "name": "Kingpaca Cryst",
+    "wiki": "https://palworld.fandom.com/wiki/Kingpaca_Cryst",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "cooling",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "wool",
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 90,
+    "key": "090",
+    "name": "Mammorest",
+    "wiki": "https://palworld.fandom.com/wiki/Mammorest",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "high_quality_pal_oil",
+      "leather",
+      "mammorest_meat"
+    ]
+  },
+  {
+    "id": 172,
+    "key": "090B",
+    "name": "Mammorest Cryst",
+    "wiki": "https://palworld.fandom.com/wiki/Mammorest_Cryst",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 2
+      },
+      {
+        "type": "cooling",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "high_quality_pal_oil",
+      "leather",
+      "mammorest_meat"
+    ]
+  },
+  {
+    "id": 91,
+    "key": "091",
+    "name": "Wumpo",
+    "wiki": "https://palworld.fandom.com/wiki/Wumpo",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 3
+      },
+      {
+        "type": "cooling",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "ice_organ",
+      "beautiful_flower"
+    ]
+  },
+  {
+    "id": 173,
+    "key": "091B",
+    "name": "Wumpo Botan",
+    "wiki": "https://palworld.fandom.com/wiki/Wumpo_Botan",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "lettuce_seeds",
+      "tomato_seeds",
+      "beautiful_flower"
+    ]
+  },
+  {
+    "id": 92,
+    "key": "092",
+    "name": "Warsect",
+    "wiki": "https://palworld.fandom.com/wiki/Warsect",
+    "types": [
+      "ground",
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "lumbering",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "honey"
+    ]
+  },
+  {
+    "id": 174,
+    "key": "092B",
+    "name": "Warsect Terra",
+    "wiki": "https://palworld.fandom.com/wiki/Warsect_Terra",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "mining",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "coal"
+    ]
+  },
+  {
+    "id": 93,
+    "key": "093",
+    "name": "Fenglope",
+    "wiki": "https://palworld.fandom.com/wiki/Fenglope",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "leather",
+      "horn"
+    ]
+  },
+  {
+    "id": 94,
+    "key": "094",
+    "name": "Felbat",
+    "wiki": "https://palworld.fandom.com/wiki/Felbat",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "medicine_production",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "cloth",
+      "small_pal_soul"
+    ]
+  },
+  {
+    "id": 95,
+    "key": "095",
+    "name": "Quivern",
+    "wiki": "https://palworld.fandom.com/wiki/Quivern",
+    "types": [
+      "dragon"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "high_quality_pal_oil"
+    ]
+  },
+  {
+    "id": 176,
+    "key": "095B",
+    "name": "Quivern Botan",
+    "wiki": "https://palworld.fandom.com/wiki/Quivern_Botan",
+    "types": [
+      "dragon",
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "high_quality_pal_oil",
+      "beautiful_flower",
+      "red_berries"
+    ]
+  },
+  {
+    "id": 96,
+    "key": "096",
+    "name": "Blazamut",
+    "wiki": "https://palworld.fandom.com/wiki/Blazamut",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 3
+      },
+      {
+        "type": "mining",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "coal",
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 177,
+    "key": "096B",
+    "name": "Blazamut Ryu",
+    "wiki": "https://palworld.fandom.com/wiki/Blazamut_Ryu",
+    "types": [
+      "dragon",
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 4
+      },
+      {
+        "type": "mining",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "coal",
+      "medium_pal_soul",
+      "precious_claw"
+    ]
+  },
+  {
+    "id": 97,
+    "key": "097",
+    "name": "Helzephyr",
+    "wiki": "https://palworld.fandom.com/wiki/Helzephyr",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "venom_gland",
+      "medium_pal_soul"
+    ]
+  },
+  {
+    "id": 178,
+    "key": "097B",
+    "name": "Helzephyr Lux",
+    "wiki": "https://palworld.fandom.com/wiki/Helzephyr_Lux",
+    "types": [
+      "dark",
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "electric_organ",
+      "medium_pal_soul"
+    ]
+  },
+  {
+    "id": 98,
+    "key": "098",
+    "name": "Astegon",
+    "wiki": "https://palworld.fandom.com/wiki/Astegon",
+    "types": [
+      "dragon",
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "mining",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "pal_metal_ingot",
+      "pure_quartz"
+    ]
+  },
+  {
+    "id": 99,
+    "key": "099",
+    "name": "Menasting",
+    "wiki": "https://palworld.fandom.com/wiki/Menasting",
+    "types": [
+      "dark",
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "coal",
+      "venom_gland"
+    ]
+  },
+  {
+    "id": 179,
+    "key": "099B",
+    "name": "Menasting Terra",
+    "wiki": "https://palworld.fandom.com/wiki/Menasting_Terra",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "crude_oil",
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 100,
+    "key": "100",
+    "name": "Anubis",
+    "wiki": "https://palworld.fandom.com/wiki/Anubis",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 4
+      },
+      {
+        "type": "mining",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "bone",
+      "large_pal_soul",
+      "innovative_technical_manual"
+    ]
+  },
+  {
+    "id": 101,
+    "key": "101",
+    "name": "Jormuntide",
+    "wiki": "https://palworld.fandom.com/wiki/Jormuntide",
+    "types": [
+      "dragon",
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 180,
+    "key": "101B",
+    "name": "Jormuntide Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Jormuntide_Ignis",
+    "types": [
+      "dragon",
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "high_quality_pal_oil",
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 102,
+    "key": "102",
+    "name": "Suzaku",
+    "wiki": "https://palworld.fandom.com/wiki/Suzaku",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 181,
+    "key": "102B",
+    "name": "Suzaku Aqua",
+    "wiki": "https://palworld.fandom.com/wiki/Suzaku_Aqua",
+    "types": [
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 103,
+    "key": "103",
+    "name": "Grizzbolt",
+    "wiki": "https://palworld.fandom.com/wiki/Grizzbolt",
+    "types": [
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 3
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "electric_organ",
+      "leather"
+    ]
+  },
+  {
+    "id": 104,
+    "key": "104",
+    "name": "Lyleen",
+    "wiki": "https://palworld.fandom.com/wiki/Lyleen",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 4
+      },
+      {
+        "type": "handiwork",
+        "level": 3
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "low_grade_medical_supplies",
+      "beautiful_flower",
+      "innovative_technical_manual"
+    ]
+  },
+  {
+    "id": 182,
+    "key": "104B",
+    "name": "Lyleen Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Lyleen_Noct",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 3
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "low_grade_medical_supplies",
+      "beautiful_flower",
+      "innovative_technical_manual"
+    ]
+  },
+  {
+    "id": 105,
+    "key": "105",
+    "name": "Faleris",
+    "wiki": "https://palworld.fandom.com/wiki/Faleris",
+    "types": [
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 183,
+    "key": "105B",
+    "name": "Faleris Aqua",
+    "wiki": "https://palworld.fandom.com/wiki/Faleris_Aqua",
+    "types": [
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 4
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 106,
+    "key": "106",
+    "name": "Orserk",
+    "wiki": "https://palworld.fandom.com/wiki/Orserk",
+    "types": [
+      "dragon",
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 4
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "electric_organ"
+    ]
+  },
+  {
+    "id": 107,
+    "key": "107",
+    "name": "Shadowbeak",
+    "wiki": "https://palworld.fandom.com/wiki/Shadowbeak",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "pal_metal_ingot",
+      "carbon_fiber",
+      "innovative_technical_manual"
+    ]
+  },
+  {
+    "id": 108,
+    "key": "108",
+    "name": "Paladius",
+    "wiki": "https://palworld.fandom.com/wiki/Paladius",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "pal_metal_ingot",
+      "diamond"
+    ]
+  },
+  {
+    "id": 109,
+    "key": "109",
+    "name": "Necromus",
+    "wiki": "https://palworld.fandom.com/wiki/Necromus",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "mining",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "pal_metal_ingot",
+      "large_pal_soul"
+    ]
+  },
+  {
+    "id": 110,
+    "key": "110",
+    "name": "Frostallion",
+    "wiki": "https://palworld.fandom.com/wiki/Frostallion",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "cooling",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "ice_organ",
+      "diamond"
+    ]
+  },
+  {
+    "id": 184,
+    "key": "110B",
+    "name": "Frostallion Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Frostallion_Noct",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "pure_quartz",
+      "large_pal_soul"
+    ]
+  },
+  {
+    "id": 111,
+    "key": "111",
+    "name": "Jetragon",
+    "wiki": "https://palworld.fandom.com/wiki/Jetragon",
+    "types": [
+      "dragon"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "pure_quartz",
+      "polymer",
+      "carbon_fiber",
+      "diamond"
+    ]
+  },
+  {
+    "id": 112,
+    "key": "112",
+    "name": "Bellanoir",
+    "wiki": "https://palworld.fandom.com/wiki/Bellanoir",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 4
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": []
+  },
+  {
+    "id": 185,
+    "key": "112B",
+    "name": "Bellanoir Libero",
+    "wiki": "https://palworld.fandom.com/wiki/Bellanoir_Libero",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 4
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": []
+  },
+  {
+    "id": 113,
+    "key": "113",
+    "name": "Selyne",
+    "wiki": "https://palworld.fandom.com/wiki/Selyne",
+    "types": [
+      "dark",
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 4
+      },
+      {
+        "type": "medicine_production",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "cloth",
+      "sapphire",
+      "precious_claw"
+    ]
+  },
+  {
+    "id": 314,
+    "key": "114B",
+    "name": "Croajiro Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Croajiro_Noct",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "pal_fluids",
+      "cloth",
+      "venom_gland"
+    ]
+  },
+  {
+    "id": 114,
+    "key": "114",
+    "name": "Croajiro",
+    "wiki": "https://palworld.fandom.com/wiki/Croajiro",
+    "types": [
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 1
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "pal_fluids",
+      "cloth"
+    ]
+  },
+  {
+    "id": 115,
+    "key": "115",
+    "name": "Lullu",
+    "wiki": "https://palworld.fandom.com/wiki/Lullu",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "beautiful_flower",
+      "red_berries"
+    ]
+  },
+  {
+    "id": 116,
+    "key": "116",
+    "name": "Shroomer",
+    "wiki": "https://palworld.fandom.com/wiki/Shroomer",
+    "types": [
+      "grass"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "mushroom",
+      "red_berries"
+    ]
+  },
+  {
+    "id": 186,
+    "key": "116B",
+    "name": "Shroomer Noct",
+    "wiki": "https://palworld.fandom.com/wiki/Shroomer_Noct",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "venom_gland",
+      "mysterious_mushroom"
+    ]
+  },
+  {
+    "id": 117,
+    "key": "117",
+    "name": "Kikit",
+    "wiki": "https://palworld.fandom.com/wiki/Kikit",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "mining",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "leather",
+      "bone",
+      "crude_oil"
+    ]
+  },
+  {
+    "id": 118,
+    "key": "118",
+    "name": "Sootseer",
+    "wiki": "https://palworld.fandom.com/wiki/Sootseer",
+    "types": [
+      "dark",
+      "fire"
+    ],
+    "suitability": [
+      {
+        "type": "kindling",
+        "level": 3
+      },
+      {
+        "type": "handiwork",
+        "level": 3
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "mining",
+        "level": 2
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "medium_pal_soul",
+      "bone",
+      "crude_oil"
+    ]
+  },
+  {
+    "id": 119,
+    "key": "119",
+    "name": "Prixter",
+    "wiki": "https://palworld.fandom.com/wiki/Prixter",
+    "types": [
+      "dark",
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "lumbering",
+        "level": 3
+      },
+      {
+        "type": "medicine_production",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "venom_gland"
+    ]
+  },
+  {
+    "id": 120,
+    "key": "120",
+    "name": "Knocklem",
+    "wiki": "https://palworld.fandom.com/wiki/Knocklem",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 3
+      },
+      {
+        "type": "mining",
+        "level": 4
+      },
+      {
+        "type": "transporting",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "ore"
+    ]
+  },
+  {
+    "id": 121,
+    "key": "121",
+    "name": "Yakumo",
+    "wiki": "https://palworld.fandom.com/wiki/Yakumo",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "leather"
+    ]
+  },
+  {
+    "id": 122,
+    "key": "122",
+    "name": "Dogen",
+    "wiki": "https://palworld.fandom.com/wiki/Dogen",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 3
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 1
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "bone"
+    ]
+  },
+  {
+    "id": 123,
+    "key": "123",
+    "name": "Dazemu",
+    "wiki": "https://palworld.fandom.com/wiki/Dazemu",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "bone"
+    ]
+  },
+  {
+    "id": 124,
+    "key": "124",
+    "name": "Mimog",
+    "wiki": "https://palworld.fandom.com/wiki/Mimog",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "gold_coin",
+      "dog_coin",
+      "training_manual_(xl)"
+    ]
+  },
+  {
+    "id": 125,
+    "key": "125",
+    "name": "Xenovader",
+    "wiki": "https://palworld.fandom.com/wiki/Xenovader",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "meteorite_fragment"
+    ]
+  },
+  {
+    "id": 126,
+    "key": "126",
+    "name": "Xenogard",
+    "wiki": "https://palworld.fandom.com/wiki/Xenogard",
+    "types": [
+      "dragon"
+    ],
+    "suitability": [
+      {
+        "type": "mining",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "meteorite_fragment",
+      "high_quality_pal_oil"
+    ]
+  },
+  {
+    "id": 127,
+    "key": "127",
+    "name": "Xenolord",
+    "wiki": "https://palworld.fandom.com/wiki/Xenolord",
+    "types": [
+      "dark",
+      "dragon"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "meteorite_fragment"
+    ]
+  },
+  {
+    "id": 128,
+    "key": "128",
+    "name": "Nitemary",
+    "wiki": "https://palworld.fandom.com/wiki/Nitemary",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "small_pal_soul"
+    ]
+  },
+  {
+    "id": 129,
+    "key": "129",
+    "name": "Starryon",
+    "wiki": "https://palworld.fandom.com/wiki/Starryon",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "leather",
+      "dark_fragment"
+    ]
+  },
+  {
+    "id": 130,
+    "key": "130",
+    "name": "Silvegis",
+    "wiki": "https://palworld.fandom.com/wiki/Silvegis",
+    "types": [
+      "dragon"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 3
+      }
+    ],
+    "drops": [
+      "chromite"
+    ]
+  },
+  {
+    "id": 131,
+    "key": "131",
+    "name": "Smokie",
+    "wiki": "https://palworld.fandom.com/wiki/Smokie",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "bone",
+      "crude_oil"
+    ]
+  },
+  {
+    "id": 132,
+    "key": "132",
+    "name": "Celesdir",
+    "wiki": "https://palworld.fandom.com/wiki/Celesdir",
+    "types": [
+      "neutral"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      },
+      {
+        "type": "lumbering",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "leather",
+      "horn",
+      "hexolite_quartz"
+    ]
+  },
+  {
+    "id": 133,
+    "key": "133",
+    "name": "Omascul",
+    "wiki": "https://palworld.fandom.com/wiki/Omascul",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "dark_fragment"
+    ]
+  },
+  {
+    "id": 134,
+    "key": "134",
+    "name": "Splatterina",
+    "wiki": "https://palworld.fandom.com/wiki/Splatterina",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 4
+      },
+      {
+        "type": "lumbering",
+        "level": 1
+      },
+      {
+        "type": "medicine_production",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "dark_fragment"
+    ]
+  },
+  {
+    "id": 135,
+    "key": "136",
+    "name": "Azurmane",
+    "wiki": "https://palworld.fandom.com/wiki/Azurmane",
+    "types": [
+      "electric"
+    ],
+    "suitability": [
+      {
+        "type": "generating_electricity",
+        "level": 4
+      },
+      {
+        "type": "gathering",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "electric_organ"
+    ]
+  },
+  {
+    "id": 136,
+    "key": "137",
+    "name": "Bastigor",
+    "wiki": "https://palworld.fandom.com/wiki/Bastigor",
+    "types": [
+      "ice"
+    ],
+    "suitability": [
+      {
+        "type": "lumbering",
+        "level": 3
+      },
+      {
+        "type": "mining",
+        "level": 3
+      },
+      {
+        "type": "cooling",
+        "level": 4
+      }
+    ],
+    "drops": [
+      "leather",
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 137,
+    "key": "138",
+    "name": "Prunelia",
+    "wiki": "https://palworld.fandom.com/wiki/Prunelia",
+    "types": [
+      "grass",
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "planting",
+        "level": 3
+      },
+      {
+        "type": "handiwork",
+        "level": 1
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 3
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "low_grade_medical_supplies",
+      "beautiful_flower",
+      "carrot_seeds"
+    ]
+  },
+  {
+    "id": 138,
+    "key": "139",
+    "name": "Nyafia",
+    "wiki": "https://palworld.fandom.com/wiki/Nyafia",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "handiwork",
+        "level": 3
+      },
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "lumbering",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "leather"
+    ]
+  },
+  {
+    "id": 139,
+    "key": "140",
+    "name": "Gildane",
+    "wiki": "https://palworld.fandom.com/wiki/Gildane",
+    "types": [
+      "ground"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "leather"
+    ]
+  },
+  {
+    "id": 140,
+    "key": "135",
+    "name": "Tarantriss",
+    "wiki": "https://palworld.fandom.com/wiki/Tarantriss?file=Tarantriss.png",
+    "types": [
+      "dark"
+    ],
+    "suitability": [
+      {
+        "type": "gathering",
+        "level": 2
+      },
+      {
+        "type": "handiwork",
+        "level": 2
+      },
+      {
+        "type": "medicine_production",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 2
+      }
+    ],
+    "drops": [
+      "fiber",
+      "venom_gland"
+    ]
+  },
+  {
+    "id": 202,
+    "key": "141",
+    "name": "Herbil",
+    "wiki": "https://palworld.fandom.com/wiki/Herbil",
+    "types": [
+      "grass",
+      "neutral"
+    ],
+    "suitability": [],
+    "drops": [
+      "leather",
+      "red_berries"
+    ]
+  },
+  {
+    "id": 203,
+    "key": "142",
+    "name": "Icelyn",
+    "wiki": "https://palworld.fandom.com/wiki/Icelyn",
+    "types": [
+      "ice"
+    ],
+    "suitability": [],
+    "drops": [
+      "ice_organ",
+      "precious_plume"
+    ]
+  },
+  {
+    "id": 204,
+    "key": "143",
+    "name": "Frostplume",
+    "wiki": "https://palworld.fandom.com/wiki/Frostplume",
+    "types": [
+      "ice"
+    ],
+    "suitability": [],
+    "drops": [
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 205,
+    "key": "144",
+    "name": "Palumba",
+    "wiki": "https://palworld.fandom.com/wiki/Palumba",
+    "types": [
+      "grass"
+    ],
+    "suitability": [],
+    "drops": [
+      "bone"
+    ]
+  },
+  {
+    "id": 206,
+    "key": "145",
+    "name": "Braloha",
+    "wiki": "https://palworld.fandom.com/wiki/Braloha",
+    "types": [
+      "grass",
+      "ground"
+    ],
+    "suitability": [],
+    "drops": [
+      "leather",
+      "red_berries",
+      "lettuce_seeds",
+      "tomato_seeds"
+    ]
+  },
+  {
+    "id": 207,
+    "key": "146",
+    "name": "Munchill",
+    "wiki": "https://palworld.fandom.com/wiki/Munchill",
+    "types": [
+      "ice",
+      "water"
+    ],
+    "suitability": [],
+    "drops": [
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 208,
+    "key": "147",
+    "name": "Polapup",
+    "wiki": "https://palworld.fandom.com/wiki/Polapup",
+    "types": [
+      "ice",
+      "water"
+    ],
+    "suitability": [],
+    "drops": [
+      "ice_organ"
+    ]
+  },
+  {
+    "id": 209,
+    "key": "148",
+    "name": "Turtacle",
+    "wiki": "https://palworld.fandom.com/wiki/Turtacle",
+    "types": [
+      "water"
+    ],
+    "suitability": [],
+    "drops": [
+      "pal_fluids",
+      "bone"
+    ]
+  },
+  {
+    "id": 210,
+    "key": "148B",
+    "name": "Turtacle Terra",
+    "wiki": "https://palworld.fandom.com/wiki/Turtacle_Terra",
+    "types": [
+      "water",
+      "ground"
+    ],
+    "suitability": [],
+    "drops": [
+      "pal_fluids",
+      "bone"
+    ]
+  },
+  {
+    "id": 211,
+    "key": "149",
+    "name": "Jellroy",
+    "wiki": "https://palworld.fandom.com/wiki/Jellroy",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "suitability": [],
+    "drops": [
+      "pal_fluids",
+      "jellroy_bell_flesh"
+    ]
+  },
+  {
+    "id": 212,
+    "key": "150",
+    "name": "Jelliette",
+    "wiki": "https://palworld.fandom.com/wiki/Jelliette",
+    "types": [
+      "water"
+    ],
+    "suitability": [],
+    "drops": [
+      "pal_fluids",
+      "jelliette_bell_flesh"
+    ]
+  },
+  {
+    "id": 213,
+    "key": "151",
+    "name": "Gloopie",
+    "wiki": "https://palworld.fandom.com/wiki/Gloopie",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "suitability": [],
+    "drops": [
+      "pal_fluids",
+      "gloopie_tentacle"
+    ]
+  },
+  {
+    "id": 214,
+    "key": "152",
+    "name": "Finsider",
+    "wiki": "https://palworld.fandom.com/wiki/Finsider",
+    "types": [
+      "water"
+    ],
+    "suitability": [],
+    "drops": [
+      "leather",
+      "small_pal_soul",
+      "pal_fluids"
+    ]
+  },
+  {
+    "id": 215,
+    "key": "152B",
+    "name": "Finsider Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Finsider_Ignis",
+    "types": [
+      "water",
+      "fire"
+    ],
+    "suitability": [],
+    "drops": [
+      "leather",
+      "small_pal_soul",
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 216,
+    "key": "153",
+    "name": "Ghangler",
+    "wiki": "https://palworld.fandom.com/wiki/Ghangler",
+    "types": [
+      "water",
+      "dark"
+    ],
+    "suitability": [],
+    "drops": [
+      "bone",
+      "venom_gland"
+    ]
+  },
+  {
+    "id": 217,
+    "key": "153B",
+    "name": "Ghangler Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Ghangler_Ignis",
+    "types": [
+      "water",
+      "fire"
+    ],
+    "suitability": [],
+    "drops": [
+      "bone",
+      "flame_organ"
+    ]
+  },
+  {
+    "id": 218,
+    "key": "154",
+    "name": "Whalaska",
+    "wiki": "https://palworld.fandom.com/wiki/Whalaska",
+    "types": [
+      "water",
+      "ice"
+    ],
+    "suitability": [],
+    "drops": [
+      "pal_fluids",
+      "coralum_ore",
+      "ice_organ",
+      "large_pal_soul"
+    ]
+  },
+  {
+    "id": 219,
+    "key": "154B",
+    "name": "Whalaska Ignis",
+    "wiki": "https://palworld.fandom.com/wiki/Whalaska_Ignis",
+    "types": [
+      "fire",
+      "ice"
+    ],
+    "suitability": [],
+    "drops": [
+      "pal_fluids",
+      "coralum_ore",
+      "flame_organ",
+      "large_pal_soul"
+    ]
+  },
+  {
+    "id": 220,
+    "key": "155",
+    "name": "Neptilius",
+    "wiki": "https://palworld.fandom.com/wiki/Neptilius",
+    "types": [
+      "water"
+    ],
+    "suitability": [],
+    "drops": [
+      "coralum_ore",
+      "pure_quartz",
+      "polymer",
+      "carbon_fiber",
+      "diamond",
+      "large_pal_soul"
+    ]
+  }
+]
