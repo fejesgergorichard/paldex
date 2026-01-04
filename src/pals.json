@@ -5325,5 +5325,38 @@
       "large_pal_soul",
       "precious_pelt"
     ]
+  },
+  {
+    "id": 384,
+    "key": "043B",
+    "name": "Dumud Gild",
+    "wiki": "https://palworld.fandom.com/wiki/Dumud_Gild",
+    "types": [
+      "ground",
+      "water"
+    ],
+    "suitability": [
+      {
+        "type": "watering",
+        "level": 1
+      },
+      {
+        "type": "mining",
+        "level": 2
+      },
+      {
+        "type": "transporting",
+        "level": 1
+      },
+      {
+        "type": "farming",
+        "level": 1
+      }
+    ],
+    "drops": [
+      "raw_dumud",
+      "high_quality_pal_oil",
+      "gold_coin"
+    ]
   }
 ]
