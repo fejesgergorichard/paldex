@@ -207,6 +207,7 @@
                             <label for="fileInput" class="px-4 py-2 bg-yellow-600 text-white rounded hover:bg-yellow-700 cursor-pointer">📁 Load JSON</label>
                             <input type="file" id="fileInput" accept=".json" onchange="loadJSON(event)" class="hidden">
                             <button onclick="downloadJSON()" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">💾 Download JSON</button>
+                            <button onclick="saveAllPalsToAPI()" class="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">🔄 Save to Database</button>
                         </div>
 
                         <!-- Search Field -->
@@ -289,6 +290,8 @@
     </div>
 
     <script>
+        const API_BASE_URL = '/api';  // from nginx reverse proxy
+
         let palsData = [];
         let currentEditingIndex = -1;
         let searchTerm = '';
@@ -298,8 +301,50 @@
         let allDrops = new Set();
         let allSuitabilities = new Set();
 
-        // Initialize
-        updateStats();
+        // API Functions
+        async function loadPalsFromAPI() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/pals/`);
+                const data = await response.json();
+                palsData = Array.isArray(data) ? data : [data];
+                extractAutocompleteData();
+                renderPals();
+                updateStats();
+                console.log(`✅ Loaded ${palsData.length} pals from database`);
+            } catch (error) {
+                console.error('❌ Error loading pals from API:', error);
+                alert('Failed to load pals from database. Make sure the server is running.');
+            }
+        }
+
+        async function saveAllPalsToAPI() {
+            try {
+                const response = await fetch(`${API_BASE_URL}/pals/bulk`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(palsData)
+                });
+                
+                const result = await response.json();
+                
+                if (!result.success) {
+                    throw new Error('Failed to save pals');
+                }
+                
+                console.log(`✅ Saved ${result.count} pals to database`);
+                alert(`Successfully saved ${result.count} pals to database!`);
+                return true;
+            } catch (error) {
+                console.error('❌ Error saving pals:', error);
+                alert('Failed to save pals to database. Make sure the server is running.');
+                return false;
+            }
+        }
+
+        // Initialize - Load from API
+        loadPalsFromAPI();
         toggleAccordion(); // Open by default
         
         function extractAutocompleteData() {
@@ -481,7 +526,8 @@
                     extractAutocompleteData();
                     renderPals();
                     updateStats();
-                    alert(`Loaded ${palsData.length} pals successfully!`);
+                    console.log(`Loaded ${palsData.length} pals from file!`);
+                    alert('JSON loaded successfully! Click "Save to Database" to persist changes.');
                 } catch (error) {
                     alert('Error parsing JSON: ' + error.message);
                 }
@@ -650,19 +696,24 @@
             document.getElementById('editModal').classList.add('hidden');
         }
 
-        function deletePal() {
+        async function deletePal() {
             if (currentEditingIndex === -1) return;
             
             if (confirm('Are you sure you want to delete this Pal?')) {
                 palsData.splice(currentEditingIndex, 1);
-                extractAutocompleteData();
-                renderPals();
-                updateStats();
-                closeModal();
+                
+                const success = await saveAllPalsToAPI();
+                
+                if (success) {
+                    extractAutocompleteData();
+                    renderPals();
+                    updateStats();
+                    closeModal();
+                }
             }
         }
 
-        document.getElementById('palForm').addEventListener('submit', (e) => {
+        document.getElementById('palForm').addEventListener('submit', async (e) => {
             e.preventDefault();
             
             const palData = {
@@ -681,10 +732,14 @@
                 palsData[currentEditingIndex] = palData;
             }
             
-            extractAutocompleteData();
-            renderPals();
-            updateStats();
-            closeModal();
+            const success = await saveAllPalsToAPI();
+            
+            if (success) {
+                extractAutocompleteData();
+                renderPals();
+                updateStats();
+                closeModal();
+            }
         });
 
         // Element filter handling

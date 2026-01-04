@@ -3,9 +3,10 @@
   "module": "index.ts",
   "type": "module",
   "dependencies": {
-    "@elysiajs/static": "^0.8.1",
     "@elysiajs/cors": "latest",
-    "elysia": "latest"
+    "@elysiajs/static": "^0.8.1",
+    "elysia": "latest",
+    "mongodb": "^7.0.0"
   },
   "scripts": {
     "start": "bun --watch run ./src/index.ts"

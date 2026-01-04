@@ -1,5 +1,5 @@
 const capturedDataKey = "Captured_pals";
-const apiUrl = "/api";
+const apiUrl = "/api";  // from nginx reverse proxy
 
 async function getPals() {
     try {
