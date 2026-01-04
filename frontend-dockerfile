@@ -8,7 +8,7 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 # Copy frontend files
 WORKDIR /usr/share/nginx/html
-COPY frontend/index.html frontend/data-editor.html frontend/app.js frontend/initialData.js frontend/passives.js frontend/passives.json ./
+COPY frontend/index.html frontend/data-editor.html frontend/app.js frontend/passives.js frontend/passives.json ./
 COPY public/images /usr/share/nginx/html/public/images
 
 # Expose port 80

@@ -438,5 +438,10 @@
     "name": "Lunker",
     "tier": "A",
     "description": "20% increase to Water attack damage. 20% increase to Ice attack damage. Defense +20%"
+  },
+  {
+    "name": "King of the Waves",
+    "tier": "A",
+    "description": "50% increase movement speed on water."
   }
 ]

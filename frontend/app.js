@@ -1,9 +1,5 @@
-import { initialData } from "./initialData.js";
-
-const dataKey = "CapturedPalz";
 const capturedDataKey = "Captured_pals";
-const apiUrl = "/api";
-// const apiUrl = "http://localhost:3000";
+const apiUrl = "/api"; //"http://localhost:3000";
 
 async function getPals(limit=300) {
     try {
@@ -53,15 +49,15 @@ function storeCapturedData(data) {
 }
 
 function loadCapturedData() {
-    const stored = localStorage.getItem(capturedDataKey);
+    var stored = localStorage.getItem(capturedDataKey);
     if (stored) {
         console.log(stored);
         return JSON.parse(stored);
     } else {
-        // Initialize with default values if nothing is stored
-        const initialDataToStore = initialData.map(name => ({name}));
-        storeData(initialDataToStore);
-        return initialDataToStore;
+        console.log("No entries found. Initializing empty list.");
+        var emptyData = [];
+        storeCapturedData(emptyData);
+        return emptyData;
     }
 }
 
