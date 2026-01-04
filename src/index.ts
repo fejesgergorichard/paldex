@@ -1,7 +1,14 @@
 import { staticPlugin } from "@elysiajs/static";
 import { cors } from '@elysiajs/cors';
 import { Elysia } from "elysia";
-import { getPals, getPassives, updateAllPals, closeDatabaseConnection } from "./services/mongoDataService";
+import { 
+  getPals, 
+  getPassives, 
+  updateAllPals, 
+  getCapturedPals,
+  saveCapturedPals,
+  closeDatabaseConnection 
+} from "./services/mongoDataService";
 
 const app = new Elysia()
   .use(staticPlugin())
@@ -16,6 +23,15 @@ const app = new Elysia()
   })
   .post("/pals/bulk", async ({ body }) => {
     const result = await updateAllPals(body as any[]);
+    return result;
+  })
+  .get("/captured/:userId", async ({ params }) => {
+    const captured = await getCapturedPals(params.userId);
+    return captured;
+  })
+  .post("/captured/", async ({ body }) => {
+    const { userId, pals } = body as { userId: string; pals: any[] };
+    const result = await saveCapturedPals(userId, pals);
     return result;
   })
   .listen(3000);

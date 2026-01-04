@@ -1,10 +1,29 @@
 const capturedDataKey = "Captured_pals";
-const apiUrl = "/api";  // from nginx reverse proxy
+const userIdKey = "userId";
+const API_URL = "/api";  // from nginx reverse proxy
+
+function generateUserId() {
+    return 'user_' + 'mandersz' + '_' + Math.random().toString(36).substring(2, 5);
+}
+
+function getUserId() {
+    let userId = localStorage.getItem(userIdKey);
+    
+    if (!userId) {
+        userId = generateUserId();
+        localStorage.setItem(userIdKey, userId);
+        console.log("New user ID generated:", userId);
+    } else {
+        console.log("👤 Existing user ID:", userId);
+    }
+    
+    return userId;
+}
 
 async function getPals() {
     try {
         const response = await fetch(
-            `${apiUrl}/pals`,
+            `${API_URL}/pals`,
             {
                 method: 'GET',
                 headers: {
@@ -44,11 +63,36 @@ function toHumanReadable(str) {
         .join(" ");
 }
 
-function storeCapturedData(data) {
+async function storeCapturedData(data) {    
     localStorage.setItem(capturedDataKey, JSON.stringify(data));
+    
+    const userId = getUserId();
+    try {
+        const response = await fetch(`${API_URL}/captured/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                userId: userId,
+                pals: data
+            })
+        });
+        
+        if (response.ok) {
+            const result = await response.json();
+            console.log(`✅ Backed up ${result.count} captured pals to MongoDB for user ${result.userId}`);
+        } else {
+            console.warn("⚠️ Failed to backup to MongoDB");
+        }
+    } catch (error) {
+        console.warn("⚠️ Could not backup to MongoDB:", error);
+    }
 }
 
 function loadCapturedData() {
+    // TODO: MongoDb backup if empty
+    // const userId = getUserId();
     var stored = localStorage.getItem(capturedDataKey);
     if (stored) {
         console.log(stored);

@@ -1,6 +1,6 @@
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://fejesgergorichard_db_user:qqtxGzEFoUJ9bPyl@cluster0.nzuta4x.mongodb.net/?appName=Cluster0?retryWrites=true&w=majority";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://<username>:<password>@<cluster>.mongodb.net/?retryWrites=true&w=majority";
 const DB_NAME = process.env.DB_NAME || "palworld";
 
 let client: MongoClient;
@@ -39,16 +39,41 @@ export async function updateAllPals(palsData: any[]) {
   const db = await connectToDatabase();
   const palsCollection = db.collection("pals");
   
-  // Clear the entire collection
   await palsCollection.deleteMany({});
   
-  // Insert all pals
   if (palsData.length > 0) {
     await palsCollection.insertMany(palsData);
   }
   
   console.log(`✅ Updated ${palsData.length} pals in database`);
   return { success: true, count: palsData.length };
+}
+
+export async function getCapturedPals(userId: string) {
+  const db = await connectToDatabase();
+  const capturedCollection = db.collection("captured");
+  
+  const result = await capturedCollection.findOne({ userId: userId });
+  return result ? result.pals : [];
+}
+
+export async function saveCapturedPals(userId: string, capturedData: any[]) {
+  const db = await connectToDatabase();
+  const capturedCollection = db.collection("captured");
+  
+  await capturedCollection.updateOne(
+    { userId: userId },
+    { 
+      $set: { 
+        pals: capturedData, 
+        updatedAt: new Date() 
+      } 
+    },
+    { upsert: true }
+  );
+  
+  console.log(`✅ Saved ${capturedData.length} captured pals for user ${userId}`);
+  return { success: true, count: capturedData.length, userId: userId };
 }
 
 export async function seedDatabase() {
