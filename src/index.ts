@@ -1,8 +1,7 @@
 import { staticPlugin } from "@elysiajs/static";
 import {cors} from '@elysiajs/cors'
 import { Elysia } from "elysia";
-import { queryListPals } from "./schemas";
-import { ListPalsUseCase, ListPassivesUseCase } from "./useCases";
+import { pals, passives } from "./services/jsonDataService";
 
 const app = new Elysia()
   .use(staticPlugin())
@@ -13,18 +12,12 @@ const app = new Elysia()
   // }))
   .use(cors())
   .get(
-    "/",
-    ({ query: { page, limit, term, ...filter } }) =>
-      ListPalsUseCase.execute({ page, limit, term, filter }),
-    {
-      query: queryListPals,
-    }
+    "/pals/",
+    () => pals
   )
   .get(
     "/passives/",
-    () =>
-      ListPassivesUseCase.execute(),
-    {}
+    () => passives
   )
   .listen(3000);
 

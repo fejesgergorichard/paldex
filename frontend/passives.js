@@ -33,7 +33,7 @@ async function getPassives() {
         }
 
         const data = await response.json();
-        return data.content;
+        return data;
     } catch (error) {
         console.error('Error:', error);
         return null;

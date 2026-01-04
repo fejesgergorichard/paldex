@@ -1,10 +1,10 @@
 const capturedDataKey = "Captured_pals";
-const apiUrl = "/api"; //"http://localhost:3000";
+const apiUrl = "/api";
 
-async function getPals(limit=300) {
+async function getPals() {
     try {
         const response = await fetch(
-            `${apiUrl}?limit=${limit}`,
+            `${apiUrl}/pals`,
             {
                 method: 'GET',
                 headers: {
@@ -19,7 +19,7 @@ async function getPals(limit=300) {
         }
 
         const data = await response.json();
-        return data.content;
+        return data;
     } catch (error) {
         console.error('Error:', error);
         return null;
