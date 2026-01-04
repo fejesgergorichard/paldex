@@ -1,8 +1,12 @@
 import elasticunr from "elasticlunr";
 import type { IPal } from "../common/interfaces";
-const file = Bun.file("src/pals.json");
+import type { IPassive } from "@interfaces/passive.interface";
 
-const pals: IPal[] = await file.json();
+const palsFile = Bun.file("src/pals.json");
+const passivesFile = Bun.file("src/passives.json");
+
+const pals: IPal[] = await palsFile.json();
+const passives: IPassive[] = await passivesFile.json();
 
 const search = elasticunr<IPal>(function () {
   this.addField("types");
@@ -27,5 +31,8 @@ const execute = (query?: string) => {
   return pals.filter((pal) => result.some((item) => +item.ref === pal.id));
 };
 
+const executePassives = () => passives;
+
 // export to import as elasticurnService
 export const elasticurnService = { execute };
+export const passivesService = { executePassives };

@@ -1,17 +1,42 @@
 let passivesData = [];
 let currentSort = { column: null, ascending: true };
+const apiUrl = "/api"; //"http://localhost:3000";
 
 const tierOrder = { 'A': 1, 'B': 2, 'C': 3, 'D': 4, 'X': 5, 'Y': 6, 'Z': 7 };
 
 async function loadPassives() {
     try {
-        const response = await fetch('passives.json');
-        passivesData = await response.json();
+        passivesData = await getPassives();
         renderPassives(passivesData);
     } catch (error) {
         console.error('Error loading passives:', error);
         document.getElementById('passivesTableBody').innerHTML =
             '<tr><td colspan="3" class="px-2 py-2 text-center text-red-400">Error loading passives data</td></tr>';
+    }
+}
+
+async function getPassives() {
+    try {
+        const response = await fetch(
+            `${apiUrl}/passives`,
+            {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                }
+            }
+        );
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        return data.content;
+    } catch (error) {
+        console.error('Error:', error);
+        return null;
     }
 }
 
