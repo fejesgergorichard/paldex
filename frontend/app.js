@@ -3,7 +3,7 @@ const userIdKey = "userId";
 const API_URL = "/api";  // from nginx reverse proxy
 
 function generateUserId() {
-    return 'user_' + 'mandersz' + '_' + Math.random().toString(36).substring(2, 5);
+    return 'user_' + 'random' + '_' + Math.random().toString(36).substring(2, 5);
 }
 
 function getUserId() {
@@ -90,37 +90,64 @@ async function storeCapturedData(data) {
     }
 }
 
+async function loadCapturedDataFromDatabase() {
+    const userId = getUserId();
+    
+    try {
+        const response = await fetch(`${API_URL}/captured/${userId}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            const result = await response.json();
+            console.log(`✅ Retrieved ${result.length} captured pals from MongoDB for user ${userId}`);
+            // Save to localStorage
+            localStorage.setItem(capturedDataKey, JSON.stringify(result));
+            return result;
+        } else {
+            console.warn("⚠️ Failed to retrieve from MongoDB");
+        }
+    } catch (error) {
+        console.warn("⚠️ Could not retrieve from MongoDB:", error);
+    }
+    
+    // Fallback to localStorage if DB fails
+    return loadCapturedData();
+}
+
 function loadCapturedData() {
-    // TODO: MongoDb backup if empty
-    // const userId = getUserId();
-    var stored = localStorage.getItem(capturedDataKey);
+    const stored = localStorage.getItem(capturedDataKey);
     if (stored) {
-        console.log(stored);
         return JSON.parse(stored);
     } else {
         console.log("No entries found. Initializing empty list.");
-        var emptyData = [];
-        storeCapturedData(emptyData);
-        return emptyData;
+        return [];
     }
 }
 
-let capturedData = loadCapturedData();
+let capturedData = [];
+let pals = [];
 const searchInput = document.getElementById("searchInput");
 const activeList = document.getElementById("activeList");
 const showCapturedCheckbox = document.getElementById("captured");
 
-document.addEventListener("DOMContentLoaded", renderTodos);
+document.addEventListener("DOMContentLoaded", async () => {
+    capturedData = await loadCapturedDataFromDatabase();
+    pals = await getPals();
 
-async function renderTodos() {
+    renderTodos();
+});
+
+function renderTodos() {
     const showCapturedFilter = showCapturedCheckbox.checked;
     const capturedList = capturedData;
     const searchTerm = searchInput.value.toLowerCase();
 
     const selectedElements = Array.from(document.querySelectorAll('input[name="element"]:checked'))
         .map(checkbox => checkbox.value.toLowerCase());
-    
-    const pals = await getPals();
 
     activeList.innerHTML = "";
 
