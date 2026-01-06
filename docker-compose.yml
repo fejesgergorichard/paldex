@@ -3,6 +3,8 @@ version: "3.9"
 services:
   paldex:
     container_name: paldex
+    environment:
+      - MONGODB_URI=${MONGODB_URI}
     build:
       context: .
       dockerfile: paldex-api

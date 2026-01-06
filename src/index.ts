@@ -6,8 +6,7 @@ import {
   getPassives, 
   updateAllPals, 
   getCapturedPals,
-  saveCapturedPals,
-  closeDatabaseConnection 
+  saveCapturedPals
 } from "./services/mongoDataService";
 
 const app = new Elysia()
@@ -33,12 +32,6 @@ const app = new Elysia()
     const { userId, pals } = body as { userId: string; pals: any[] };
     const result = await saveCapturedPals(userId, pals);
     return result;
-  })
-  .listen(3000);
+  });
 
-console.log(`🦊 Elysia is running at on port ${app.server?.port}...`);
-
-process.on("SIGINT", async () => {
-  await closeDatabaseConnection();
-  process.exit(0);
-});
+export default app;
