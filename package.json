@@ -9,7 +9,8 @@
     "mongodb": "^7.0.0"
   },
   "scripts": {
-    "start": "bun --watch run ./src/index.ts"
+    "start": "bun run ./src/index.ts",
+    "dev": "bun --watch run ./src/index.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
