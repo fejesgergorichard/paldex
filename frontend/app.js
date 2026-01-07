@@ -10,7 +10,12 @@ function getUserId() {
     let userId = localStorage.getItem(userIdKey);
     
     if (!userId) {
-        userId = generateUserId();
+        let foo = prompt('Type your user ID (or leave blank to generate a new one):');
+        if (foo && foo.trim() !== "") {
+            userId = foo.trim();
+        } else {
+            userId = generateUserId();
+        }
         localStorage.setItem(userIdKey, userId);
         console.log("New user ID generated:", userId);
     } else {
