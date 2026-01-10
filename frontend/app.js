@@ -142,11 +142,14 @@ const showCapturedCheckbox = document.getElementById("captured");
 document.addEventListener("DOMContentLoaded", async () => {
     capturedData = await loadCapturedDataFromDatabase();
     pals = await getPals();
-
     renderTodos();
 });
 
 function renderTodos() {
+    if (!pals) {
+        activeList.innerHTML = '<li class="px-2 py-2 text-center text-red-400">Error loading pals data</li>';
+        return;
+    }
     const showCapturedFilter = showCapturedCheckbox.checked;
     const capturedList = capturedData;
     const searchTerm = searchInput.value.toLowerCase();
