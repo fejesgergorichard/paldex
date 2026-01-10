@@ -2,446 +2,535 @@
   {
     "name": "Botanical Barrier",
     "tier": "D",
-    "description": "10% decrease to incoming Grass damage."
+    "positives": ["+10% Grass damage resistance"],
+    "negatives": []
   },
   {
     "name": "Earthquake Resistant",
     "tier": "D",
-    "description": "10% decrease to incoming Ground damage."
+    "positives": ["+10% Ground damage resistance"],
+    "negatives": []
   },
   {
     "name": "Zen Mind",
     "tier": "D",
-    "description": "10% increase to Neutral attack damage."
+    "positives": ["+10% Neutral attack damage"],
+    "negatives": []
   },
   {
     "name": "Dragonkiller",
     "tier": "D",
-    "description": "10% decrease to incoming Dragon damage."
+    "positives": ["+10% Dragon damage resistance"],
+    "negatives": []
   },
   {
     "name": "Insulated Body",
     "tier": "D",
-    "description": "10% decrease to incoming Lightning damage."
+    "positives": ["+10% Lightning damage resistance"],
+    "negatives": []
   },
   {
     "name": "Brave",
     "tier": "D",
-    "description": "Attack +10%"
+    "positives": ["+10% Attack"],
+    "negatives": []
   },
   {
     "name": "Fragrant Foliage",
     "tier": "D",
-    "description": "10% increase to Grass attack damage."
+    "positives": ["+10% Grass attack damage"],
+    "negatives": []
   },
   {
     "name": "Burly Body",
     "tier": "B",
-    "description": "Defense +20%"
+    "positives": ["+20% Defense"],
+    "negatives": []
   },
   {
     "name": "Coward",
     "tier": "X",
-    "description": "Attack -10%"
+    "positives": [],
+    "negatives": ["-10% Attack"]
   },
   {
     "name": "Blood of the Dragon",
     "tier": "D",
-    "description": "10% increase to Dragon attack damage."
+    "positives": ["+10% Dragon attack damage"],
+    "negatives": []
   },
   {
     "name": "Heated Body",
     "tier": "D",
-    "description": "10% decrease to incoming Ice damage."
+    "positives": ["+10% Ice damage resistance"],
+    "negatives": []
   },
   {
     "name": "Pacifist",
     "tier": "Z",
-    "description": "Attack -20%"
+    "positives": [],
+    "negatives": ["-20% Attack"]
   },
   {
     "name": "Positive Thinker",
     "tier": "D",
-    "description": "SAN drops +10% slower."
+    "positives": ["+10% slower SAN drop"],
+    "negatives": []
   },
   {
     "name": "Motivational Leader",
     "tier": "B",
-    "description": "25% increase to Player Work Speed."
+    "positives": ["+25% Player Work Speed"],
+    "negatives": []
   },
   {
     "name": "Lucky",
     "tier": "A",
-    "description": "Work Speed +15%, Attack +15%"
+    "positives": ["+15% Work Speed", "+15% Attack"],
+    "negatives": []
   },
   {
     "name": "Pyromaniac",
     "tier": "D",
-    "description": "10% increase to Fire attack damage."
+    "positives": ["+10% Fire attack damage"],
+    "negatives": []
   },
   {
     "name": "Abnormal",
     "tier": "D",
-    "description": "10% decrease to incoming Neutral damage."
+    "positives": ["+10% Neutral damage resistance"],
+    "negatives": []
   },
   {
     "name": "Cheery",
     "tier": "D",
-    "description": "10% decrease to incoming Dark damage."
+    "positives": ["+10% Dark damage resistance"],
+    "negatives": []
   },
   {
     "name": "Nimble",
     "tier": "D",
-    "description": "10% increase to Movement Speed."
+    "positives": ["+10% Movement Speed"],
+    "negatives": []
   },
   {
     "name": "Runner",
     "tier": "C",
-    "description": "20% increase to Movement Speed."
+    "positives": ["+20% Movement Speed"],
+    "negatives": []
   },
   {
     "name": "Slacker",
     "tier": "Z",
-    "description": "Work Speed -30%"
+    "positives": [],
+    "negatives": ["-30% Work Speed"]
   },
   {
     "name": "Unstable",
     "tier": "X",
-    "description": "SAN drops +10% faster."
+    "positives": [],
+    "negatives": ["-10% faster SAN drops"]
   },
   {
     "name": "Stronghold Strategist",
     "tier": "B",
-    "description": "10% increase to Player Defense."
+    "positives": ["+10% Player Defense"],
+    "negatives": []
   },
   {
     "name": "Workaholic",
     "tier": "B",
-    "description": "SAN drops +15% slower."
+    "positives": ["+15% slower SAN drops"],
+    "negatives": []
   },
   {
     "name": "Swift",
     "tier": "A",
-    "description": "30% increase to movement speed."
+    "positives": ["+30% Movement Speed"],
+    "negatives": []
   },
   {
     "name": "Sadist",
     "tier": "D",
-    "description": "Attack +15%, Defense -15%"
+    "positives": ["+15% Attack"],
+    "negatives": ["-15% Defense"]
   },
   {
     "name": "Glutton",
     "tier": "X",
-    "description": "Hunger decreases +10% faster."
+    "positives": [],
+    "negatives": ["-10% faster Hunger decrease"]
   },
   {
     "name": "Downtrodden",
     "tier": "X",
-    "description": "Defense -10%"
+    "positives": [],
+    "negatives": ["-10% Defense"]
   },
   {
     "name": "Vanguard",
     "tier": "B",
-    "description": "10% increase to Player Attack."
+    "positives": ["+10% Player Attack"],
+    "negatives": []
   },
   {
     "name": "Capacitor",
     "tier": "D",
-    "description": "10% increase to Lightning attack damage."
+    "positives": ["+10% Lightning attack damage"],
+    "negatives": []
   },
   {
     "name": "Logging Foreman",
     "tier": "B",
-    "description": "25% increase to Player Logging Efficiency."
+    "positives": ["+25% Player Logging Efficiency"],
+    "negatives": []
   },
   {
     "name": "Aggressive",
     "tier": "D",
-    "description": "Attack +10%, Defense -10%"
+    "positives": ["+10% Attack"],
+    "negatives": ["-10% Defense"]
   },
   {
     "name": "Waterproof",
     "tier": "D",
-    "description": "10% decrease to incoming Water damage."
+    "positives": ["+10% Water damage resistance"],
+    "negatives": []
   },
   {
     "name": "Dainty Eater",
     "tier": "D",
-    "description": "Hunger decreases +10% slower."
+    "positives": ["+10% slower Hunger decrease"],
+    "negatives": []
   },
   {
     "name": "Coldblooded",
     "tier": "D",
-    "description": "10% increase to Ice attack damage."
+    "positives": ["+10% Ice attack damage"],
+    "negatives": []
   },
   {
     "name": "Artisan",
     "tier": "B",
-    "description": "Work Speed +50%"
+    "positives": ["+50% Work Speed"],
+    "negatives": []
   },
   {
     "name": "Destructive",
     "tier": "Y",
-    "description": "SAN drops +15% faster."
+    "positives": [],
+    "negatives": ["-15% faster SAN drops"]
   },
   {
     "name": "Musclehead",
     "tier": "C",
-    "description": "Attack +30%, Work Speed -50%"
+    "positives": ["+30% Attack"],
+    "negatives": ["-50% Work Speed"]
   },
   {
     "name": "Hooligan",
     "tier": "D",
-    "description": "Attack +15%, Work Speed -10%"
+    "positives": ["+15% Attack"],
+    "negatives": ["-10% Work Speed"]
   },
   {
     "name": "Diet Lover",
     "tier": "B",
-    "description": "Hunger decreases +15% slower"
+    "positives": ["+15% slower Hunger decrease"],
+    "negatives": []
   },
   {
     "name": "Mine Foreman",
     "tier": "B",
-    "description": "25% increase to Player Mining Efficiency."
+    "positives": ["+25% Player Mining Efficiency"],
+    "negatives": []
   },
   {
     "name": "Serious",
     "tier": "D",
-    "description": "Work Speed +20%"
+    "positives": ["+20% Work Speed"],
+    "negatives": []
   },
   {
     "name": "Ferocious",
     "tier": "B",
-    "description": "Attack +20%"
+    "positives": ["+20% Attack"],
+    "negatives": []
   },
   {
     "name": "Masochist",
     "tier": "D",
-    "description": "Defense +15%, Attack -15%"
+    "positives": ["+15% Defense"],
+    "negatives": ["-15% Attack"]
   },
   {
     "name": "Power of Gaia",
     "tier": "D",
-    "description": "10% increase to Earth attack damage."
+    "positives": ["+10% Earth attack damage"],
+    "negatives": []
   },
   {
     "name": "Bottomless Stomach",
     "tier": "Y",
-    "description": "Hunger decreases +15% faster."
+    "positives": [],
+    "negatives": ["-15% faster Hunger decrease"]
   },
   {
     "name": "Suntan Lover",
     "tier": "D",
-    "description": "10% decrease to incoming Fire damage."
+    "positives": ["+10% Fire damage resistance"],
+    "negatives": []
   },
   {
     "name": "Conceited",
     "tier": "D",
-    "description": "Work Speed +10%, Defense -10%"
+    "positives": ["+10% Work Speed"],
+    "negatives": ["-10% Defense"]
   },
   {
     "name": "Veil of Darkness",
     "tier": "D",
-    "description": "10% increase to Dark attack damage."
+    "positives": ["+10% Dark attack damage"],
+    "negatives": []
   },
   {
     "name": "Hard Skin",
     "tier": "D",
-    "description": "Defense +10%"
+    "positives": ["+10% Defense"],
+    "negatives": []
   },
   {
     "name": "Hydromaniac",
     "tier": "D",
-    "description": "10% increase to Water attack damage."
+    "positives": ["+10% Water attack damage"],
+    "negatives": []
   },
   {
     "name": "Work Slave",
     "tier": "D",
-    "description": "Work Speed +30%, Attack -30%"
+    "positives": ["+30% Work Speed"],
+    "negatives": ["-30% Attack"]
   },
   {
     "name": "Legend",
     "tier": "A",
-    "description": "Attack +20%, Defense +20%, Movement Speed increases 15%"
+    "positives": ["+20% Attack", "+20% Defense", "+15% Movement Speed"],
+    "negatives": []
   },
   {
     "name": "Divine Dragon",
     "tier": "B",
-    "description": "20% increase to Dragon attack damage."
+    "positives": ["+20% Dragon attack damage"],
+    "negatives": []
   },
   {
     "name": "Lord of Lightning",
     "tier": "B",
-    "description": "20% increase to Lightning attack damage."
+    "positives": ["+20% Lightning attack damage"],
+    "negatives": []
   },
   {
     "name": "Clumsy",
     "tier": "X",
-    "description": "Work Speed -10%"
+    "positives": [],
+    "negatives": ["-10% Work Speed"]
   },
   {
     "name": "Brittle",
     "tier": "Z",
-    "description": "Defense -20%"
+    "positives": [],
+    "negatives": ["-20% Defense"]
   },
   {
     "name": "Lord of the Underworld",
     "tier": "B",
-    "description": "20% increase to Dark attack damage."
+    "positives": ["+20% Dark attack damage"],
+    "negatives": []
   },
   {
     "name": "Spirit Emperor",
     "tier": "B",
-    "description": "20% increase to Grass attack damage."
+    "positives": ["+20% Grass attack damage"],
+    "negatives": []
   },
   {
     "name": "Celestial Emperor",
     "tier": "B",
-    "description": "20% increase to Normal attack damage."
+    "positives": ["+20% Normal attack damage"],
+    "negatives": []
   },
   {
     "name": "Flame Emperor",
     "tier": "B",
-    "description": "20% increase to Fire attack damage."
+    "positives": ["+20% Fire attack damage"],
+    "negatives": []
   },
   {
     "name": "Ice Emperor",
     "tier": "B",
-    "description": "20% increase to Ice attack damage."
+    "positives": ["+20% Ice attack damage"],
+    "negatives": []
   },
   {
     "name": "Lord of the Sea",
     "tier": "B",
-    "description": "20% increase to Water attack damage."
+    "positives": ["+20% Water attack damage"],
+    "negatives": []
   },
   {
     "name": "Earth Emperor",
     "tier": "B",
-    "description": "20% increase to Earth attack damage."
+    "positives": ["+20% Earth attack damage"],
+    "negatives": []
   },
   {
     "name": "Mercy Hit",
     "tier": "X",
-    "description": "Pacifist. Will not reduce the target's Health below 1."
+    "positives": ["Will not reduce target's Health below 1"],
+    "negatives": []
   },
   {
     "name": "Siren of the Void",
     "tier": "A",
-    "description": "30% increase to Dark attack damage. 30% increase to Ice attack damage."
+    "positives": ["+30% Dark attack damage", "+30% Ice attack damage"],
+    "negatives": []
   },
   {
     "name": "Fit as a Fiddle",
     "tier": "D",
-    "description": "Max Stamina +25% (Rideable Pals only)"
+    "positives": ["+25% Max Stamina (Rideable Pals only)"],
+    "negatives": []
   },
   {
     "name": "Easygoing",
     "tier": "X",
-    "description": "Active Skill Cooldown extension -15%."
+    "positives": [],
+    "negatives": ["-15% Active Skill Cooldown extension"]
   },
   {
     "name": "Philanthropist",
     "tier": "B",
-    "description": "When assigned to a Breeding Farm, breeding speed is increased by 100%."
+    "positives": ["+100% breeding speed (Breeding Farm only)"],
+    "negatives": []
   },
   {
     "name": "Nocturnal",
     "tier": "D",
-    "description": "Does not sleep and continues to work even at night."
+    "positives": ["Does not sleep, continues to work at night"],
+    "negatives": []
   },
   {
     "name": "Noble",
     "tier": "B",
-    "description": "Sale price +5%"
+    "positives": ["+5% Sale price"],
+    "negatives": []
   },
   {
     "name": "Fine Furs",
     "tier": "D",
-    "description": "Sale price +3%"
+    "positives": ["+3% Sale price"],
+    "negatives": []
   },
   {
     "name": "Serenity",
     "tier": "B",
-    "description": "Active skill cooldown reduction 30%, Attack +10%"
+    "positives": ["+30% Active skill cooldown reduction", "+10% Attack"],
+    "negatives": []
   },
   {
     "name": "Impatient",
     "tier": "D",
-    "description": "Active skill cooldown reduction 15%"
+    "positives": ["+15% Active skill cooldown reduction"],
+    "negatives": []
   },
   {
     "name": "Infinite Stamina",
     "tier": "B",
-    "description": "Max Stamina +50% (Rideable Pals only)"
+    "positives": ["+50% Max Stamina (Rideable Pals only)"],
+    "negatives": []
   },
   {
     "name": "Otherworldly Cells",
     "tier": "D",
-    "description": "Attack +10%, Fire damage reduction 15%, Lightning damage reduction 15%"
+    "positives": ["+10% Attack", "+15% Fire damage resistance", "+15% Lightning damage resistance"],
+    "negatives": []
   },
   {
     "name": "Shabby",
     "tier": "X",
-    "description": "Sale price -10%"
+    "positives": [],
+    "negatives": ["-10% Sale price"]
   },
   {
     "name": "Sickly",
     "tier": "X",
-    "description": "Max Stamina -25% (Rideable Pals only)"
+    "positives": [],
+    "negatives": ["-25% Max Stamina (Rideable Pals only)"]
   },
   {
     "name": "Eternal Flame",
     "tier": "A",
-    "description": "30% increase to Fire attack damage. 30% increase to Lightning attack damage."
+    "positives": ["+30% Fire attack damage", "+30% Lightning attack damage"],
+    "negatives": []
   },
   {
     "name": "Remarkable Craftmanship",
     "tier": "A",
-    "description": "Work Speed +75%."
+    "positives": ["+75% Work Speed"],
+    "negatives": []
   },
   {
     "name": "Diamond Body",
     "tier": "A",
-    "description": "Defense 30%."
+    "positives": ["+30% Defense"],
+    "negatives": []
   },
   {
     "name": "Invader",
     "tier": "A",
-    "description": "30% increase in Dark attack damage. 30% increase in Dragon attack damage."
+    "positives": ["+30% Dark attack damage", "+30% Dragon attack damage"],
+    "negatives": []
   },
   {
     "name": "Demon God",
     "tier": "A",
-    "description": "Attack +30%. Defense +5%."
+    "positives": ["+30% Attack", "+5% Defense"],
+    "negatives": []
   },
   {
     "name": "Mastery of Fasting",
     "tier": "A",
-    "description": "Hunger decreases +20% slower."
+    "positives": ["+20% slower Hunger decrease"],
+    "negatives": []
   },
   {
     "name": "Heart of the Immovable King",
     "tier": "A",
-    "description": "SAN drops +20% slower."
+    "positives": ["+20% slower SAN drops"],
+    "negatives": []
   },
   {
     "name": "Eternal Engine",
     "tier": "A",
-    "description": "Max Stamina +75% (Rideable Pals only)"
+    "positives": ["+75% Max Stamina (Rideable Pals only)"],
+    "negatives": []
   },
   {
     "name": "Vampiric",
     "tier": "A",
-    "description": "Absorbs a portion of the damage dealt to restore Health. Does not sleep at night and continues to work."
+    "positives": ["Absorbs damage dealt to restore Health", "Does not sleep, continues to work at night"],
+    "negatives": []
   },
   {
     "name": "Lunker",
     "tier": "A",
-    "description": "20% increase to Water attack damage. 20% increase to Ice attack damage. Defense +20%"
+    "positives": ["+20% Water attack damage", "+20% Ice attack damage", "+20% Defense"],
+    "negatives": []
   },
   {
     "name": "King of the Waves",
     "tier": "A",
-    "description": "50% increase movement speed on water."
+    "positives": ["+50% Movement Speed on water"],
+    "negatives": []
   }
 ]

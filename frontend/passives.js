@@ -1,7 +1,6 @@
 let passivesData = [];
 let currentSort = { column: null, ascending: true };
-const apiUrl = "/api"; //"http://localhost:3000";
-
+const API_URL = "/api"; //"http://localhost:3000";
 const tierOrder = { 'A': 1, 'B': 2, 'C': 3, 'D': 4, 'X': 5, 'Y': 6, 'Z': 7 };
 
 async function loadPassives() {
@@ -18,7 +17,7 @@ async function loadPassives() {
 async function getPassives() {
     try {
         const response = await fetch(
-            `${apiUrl}/passives`,
+            `${API_URL}/passives`,
             {
                 method: 'GET',
                 headers: {
@@ -52,10 +51,15 @@ function renderPassives(data) {
     data.forEach(passive => {
         const row = document.createElement('tr');
         row.className = 'border-b border-gray-700';
+
+        const positives = passive.positives?.map(positive => `<span class="text-blue-400">${positive}</span>`).join('<br>') || '';
+        const negatives = passive.negatives?.map(negative => `<span class="text-red-400">${negative}</span>`).join('<br>') || '';
+        const separator = (positives && negatives) ? '<br>' : '';
+
         row.innerHTML = `
           <td class="px-2 py-2">${passive.name}</td>
           <td class="px-2 py-2"><img src="../public/images/tiers/${passive.tier}.png" /> </td>
-          <td class="px-2 py-2">${passive.description}</td>
+          <td class="px-2 py-2">${positives}${separator}${negatives}</td>
         `;
         tbody.appendChild(row);
     });
