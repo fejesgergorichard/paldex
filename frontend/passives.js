@@ -103,7 +103,8 @@ function filterPassives(searchTerm) {
     const filtered = passivesData.filter(passive => {
         const term = searchTerm.toLowerCase();
         return passive.name.toLowerCase().includes(term) ||
-            passive.description.toLowerCase().includes(term);
+            passive.positives?.join(' ').toLowerCase().includes(term) ||
+            passive.negatives?.join(' ').toLowerCase().includes(term);
     });
     renderPassives(filtered);
 }
